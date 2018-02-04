@@ -8,6 +8,10 @@ target 'Meetennis' do
   # Pods for Meetennis
 
   pod 'Swinject', '~> 2.1.0'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'GoogleSignIn'
+  pod 'Alamofire', '~> 4.5'
 
   target 'MeetennisTests' do
     inherit! :search_paths
