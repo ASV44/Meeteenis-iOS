@@ -1,0 +1,6 @@
+framework module Pods_Meetennis {
+  umbrella header "Pods-Meetennis-umbrella.h"
+
+  export *
+  module * { export * }
+}
