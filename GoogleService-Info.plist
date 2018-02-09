@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>156325635270-gcdt0rt4d2mk7an0dcaaoqjjufomk14f.apps.googleusercontent.com</string>
+	<string>515413266719-723gj9j4bq4l3edkukbc738g1ue7vrdp.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.156325635270-gcdt0rt4d2mk7an0dcaaoqjjufomk14f</string>
+	<string>com.googleusercontent.apps.515413266719-723gj9j4bq4l3edkukbc738g1ue7vrdp</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>hackintosh.Meetennis</string>
+	<string>co.Meetennis</string>
 	<key>PROJECT_ID</key>
-	<string>firebase-meetennis</string>
+	<string>meetennis-93845</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -23,6 +23,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:156325635270:ios:3344c77fa237e5dc</string>
+	<string>1:515413266719:ios:98a2efa2950efecc</string>
 </dict>
 </plist>
