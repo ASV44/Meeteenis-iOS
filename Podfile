@@ -12,6 +12,7 @@ target 'Meetennis' do
   pod 'FacebookLogin'
   pod 'GoogleSignIn'
   pod 'Alamofire', '~> 4.5'
+  pod 'KeychainSwift', '~> 10.0'
 
   target 'MeetennisTests' do
     inherit! :search_paths

@@ -76,8 +76,7 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         
         Alamofire.request(URL, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             if let token = response.result.value as? [String : String]  {
-                let tokenData = LoginUtils.getTokenDataForCahce(token["token"]!, provider: provider)
-                LoginUtils.login(with: provider, cache: tokenData, self)
+                LoginUtils.login(with: provider, access: token["token"]!, self)
             }
         }
     }

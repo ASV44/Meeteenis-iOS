@@ -11,7 +11,7 @@
 		7A3543E1472BAD1E3D0CB498 /* Pods_Meetennis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809C34335E2401C5AA6A843 /* Pods_Meetennis.framework */; };
 		BF4A26907A906029D34742F9 /* Pods_MeetennisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C0D9A3085DCEC1D3DD3D9 /* Pods_MeetennisUITests.framework */; };
 		D61CEDB22029B261000E1948 /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB12029B261000E1948 /* LoginUtils.swift */; };
-		D61CEDB42029B3FF000E1948 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* FileUtils.swift */; };
+		D61CEDB42029B3FF000E1948 /* KeyChainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* KeyChainUtils.swift */; };
 		D64DD159202A4583004ACB79 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DD158202A4583004ACB79 /* QuizViewController.swift */; };
 		D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C565CE2027234B0040F4A7 /* AppDelegate.swift */; };
 		D6C565D12027234B0040F4A7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C565D02027234B0040F4A7 /* LogInViewController.swift */; };
@@ -49,7 +49,7 @@
 		953FBE31B370DEA72059D40A /* Pods-MeetennisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetennisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetennisTests/Pods-MeetennisTests.release.xcconfig"; sourceTree = "<group>"; };
 		95D61A4E9732886075C8C74E /* Pods-Meetennis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetennis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meetennis/Pods-Meetennis.release.xcconfig"; sourceTree = "<group>"; };
 		D61CEDB12029B261000E1948 /* LoginUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
-		D61CEDB32029B3FF000E1948 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		D61CEDB32029B3FF000E1948 /* KeyChainUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainUtils.swift; sourceTree = "<group>"; };
 		D64DD158202A4583004ACB79 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		D6C565CB2027234B0040F4A7 /* Meetennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meetennis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C565CE2027234B0040F4A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D61CEDB12029B261000E1948 /* LoginUtils.swift */,
-				D61CEDB32029B3FF000E1948 /* FileUtils.swift */,
+				D61CEDB32029B3FF000E1948 /* KeyChainUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -439,6 +439,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -452,6 +453,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,7 +502,7 @@
 				D64DD159202A4583004ACB79 /* QuizViewController.swift in Sources */,
 				D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */,
 				D61CEDB22029B261000E1948 /* LoginUtils.swift in Sources */,
-				D61CEDB42029B3FF000E1948 /* FileUtils.swift in Sources */,
+				D61CEDB42029B3FF000E1948 /* KeyChainUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
