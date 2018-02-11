@@ -10,63 +10,75 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 import GoogleSignIn
+import Alamofire
 
 class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
-
-    @IBOutlet weak var fbSignIn: UIButton!
+    
+    private let URL = "https://meetennis-api-test.azurewebsites.net/api/authentication"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
-        
-//        googleSignIn.style = .iconOnly
-//        googleSignIn.colorScheme = .dark
-//        googleSignIn.backgroundColor = UIColor(patternImage: UIImage(named: "googleSignin.png")!)
-    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print("\(error.localizedDescription)")
         } else {
-            // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
-            print(userId, idToken, fullName, givenName, familyName, email)
+            let idToken = user.authentication.idToken
+            sendLoginRequest(accessToken: idToken!, provider: "google")
         }
     }
 
     
     @IBAction func fbSignInClick(_ sender: Any) {
-        let loginManager = LoginManager()
-        loginManager.logIn(readPermissions: [.publicProfile], viewController: self, completion: {loginResult in
-            switch loginResult {
+        if(!LoginUtils.login(with: "facebook", root: self)) {
+            let loginManager = LoginManager()
+            loginManager.logIn(readPermissions: [.publicProfile, .email],
+                               viewController: self,
+                               completion: handleFbSignIn)
+        }
+    }
+    
+    func handleFbSignIn(loginResult: LoginResult) {
+        switch loginResult {
             case .cancelled:
                 print("User cancelled login.")
                 break
             case .failed(let error):
+                print(error)
                 break
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                print("Logged in!", accessToken)
-                break    
-            }
-        })
+            case .success( _, _, let accessToken):
+                self.sendLoginRequest(accessToken: accessToken.authenticationToken, provider: "facebook")
+                break
+        }
     }
     
     @IBAction func googleSignInClick(_ sender: Any) {
-        GIDSignIn.sharedInstance().signIn()
+        if(!LoginUtils.login(with: "google", root: self)) {
+            GIDSignIn.sharedInstance().signIn()
+        }
+    }
+    
+    func sendLoginRequest(accessToken: String, provider: String) {
+        let parameters: Parameters = [
+            "data": [
+                "token" : accessToken
+            ],
+            "provider": provider
+        ]
+        
+        Alamofire.request(URL, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            if let token = response.result.value as? [String : String]  {
+                LoginUtils.login(with: provider, access: token["token"]!, self)
+            }
+        }
     }
 }
 

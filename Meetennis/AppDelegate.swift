@@ -17,14 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GIDSignIn.sharedInstance().clientID = "156325635270-gcdt0rt4d2mk7an0dcaaoqjjufomk14f.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = "515413266719-723gj9j4bq4l3edkukbc738g1ue7vrdp.apps.googleusercontent.com"
+        
+        LoginUtils.login(self)
         return true
     }
     
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
             return GIDSignIn.sharedInstance().handle(url,
-                                                        sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                                        annotation: [:])
+                                                    sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                    annotation: [:])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

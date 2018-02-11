@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,29 +18,49 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-db-nGK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logInBackground" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-db-nGK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-Dj-002">
+                                <rect key="frame" x="164" y="307" width="86" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fgf-Dj-002" secondAttribute="height" multiplier="86:123" id="yLa-qp-mNT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="LiZ-mX-ppe">
+                                <rect key="frame" x="147" y="464.33333333333331" width="120" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LiZ-mX-ppe" secondAttribute="height" multiplier="6:1" id="gd5-m2-Zcc"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TpQ-db-nGK" secondAttribute="bottom" id="3Qx-nG-snv"/>
-                            <constraint firstItem="TpQ-db-nGK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ex3-1B-USg"/>
-                            <constraint firstItem="TpQ-db-nGK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dmH-MF-tAV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TpQ-db-nGK" secondAttribute="trailing" id="lXJ-0l-SYm"/>
+                            <constraint firstItem="TpQ-db-nGK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="06j-VY-aXu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fgf-Dj-002" secondAttribute="trailing" multiplier="1.576" id="1RM-hj-nAd"/>
+                            <constraint firstItem="fgf-Dj-002" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" multiplier="8.2" id="8Zf-pM-7Ru"/>
+                            <constraint firstItem="LiZ-mX-ppe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" multiplier="7.35" id="RfL-GC-DNQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LiZ-mX-ppe" secondAttribute="trailing" multiplier="1.475" id="X4L-dp-QoA"/>
+                            <constraint firstItem="TpQ-db-nGK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cbI-T2-06n"/>
+                            <constraint firstItem="TpQ-db-nGK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ePg-nx-kv1"/>
+                            <constraint firstItem="TpQ-db-nGK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hId-Vh-4Wn"/>
+                            <constraint firstItem="LiZ-mX-ppe" firstAttribute="top" secondItem="fgf-Dj-002" secondAttribute="bottom" multiplier="1.08" id="n6b-k8-P41"/>
+                            <constraint firstItem="fgf-Dj-002" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rDN-vb-4ld"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
     <resources>
-        <image name="splashScreen" width="1080" height="1920"/>
+        <image name="logInBackground" width="1080" height="1920"/>
+        <image name="logoIcon" width="212" height="320"/>
+        <image name="title" width="397" height="69"/>
     </resources>
 </document>
