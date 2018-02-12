@@ -13,6 +13,7 @@ target 'Meetennis' do
   pod 'GoogleSignIn'
   pod 'Alamofire', '~> 4.5'
   pod 'KeychainSwift', '~> 10.0'
+  pod 'FSPagerView'
 
   target 'MeetennisTests' do
     inherit! :search_paths
