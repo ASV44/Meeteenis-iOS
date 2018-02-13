@@ -13,19 +13,29 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var pagerView: FSPagerView!
     
+    let cellLayoutIdentifier = "PagerViewCell"
+    let cellIdentifier = "pagerViewCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
-        pagerView.transformer = FSPagerViewTransformer(type: .linear)
-        pagerView.interitemSpacing = 1.5
-        pagerView.itemSize = CGSize(width: 200, height: 250)
-        pagerView.backgroundColor = UIColor.clear
+        viewConfig(screenSize: UIScreen.main.bounds)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func viewConfig(screenSize: CGRect) {
+        let customCellNib = UINib(nibName: "PagerViewCell", bundle: nil)
+        pagerView.register(customCellNib, forCellWithReuseIdentifier: cellIdentifier)
+        pagerView.transformer = FSPagerViewTransformer(type: .linear)
+        pagerView.transformer?.minimumScale = 0.8
+        pagerView.interitemSpacing = 0.75
+        pagerView.itemSize = CGSize(width: 0.772 * screenSize.width,
+                                    height: 0.407 * screenSize.height)
+        pagerView.backgroundColor = UIColor.clear
     }
     
     @IBAction func signOutCLick(_ sender: Any) {
@@ -42,9 +52,7 @@ extension QuizViewController: FSPagerViewDataSource {
     }
     
     public func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.backgroundColor = UIColor.white
-        cell.clipsToBounds = true
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, at: index)
         return cell
     }
 }

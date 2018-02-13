@@ -109,28 +109,33 @@
                                     <action selector="signOutCLick:" destination="d8A-lt-ZHD" eventType="touchUpInside" id="6jK-Me-uzq"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-97-0Iy" customClass="FSPagerView" customModule="FSPagerView">
-                                <rect key="frame" x="20" y="304" width="374" height="293"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="d8A-lt-ZHD" id="JiX-cm-Ptw"/>
-                                    <outlet property="delegate" destination="d8A-lt-ZHD" id="xqG-9o-a6y"/>
-                                </connections>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stroke_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-7n-tqU">
                                 <rect key="frame" x="160" y="135" width="94" height="102.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hCr-7n-tqU" secondAttribute="height" multiplier="74:81" id="sHt-9z-pPV"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-97-0Iy" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="388" width="414" height="293"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1kf-97-0Iy" secondAttribute="height" multiplier="414:293" id="ngC-Fd-5WY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="d8A-lt-ZHD" id="JiX-cm-Ptw"/>
+                                    <outlet property="delegate" destination="d8A-lt-ZHD" id="xqG-9o-a6y"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hCr-7n-tqU" firstAttribute="top" secondItem="DI5-CZ-gbz" secondAttribute="top" multiplier="6.79" id="2kD-rp-Et7"/>
                             <constraint firstItem="KCb-dO-peX" firstAttribute="leading" secondItem="DI5-CZ-gbz" secondAttribute="leading" id="5aJ-Td-nNd"/>
+                            <constraint firstItem="1kf-97-0Iy" firstAttribute="trailing" secondItem="DI5-CZ-gbz" secondAttribute="trailing" id="Bcx-yh-VPn"/>
                             <constraint firstItem="hCr-7n-tqU" firstAttribute="leading" secondItem="Jrs-Fi-sQx" secondAttribute="leadingMargin" multiplier="8" id="Ohf-ee-LA1"/>
                             <constraint firstItem="KCb-dO-peX" firstAttribute="top" secondItem="Jrs-Fi-sQx" secondAttribute="top" id="Srs-Zc-6kd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1kf-97-0Iy" secondAttribute="bottom" multiplier="1.08" id="fwI-qc-0i4"/>
+                            <constraint firstItem="1kf-97-0Iy" firstAttribute="leading" secondItem="DI5-CZ-gbz" secondAttribute="leading" id="kvq-Mw-Bx9"/>
                             <constraint firstItem="KCb-dO-peX" firstAttribute="bottom" secondItem="DI5-CZ-gbz" secondAttribute="bottom" id="pBU-RT-3h3"/>
                             <constraint firstItem="KCb-dO-peX" firstAttribute="trailing" secondItem="DI5-CZ-gbz" secondAttribute="trailing" id="vS9-Up-bHx"/>
                             <constraint firstItem="hCr-7n-tqU" firstAttribute="trailing" secondItem="Jrs-Fi-sQx" secondAttribute="trailingMargin" multiplier="0.645" id="wMj-n5-rBN"/>
