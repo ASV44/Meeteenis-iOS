@@ -38,4 +38,8 @@ class KeyChainUtils {
     static func removeLastProvider() {
         userDefaults.removeObject(forKey: LAST_PROVIDER_KEY)
     }
+    
+    static func clearKeyChain() {
+        keychain.clear()
+    }
 }

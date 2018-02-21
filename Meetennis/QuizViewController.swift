@@ -8,17 +8,29 @@
 
 import UIKit
 import FSPagerView
+import Alamofire
+import SwiftyJSON
+import Kingfisher
 
 class QuizViewController: UIViewController {
+    
+    private let URL = "https://meetennis-api-test.azurewebsites.net/api/skill"
     
     @IBOutlet weak var pagerView: FSPagerView!
     
     let cellLayoutIdentifier = "PagerViewCell"
     let cellIdentifier = "pagerViewCell"
     
+    var totalElements = 10
+    var quizData: [JSON]!
+    
+    var quizRate: [Int]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getQuizData()
+        quizRate = [Int](repeating: 0, count: self.totalElements)
         viewConfig(screenSize: UIScreen.main.bounds)
     }
     
@@ -48,11 +60,55 @@ class QuizViewController: UIViewController {
 extension QuizViewController: FSPagerViewDataSource {
     
     public func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return 10
+        return totalElements
     }
     
     public func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, at: index)
         return cell
+    }
+}
+
+// MARK: Implement pager view delegate
+extension QuizViewController: FSPagerViewDelegate {
+    
+    public func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
+        let pagerCell = cell as! PagerViewCell
+        pagerCell.setRate(quizRate[index])
+    }
+    
+    public func pagerView(_ pagerView: FSPagerView, didEndDisplaying cell: FSPagerViewCell, forItemAt index: Int) {
+        let pagerCell = cell as! PagerViewCell
+        quizRate[index] = pagerCell.rate
+    }
+}
+
+// MARK: Implement API comunication
+
+extension QuizViewController {
+    func getQuizData() {
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer " + KeyChainUtils.getAccesToken(),
+        ]
+
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            print(response)
+            print(response.response!.statusCode)
+            switch response.result {
+            case .success(let value):
+                let response = JSON(value)
+                print(response)
+                self.totalElements = response["totalElements"].int!
+                self.quizData = response["data"].array
+                self.pagerView.reloadData()
+                self.pagerView.isHidden = false
+                self.quizRate = [Int](repeating: 0, count: self.totalElements)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
     }
 }

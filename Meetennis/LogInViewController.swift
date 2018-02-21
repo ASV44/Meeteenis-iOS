@@ -11,6 +11,7 @@ import FacebookCore
 import FacebookLogin
 import GoogleSignIn
 import Alamofire
+import SwiftyJSON
 
 class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
@@ -75,8 +76,15 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         ]
         
         Alamofire.request(URL, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-            if let token = response.result.value as? [String : String]  {
-                LoginUtils.login(with: provider, access: token["token"]!, self)
+            switch response.result {
+            case .success(let value):
+                let response = JSON(value)
+                let token = response["token"].string!
+                LoginUtils.login(with: provider, access: token, self)
+                break
+            case .failure(let error):
+                print(error)
+                break
             }
         }
     }
