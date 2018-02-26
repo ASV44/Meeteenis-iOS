@@ -12,16 +12,17 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class QuizViewController: UIViewController {
+class SkillRateViewController: UIViewController {
     
-    private let URL = "https://meetennis-api-test.azurewebsites.net/api/skill"
+    private let Url = "https://meetennis-api-test.azurewebsites.net/api/skill"
     
+    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var pagerView: FSPagerView!
     
     let cellLayoutIdentifier = "PagerViewCell"
     let cellIdentifier = "pagerViewCell"
     
-    var totalElements = 10
+    var totalElements = 0
     var quizData: [JSON]!
     
     var quizRate: [Int]!
@@ -50,14 +51,28 @@ class QuizViewController: UIViewController {
         pagerView.backgroundColor = UIColor.clear
     }
     
+    func initView(with data: JSON) {
+        totalElements = data["totalElements"].int!
+        quizData = data["data"].array
+        pagerView.reloadData()
+        pagerView.isHidden = false
+        quizRate = [Int](repeating: 0, count: totalElements)
+        setSkillIcon(for: pagerView.currentIndex)
+        icon.isHidden = false
+    }
+    
     @IBAction func signOutCLick(_ sender: Any) {
         LoginUtils.logout(vc: self)
+    }
+    
+    func setSkillIcon(for index: Int) {
+        let url = URL(string: quizData[index]["iconUrl"].string!)
+        icon.kf.setImage(with: url)
     }
 }
 
 // MARK: Implement pager view data source
-
-extension QuizViewController: FSPagerViewDataSource {
+extension SkillRateViewController: FSPagerViewDataSource {
     
     public func numberOfItems(in pagerView: FSPagerView) -> Int {
         return totalElements
@@ -70,40 +85,45 @@ extension QuizViewController: FSPagerViewDataSource {
 }
 
 // MARK: Implement pager view delegate
-extension QuizViewController: FSPagerViewDelegate {
+extension SkillRateViewController: FSPagerViewDelegate {
     
     public func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
         let pagerCell = cell as! PagerViewCell
         pagerCell.setRate(quizRate[index])
+        if quizData != nil {
+            pagerCell.title.text = quizData[index]["name"].string
+            pagerCell.question.text = quizData[index]["description"].string
+
+        }
     }
     
     public func pagerView(_ pagerView: FSPagerView, didEndDisplaying cell: FSPagerViewCell, forItemAt index: Int) {
         let pagerCell = cell as! PagerViewCell
         quizRate[index] = pagerCell.rate
     }
+    
+    public func pagerViewDidEndDecelerating(_ pagerView: FSPagerView) {
+        setSkillIcon(for: pagerView.currentIndex)
+    }
+    
 }
 
 // MARK: Implement API comunication
-
-extension QuizViewController {
+extension SkillRateViewController {
+    
     func getQuizData() {
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer " + KeyChainUtils.getAccesToken(),
         ]
 
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
-            print(response)
+        Alamofire.request(Url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             print(response.response!.statusCode)
             switch response.result {
             case .success(let value):
-                let response = JSON(value)
-                print(response)
-                self.totalElements = response["totalElements"].int!
-                self.quizData = response["data"].array
-                self.pagerView.reloadData()
-                self.pagerView.isHidden = false
-                self.quizRate = [Int](repeating: 0, count: self.totalElements)
+                let responseData = JSON(value)
+                //print(response)
+                self.initView(with: responseData)
                 break
             case .failure(let error):
                 print(error)

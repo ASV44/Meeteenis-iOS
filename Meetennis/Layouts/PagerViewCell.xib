@@ -31,6 +31,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9O-gu-Ksf">
+                        <rect key="frame" x="45" y="82.666666666666686" width="210" height="135"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-oE-Iy8">
                         <rect key="frame" x="53" y="222" width="195" height="28"/>
                         <subviews>
@@ -54,23 +61,12 @@
                             <constraint firstAttribute="width" secondItem="Ndd-oE-Iy8" secondAttribute="height" multiplier="7:1" id="DhY-3B-gTM"/>
                         </constraints>
                     </stackView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9O-gu-Ksf">
-                        <rect key="frame" x="45" y="61.666666666666657" width="210" height="114"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="q9O-gu-Ksf" secondAttribute="height" multiplier="35:19" id="taE-RE-Wj9"/>
-                        </constraints>
-                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="sjC-DX-FIx" firstAttribute="top" secondItem="FmR-kr-24q" secondAttribute="top" id="6ZP-aV-BM2"/>
                 <constraint firstItem="sjC-DX-FIx" firstAttribute="leading" secondItem="FmR-kr-24q" secondAttribute="leading" id="6q6-ar-geu"/>
-                <constraint firstItem="q9O-gu-Ksf" firstAttribute="top" secondItem="dO7-d0-s9W" secondAttribute="bottom" multiplier="1.4" id="7YY-Br-YbE"/>
                 <constraint firstAttribute="trailing" secondItem="sjC-DX-FIx" secondAttribute="trailing" id="C6G-qs-T6P"/>
                 <constraint firstItem="Ndd-oE-Iy8" firstAttribute="width" secondItem="FmR-kr-24q" secondAttribute="width" multiplier="0.65" id="MdJ-hz-rPi"/>
                 <constraint firstItem="q9O-gu-Ksf" firstAttribute="centerX" secondItem="FmR-kr-24q" secondAttribute="centerX" id="MlD-tW-Ssa"/>
@@ -79,6 +75,8 @@
                 <constraint firstAttribute="bottom" secondItem="Ndd-oE-Iy8" secondAttribute="bottom" multiplier="1.2" id="cev-Pl-sTB"/>
                 <constraint firstItem="dO7-d0-s9W" firstAttribute="top" secondItem="FmR-kr-24q" secondAttribute="topMargin" constant="20" id="dnn-PK-BfU"/>
                 <constraint firstAttribute="bottom" secondItem="sjC-DX-FIx" secondAttribute="bottom" id="ej6-eB-ldN"/>
+                <constraint firstItem="q9O-gu-Ksf" firstAttribute="centerY" secondItem="FmR-kr-24q" secondAttribute="centerY" id="fFf-zO-Tku"/>
+                <constraint firstItem="q9O-gu-Ksf" firstAttribute="height" secondItem="FmR-kr-24q" secondAttribute="height" multiplier="0.45" id="hba-a5-DiL"/>
                 <constraint firstItem="dO7-d0-s9W" firstAttribute="width" secondItem="FmR-kr-24q" secondAttribute="width" multiplier="0.4" id="okr-KT-aAI"/>
                 <constraint firstItem="q9O-gu-Ksf" firstAttribute="width" secondItem="FmR-kr-24q" secondAttribute="width" multiplier="0.7" id="qrS-uY-o8S"/>
             </constraints>

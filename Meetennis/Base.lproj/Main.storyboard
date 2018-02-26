@@ -93,7 +93,7 @@
         <!--Data Source-->
         <scene sceneID="hdm-XL-Mo3">
             <objects>
-                <viewController storyboardIdentifier="QuizView" id="d8A-lt-ZHD" customClass="QuizViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizView" id="d8A-lt-ZHD" customClass="SkillRateViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jrs-Fi-sQx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,13 +109,13 @@
                                     <action selector="signOutCLick:" destination="d8A-lt-ZHD" eventType="touchUpInside" id="6jK-Me-uzq"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stroke_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-7n-tqU">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stroke_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-7n-tqU">
                                 <rect key="frame" x="160" y="135" width="94" height="102.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hCr-7n-tqU" secondAttribute="height" multiplier="74:81" id="sHt-9z-pPV"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-97-0Iy" customClass="FSPagerView" customModule="FSPagerView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-97-0Iy" customClass="FSPagerView" customModule="FSPagerView">
                                 <rect key="frame" x="0.0" y="388" width="414" height="293"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -143,6 +143,7 @@
                         <viewLayoutGuide key="safeArea" id="DI5-CZ-gbz"/>
                     </view>
                     <connections>
+                        <outlet property="icon" destination="hCr-7n-tqU" id="Zat-89-Mlo"/>
                         <outlet property="pagerView" destination="1kf-97-0Iy" id="K3B-xt-KCL"/>
                     </connections>
                 </viewController>

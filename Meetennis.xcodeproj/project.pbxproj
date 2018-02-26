@@ -12,7 +12,7 @@
 		BF4A26907A906029D34742F9 /* Pods_MeetennisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C0D9A3085DCEC1D3DD3D9 /* Pods_MeetennisUITests.framework */; };
 		D61CEDB22029B261000E1948 /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB12029B261000E1948 /* LoginUtils.swift */; };
 		D61CEDB42029B3FF000E1948 /* KeyChainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* KeyChainUtils.swift */; };
-		D64DD159202A4583004ACB79 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DD158202A4583004ACB79 /* QuizViewController.swift */; };
+		D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DD158202A4583004ACB79 /* SkillRateViewController.swift */; };
 		D66400342032DF6D008B87CB /* PagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66400332032DF6D008B87CB /* PagerViewCell.xib */; };
 		D66400362032E088008B87CB /* PagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66400352032E088008B87CB /* PagerViewCell.swift */; };
 		D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C565CE2027234B0040F4A7 /* AppDelegate.swift */; };
@@ -52,7 +52,7 @@
 		95D61A4E9732886075C8C74E /* Pods-Meetennis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetennis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meetennis/Pods-Meetennis.release.xcconfig"; sourceTree = "<group>"; };
 		D61CEDB12029B261000E1948 /* LoginUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
 		D61CEDB32029B3FF000E1948 /* KeyChainUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainUtils.swift; sourceTree = "<group>"; };
-		D64DD158202A4583004ACB79 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		D64DD158202A4583004ACB79 /* SkillRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillRateViewController.swift; sourceTree = "<group>"; };
 		D66400332032DF6D008B87CB /* PagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerViewCell.xib; sourceTree = "<group>"; };
 		D66400352032E088008B87CB /* PagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewCell.swift; sourceTree = "<group>"; };
 		D6C565CB2027234B0040F4A7 /* Meetennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meetennis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +166,7 @@
 			children = (
 				D6C565CE2027234B0040F4A7 /* AppDelegate.swift */,
 				D6C565D02027234B0040F4A7 /* LogInViewController.swift */,
-				D64DD158202A4583004ACB79 /* QuizViewController.swift */,
+				D64DD158202A4583004ACB79 /* SkillRateViewController.swift */,
 				D66400352032E088008B87CB /* PagerViewCell.swift */,
 				D61CEDB02029B03A000E1948 /* Utils */,
 				D6C565D22027234B0040F4A7 /* Main.storyboard */,
@@ -521,7 +521,7 @@
 			files = (
 				D66400362032E088008B87CB /* PagerViewCell.swift in Sources */,
 				D6C565D12027234B0040F4A7 /* LogInViewController.swift in Sources */,
-				D64DD159202A4583004ACB79 /* QuizViewController.swift in Sources */,
+				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
 				D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */,
 				D61CEDB22029B261000E1948 /* LoginUtils.swift in Sources */,
 				D61CEDB42029B3FF000E1948 /* KeyChainUtils.swift in Sources */,
