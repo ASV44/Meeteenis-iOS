@@ -19,6 +19,8 @@ class PagerViewCell:  FSPagerViewCell{
     @IBOutlet weak var question: UITextView!
     @IBOutlet var balls: [UIImageView]!
     
+    private var setRateListener: ((PagerViewCell) -> Void)!
+    
     public var rate: Int = 0
     
     override func awakeFromNib() {
@@ -36,11 +38,15 @@ class PagerViewCell:  FSPagerViewCell{
         }
     }
     
+    func addSetRateListener(_ listenr: @escaping (PagerViewCell) -> Void) {
+        setRateListener = listenr
+    }
+    
     @objc func ballSelect(listener: UITapGestureRecognizer) {
         let selectedBall = listener.view as! UIImageView
         let selectedRate = balls.index(of: selectedBall)! + 1
-
         setRate(selectedRate)
+        setRateListener(self)
     }
     
     func setRate(_ rate: Int) {

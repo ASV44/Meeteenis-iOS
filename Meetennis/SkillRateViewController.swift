@@ -18,6 +18,7 @@ class SkillRateViewController: UIViewController {
     
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var pagerView: FSPagerView!
+    @IBOutlet weak var submitButton: UIButton!
     
     let cellLayoutIdentifier = "PagerViewCell"
     let cellIdentifier = "pagerViewCell"
@@ -31,7 +32,6 @@ class SkillRateViewController: UIViewController {
         super.viewDidLoad()
         
         getQuizData()
-        quizRate = [Int](repeating: 0, count: self.totalElements)
         viewConfig(screenSize: UIScreen.main.bounds)
     }
     
@@ -69,6 +69,14 @@ class SkillRateViewController: UIViewController {
         let url = URL(string: quizData[index]["iconUrl"].string!)
         icon.kf.setImage(with: url)
     }
+    
+    func updateSkillRate(for cell: PagerViewCell) -> Void {
+        self.quizRate[pagerView.currentIndex] = cell.rate
+    }
+    
+    @IBAction func submitSkillRate(_ sender: Any) {
+        postSkillsRate()
+    }
 }
 
 // MARK: Implement pager view data source
@@ -79,7 +87,8 @@ extension SkillRateViewController: FSPagerViewDataSource {
     }
     
     public func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, at: index)
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, at: index) as! PagerViewCell
+        cell.addSetRateListener(updateSkillRate)
         return cell
     }
 }
@@ -90,40 +99,70 @@ extension SkillRateViewController: FSPagerViewDelegate {
     public func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
         let pagerCell = cell as! PagerViewCell
         pagerCell.setRate(quizRate[index])
-        if quizData != nil {
-            pagerCell.title.text = quizData[index]["name"].string
-            pagerCell.question.text = quizData[index]["description"].string
+        pagerCell.title.text = quizData[index]["name"].string
+        pagerCell.question.text = quizData[index]["description"].string
 
-        }
-    }
-    
-    public func pagerView(_ pagerView: FSPagerView, didEndDisplaying cell: FSPagerViewCell, forItemAt index: Int) {
-        let pagerCell = cell as! PagerViewCell
-        quizRate[index] = pagerCell.rate
     }
     
     public func pagerViewDidEndDecelerating(_ pagerView: FSPagerView) {
         setSkillIcon(for: pagerView.currentIndex)
+        if submitButton.isHidden == true &&
+            pagerView.currentIndex == totalElements - 1 {
+            submitButton.isHidden = false
+        }
     }
-    
 }
 
 // MARK: Implement API comunication
 extension SkillRateViewController {
     
+    func getRequestHeader() -> HTTPHeaders {
+        return ["Authorization": "Bearer " + KeyChainUtils.getAccesToken()]
+    }
+    
     func getQuizData() {
-        
-        let headers: HTTPHeaders = [
-            "Authorization": "Bearer " + KeyChainUtils.getAccesToken(),
-        ]
-
-        Alamofire.request(Url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+        Alamofire.request(Url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: getRequestHeader()).responseJSON { response in
             print(response.response!.statusCode)
             switch response.result {
             case .success(let value):
                 let responseData = JSON(value)
                 //print(response)
                 self.initView(with: responseData)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
+    
+    func postSkillsRate() {
+        var request = URLRequest(url: try! Url.asURL())
+        
+        request.httpMethod = "POST"
+        request.setValue("Bearer " + KeyChainUtils.getAccesToken(),
+                         forHTTPHeaderField: "Authorization")
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        var parameters: [Parameters] = [Parameters]()
+        for i in 0..<quizRate.count {
+            let skillRate: Parameters = [
+                "skill": quizData[i]["id"],
+                "value": quizRate[i]
+            ]
+            parameters.append(skillRate)
+        }
+        
+        request.httpBody = try! JSONSerialization.data(withJSONObject: parameters)
+
+        Alamofire.request(request).responseJSON { response in
+            print(response.response!.statusCode)
+            switch response.result {
+            case .success(let value):
+                //let responseData = JSON(value)
+                print(response)
+                print(value)
                 break
             case .failure(let error):
                 print(error)

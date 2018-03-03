@@ -31,7 +31,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9O-gu-Ksf">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9O-gu-Ksf">
                         <rect key="frame" x="45" y="82.666666666666686" width="210" height="135"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
@@ -39,7 +39,7 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-oE-Iy8">
-                        <rect key="frame" x="53" y="222" width="195" height="28"/>
+                        <rect key="frame" x="53" y="233" width="195" height="28"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="inactive_ball" translatesAutoresizingMaskIntoConstraints="NO" id="8EC-kp-wnV">
                                 <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="28"/>
@@ -72,12 +72,12 @@
                 <constraint firstItem="q9O-gu-Ksf" firstAttribute="centerX" secondItem="FmR-kr-24q" secondAttribute="centerX" id="MlD-tW-Ssa"/>
                 <constraint firstItem="dO7-d0-s9W" firstAttribute="centerX" secondItem="FmR-kr-24q" secondAttribute="centerX" id="ROu-vQ-x0p"/>
                 <constraint firstItem="Ndd-oE-Iy8" firstAttribute="centerX" secondItem="liq-Gv-hTm" secondAttribute="centerX" id="YTK-16-D8S"/>
-                <constraint firstAttribute="bottom" secondItem="Ndd-oE-Iy8" secondAttribute="bottom" multiplier="1.2" id="cev-Pl-sTB"/>
+                <constraint firstAttribute="bottom" secondItem="Ndd-oE-Iy8" secondAttribute="bottom" multiplier="1.15" id="cev-Pl-sTB"/>
                 <constraint firstItem="dO7-d0-s9W" firstAttribute="top" secondItem="FmR-kr-24q" secondAttribute="topMargin" constant="20" id="dnn-PK-BfU"/>
                 <constraint firstAttribute="bottom" secondItem="sjC-DX-FIx" secondAttribute="bottom" id="ej6-eB-ldN"/>
                 <constraint firstItem="q9O-gu-Ksf" firstAttribute="centerY" secondItem="FmR-kr-24q" secondAttribute="centerY" id="fFf-zO-Tku"/>
                 <constraint firstItem="q9O-gu-Ksf" firstAttribute="height" secondItem="FmR-kr-24q" secondAttribute="height" multiplier="0.45" id="hba-a5-DiL"/>
-                <constraint firstItem="dO7-d0-s9W" firstAttribute="width" secondItem="FmR-kr-24q" secondAttribute="width" multiplier="0.4" id="okr-KT-aAI"/>
+                <constraint firstItem="dO7-d0-s9W" firstAttribute="width" relation="greaterThanOrEqual" secondItem="FmR-kr-24q" secondAttribute="width" multiplier="0.4" id="okr-KT-aAI"/>
                 <constraint firstItem="q9O-gu-Ksf" firstAttribute="width" secondItem="FmR-kr-24q" secondAttribute="width" multiplier="0.7" id="qrS-uY-o8S"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="liq-Gv-hTm"/>
