@@ -31,7 +31,8 @@ class SkillRateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getQuizData()
+        //getQuizData()
+        postSkillsRate()
         viewConfig(screenSize: UIScreen.main.bounds)
     }
     
@@ -121,6 +122,7 @@ extension SkillRateViewController {
     }
     
     func getQuizData() {
+        print("API Key",KeyChainUtils.getAccesToken())
         Alamofire.request(Url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: getRequestHeader()).responseJSON { response in
             print(response.response!.statusCode)
             switch response.result {
@@ -146,14 +148,22 @@ extension SkillRateViewController {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         var parameters: [Parameters] = [Parameters]()
-        for i in 0..<quizRate.count {
+//        for i in 0..<quizRate.count {
+//            let skillRate: Parameters = [
+//                "skill": quizData[i]["id"],
+//                "value": quizRate[i]
+//            ]
+//            parameters.append(skillRate)
+//        }
+        
+        for i in 0..<5 {
             let skillRate: Parameters = [
-                "skill": quizData[i]["id"],
-                "value": quizRate[i]
+                "skill": i,
+                "value": (i + 1) * 20
             ]
             parameters.append(skillRate)
         }
-        
+        print(parameters)
         request.httpBody = try! JSONSerialization.data(withJSONObject: parameters)
 
         Alamofire.request(request).responseJSON { response in

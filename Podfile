@@ -16,6 +16,7 @@ target 'Meetennis' do
   pod 'FSPagerView'
   pod 'SwiftyJSON'
   pod 'Kingfisher', '~> 4.0'
+  pod 'ObjectMapper', '~> 3.1'
 
   target 'MeetennisTests' do
     inherit! :search_paths

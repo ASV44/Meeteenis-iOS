@@ -17,8 +17,12 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
     
     private let URL = "https://meetennis-api-test.azurewebsites.net/api/authentication"
     
+    var presenter: LoginPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setPresenter()
         
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
@@ -26,6 +30,10 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func setPresenter() {
+        presenter = LoginPresenter(router: Router(viewController: self), interactor: LoginInteractor(gateWay: JWTokenRepository(apiService: APICommunication())))
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -56,7 +64,8 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
                 print(error)
                 break
             case .success( _, _, let accessToken):
-                self.sendLoginRequest(accessToken: accessToken.authenticationToken, provider: "facebook")
+                //self.sendLoginRequest(accessToken: accessToken.authenticationToken, provider: "facebook")
+                presenter.login(token: accessToken.authenticationToken, loginProvider: "facebook")
                 break
         }
     }
@@ -68,6 +77,8 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
     }
     
     func sendLoginRequest(accessToken: String, provider: String) {
+        print(accessToken)
+        print(provider)
         let parameters: Parameters = [
             "data": [
                 "token" : accessToken
@@ -76,6 +87,7 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         ]
         
         Alamofire.request(URL, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            print(response.response?.statusCode)
             switch response.result {
             case .success(let value):
                 let response = JSON(value)
