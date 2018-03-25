@@ -12,9 +12,9 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class SkillRateViewController: UIViewController {
+class SkillRateViewController: UIViewController, SkillRateView {
     
-    private let Url = "https://meetennis-api-test.azurewebsites.net/api/skill"
+    var presenter: SkillRatePresenter!
     
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var pagerView: FSPagerView!
@@ -30,14 +30,19 @@ class SkillRateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //getQuizData()
+        setPresenter()
+        presenter.getQuizData()
         viewConfig(screenSize: UIScreen.main.bounds)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setPresenter() {
+        presenter = SkillRatePresenter(router: Router(viewController: self), interactor: SkillRateInteractor(gateWay: SkillDataRepository(apiService: APICommunication())))
+        presenter.view = self
     }
     
     func viewConfig(screenSize: CGRect) {
@@ -106,6 +111,14 @@ extension SkillRateViewController: FSPagerViewDelegate {
             pagerView.currentIndex == totalElements - 1 {
             submitButton.isHidden = false
         }
+    }
+    
+    func onError(error: Errors.Error) {
+        let alert = UIAlertController(title: nil, message: error.description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            alert!.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

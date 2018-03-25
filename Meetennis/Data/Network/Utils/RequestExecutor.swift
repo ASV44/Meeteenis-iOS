@@ -12,7 +12,7 @@ import ObjectMapper
 
 class RequestExecutor {
     
-    func execute<T: Mappable>(to url: String, with parameters: Parameters, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
+    func execute<T: Mappable>(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
         let request: Observable<T> = getRequest(to: url, with: parameters, method: method, headers: headers)
         return execute(request)
     }
@@ -27,7 +27,7 @@ class RequestExecutor {
         }
     }
     
-    func getRequest<T: Mappable>(to url: String, with parameters: Parameters, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
+    func getRequest<T: Mappable>(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
         return Observable.create { observer in
             let request = Alamofire.request(url, method: method, parameters: parameters,encoding: JSONEncoding.default, headers: headers)
                 .validate().responseJSON { response in

@@ -19,12 +19,12 @@ class SplashPresenter: BasePresenter<SplashView> {
     }
     
     func logIn() {
-        let observable = interactor.getJWToken()
-        execute(observable, onLogin, onError)
+        execute(interactor.getJWToken(), onLogin, onError)
     }
     
     func onLogin() {
-        router.showAuthenticatedVC(animated: false)
+        //router.showAuthenticatedVC(animated: false)
+        router.showSkillRateVC()
     }
     
     func onError(error: Error) {

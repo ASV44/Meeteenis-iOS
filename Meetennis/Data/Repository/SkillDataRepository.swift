@@ -6,4 +6,20 @@
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+class SkillDataRepository: SkillRateGateway {
+    
+    private let apiService: APIService
+    
+    init(apiService: APIService) {
+        self.apiService = apiService
+    }
+    
+    func getQuizData() -> Observable<[Skill]> {
+        return apiService.getQuizData()
+            .map { it in
+                it.toSkillList()
+            }
+    }
+}

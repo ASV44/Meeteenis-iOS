@@ -6,4 +6,8 @@
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+protocol SkillRateGateway {
+    func getQuizData() -> Observable<[Skill]>
+}

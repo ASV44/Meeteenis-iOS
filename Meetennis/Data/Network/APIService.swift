@@ -11,6 +11,6 @@ import RxSwift
 import ObjectMapper
 
 protocol APIService {
-    //func request<T: Mappable>(to url: String, with parameters: Parameters, method: HTTPMethod,  headers: HTTPHeaders?) -> Observable<T>
     func getJWToken(requestParameters: Parameters) -> Observable<JWTokenResponseAPI>
+    func getQuizData() -> Observable<SkillDataResponseAPI>
 }

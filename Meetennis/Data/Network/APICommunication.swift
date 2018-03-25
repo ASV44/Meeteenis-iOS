@@ -23,6 +23,10 @@ class APICommunication: APIService {
         return requestExecutor.execute(to: Url.authentication, with: requestParameters, method: .post)
     }
     
+    func getQuizData() -> Observable<SkillDataResponseAPI> {
+        return requestExecutor.execute(to: Url.skills, with: nil, method: HTTPMethod.get, headers: getRequestHeader())
+    }
+    
     func getRequestHeader() -> HTTPHeaders {
         return ["Authorization": "Bearer " + keyChain.getAccesToken()]
     }

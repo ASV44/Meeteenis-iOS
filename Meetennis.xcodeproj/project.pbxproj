@@ -20,12 +20,16 @@
 		D66400362032E088008B87CB /* PagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66400352032E088008B87CB /* PagerViewCell.swift */; };
 		D69AC4D2205ECE8F00107703 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AC4D1205ECE8F00107703 /* BasePresenter.swift */; };
 		D69AC4D4205ECECF00107703 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AC4D3205ECECF00107703 /* BaseView.swift */; };
+		D6ABFE0F206810FB00500F41 /* SkillDataResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFE0E206810FB00500F41 /* SkillDataResponseAPI.swift */; };
+		D6ABFE11206812EC00500F41 /* SkillResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFE10206812EC00500F41 /* SkillResponseAPI.swift */; };
+		D6ABFE13206813D100500F41 /* SkillDataMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFE12206813D100500F41 /* SkillDataMappers.swift */; };
+		D6ABFE15206819B400500F41 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFE14206819B400500F41 /* Skill.swift */; };
 		D6ADAE5E20669231000188D3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE5D20669231000188D3 /* SplashViewController.swift */; };
 		D6ADAE60206696D3000188D3 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE5F206696D3000188D3 /* SplashView.swift */; };
 		D6ADAE62206696F2000188D3 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE61206696F2000188D3 /* SplashPresenter.swift */; };
 		D6ADAE64206700FB000188D3 /* AuthenticatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE63206700FB000188D3 /* AuthenticatedViewController.swift */; };
 		D6ADAE672067299A000188D3 /* HttpException.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE662067299A000188D3 /* HttpException.swift */; };
-		D6ADAE6A20673C14000188D3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE6920673C14000188D3 /* Error.swift */; };
+		D6ADAE6A20673C14000188D3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE6920673C14000188D3 /* Errors.swift */; };
 		D6ADAE6C20674619000188D3 /* NetworkConnectionException.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE6B20674619000188D3 /* NetworkConnectionException.swift */; };
 		D6ADAE6F20674982000188D3 /* Reachability..swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE6E20674982000188D3 /* Reachability..swift */; };
 		D6ADAE7120674B7C000188D3 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE7020674B7C000188D3 /* RequestExecutor.swift */; };
@@ -52,6 +56,10 @@
 		D6D04E99204C304200A83178 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D04E98204C304200A83178 /* Url.swift */; };
 		D6D04E9C204C41A200A83178 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D04E9B204C41A200A83178 /* Router.swift */; };
 		D6DE69452054B5FF002EC053 /* APICommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DE69442054B5FF002EC053 /* APICommunication.swift */; };
+		D6E4C60120685653007471B1 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60020685653007471B1 /* LoginProvider.swift */; };
+		D6E4C603206856D9007471B1 /* FacebookLoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C602206856D9007471B1 /* FacebookLoginProvider.swift */; };
+		D6E4C60520685739007471B1 /* LoginProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60420685739007471B1 /* LoginProviders.swift */; };
+		D6E4C60720685F0F007471B1 /* GoogleLoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60620685F0F007471B1 /* GoogleLoginProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,12 +98,16 @@
 		D66400352032E088008B87CB /* PagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewCell.swift; sourceTree = "<group>"; };
 		D69AC4D1205ECE8F00107703 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		D69AC4D3205ECECF00107703 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D6ABFE0E206810FB00500F41 /* SkillDataResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDataResponseAPI.swift; sourceTree = "<group>"; };
+		D6ABFE10206812EC00500F41 /* SkillResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillResponseAPI.swift; sourceTree = "<group>"; };
+		D6ABFE12206813D100500F41 /* SkillDataMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDataMappers.swift; sourceTree = "<group>"; };
+		D6ABFE14206819B400500F41 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		D6ADAE5D20669231000188D3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D6ADAE5F206696D3000188D3 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D6ADAE61206696F2000188D3 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		D6ADAE63206700FB000188D3 /* AuthenticatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedViewController.swift; sourceTree = "<group>"; };
 		D6ADAE662067299A000188D3 /* HttpException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpException.swift; sourceTree = "<group>"; };
-		D6ADAE6920673C14000188D3 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		D6ADAE6920673C14000188D3 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		D6ADAE6B20674619000188D3 /* NetworkConnectionException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionException.swift; sourceTree = "<group>"; };
 		D6ADAE6E20674982000188D3 /* Reachability..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability..swift; sourceTree = "<group>"; };
 		D6ADAE7020674B7C000188D3 /* RequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
@@ -128,6 +140,10 @@
 		D6D04E98204C304200A83178 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		D6D04E9B204C41A200A83178 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D6DE69442054B5FF002EC053 /* APICommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICommunication.swift; sourceTree = "<group>"; };
+		D6E4C60020685653007471B1 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		D6E4C602206856D9007471B1 /* FacebookLoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginProvider.swift; sourceTree = "<group>"; };
+		D6E4C60420685739007471B1 /* LoginProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProviders.swift; sourceTree = "<group>"; };
+		D6E4C60620685F0F007471B1 /* GoogleLoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginProvider.swift; sourceTree = "<group>"; };
 		DF52EF30EA2FAF6F53613FAC /* Pods_MeetennisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetennisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -194,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				D642EEA32055B59E001514ED /* JWTokenMapper.swift */,
+				D6ABFE12206813D100500F41 /* SkillDataMappers.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -220,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				D6CACC95205747AF00D704D9 /* JWTokenResponseAPI.swift */,
+				D6ABFE0E206810FB00500F41 /* SkillDataResponseAPI.swift */,
+				D6ABFE10206812EC00500F41 /* SkillResponseAPI.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -236,7 +255,7 @@
 		D6ADAE6820673C08000188D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D6ADAE6920673C14000188D3 /* Error.swift */,
+				D6ADAE6920673C14000188D3 /* Errors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +346,7 @@
 		D6C789AB204A8FBC00652B94 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D6E4C5FE2068562C007471B1 /* Controllers */,
 				D6ADAE6820673C08000188D3 /* Models */,
 				D6D04E9A204C419100A83178 /* Navigation */,
 				D6C789B1204A91CE00652B94 /* Presenters */,
@@ -359,10 +379,10 @@
 		D6C789AF204A900400652B94 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D6D04E7B204C107A00A83178 /* LoginView.swift */,
-				D6D04E7D204C10A100A83178 /* SkillRateView.swift */,
 				D69AC4D3205ECECF00107703 /* BaseView.swift */,
 				D6ADAE5F206696D3000188D3 /* SplashView.swift */,
+				D6D04E7B204C107A00A83178 /* LoginView.swift */,
+				D6D04E7D204C10A100A83178 /* SkillRateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -379,10 +399,10 @@
 		D6C789B1204A91CE00652B94 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				D69AC4D1205ECE8F00107703 /* BasePresenter.swift */,
 				D6ADAE61206696F2000188D3 /* SplashPresenter.swift */,
 				D6D04E7F204C110700A83178 /* LoginPresenter.swift */,
 				D6D04E81204C111700A83178 /* SkillRatePresenter.swift */,
-				D69AC4D1205ECE8F00107703 /* BasePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -402,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				D6CACC982057581100D704D9 /* JWToken.swift */,
+				D6ABFE14206819B400500F41 /* Skill.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -458,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				D6D04E98204C304200A83178 /* Url.swift */,
+				D6E4C60420685739007471B1 /* LoginProviders.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -468,6 +490,24 @@
 				D6D04E9B204C41A200A83178 /* Router.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D6E4C5FE2068562C007471B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4C5FF20685634007471B1 /* LoginProviders */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D6E4C5FF20685634007471B1 /* LoginProviders */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4C60020685653007471B1 /* LoginProvider.swift */,
+				D6E4C602206856D9007471B1 /* FacebookLoginProvider.swift */,
+				D6E4C60620685F0F007471B1 /* GoogleLoginProvider.swift */,
+			);
+			path = LoginProviders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -804,6 +844,9 @@
 				D6D04E86204C150100A83178 /* JWTokenRepository.swift in Sources */,
 				D6ADAE6C20674619000188D3 /* NetworkConnectionException.swift in Sources */,
 				D6CACC992057581100D704D9 /* JWToken.swift in Sources */,
+				D6E4C60720685F0F007471B1 /* GoogleLoginProvider.swift in Sources */,
+				D6ABFE11206812EC00500F41 /* SkillResponseAPI.swift in Sources */,
+				D6E4C603206856D9007471B1 /* FacebookLoginProvider.swift in Sources */,
 				D66400362032E088008B87CB /* PagerViewCell.swift in Sources */,
 				D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */,
 				D6D04E7C204C107A00A83178 /* LoginView.swift in Sources */,
@@ -815,26 +858,31 @@
 				D6ADAE62206696F2000188D3 /* SplashPresenter.swift in Sources */,
 				D6D04E8C204C159E00A83178 /* SkillRateGateway.swift in Sources */,
 				D6C565D12027234B0040F4A7 /* LogInViewController.swift in Sources */,
+				D6ABFE0F206810FB00500F41 /* SkillDataResponseAPI.swift in Sources */,
 				D6D04E80204C110700A83178 /* LoginPresenter.swift in Sources */,
 				D6D04E82204C111700A83178 /* SkillRatePresenter.swift in Sources */,
 				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
 				D6ADAE64206700FB000188D3 /* AuthenticatedViewController.swift in Sources */,
 				D6CACC96205747AF00D704D9 /* JWTokenResponseAPI.swift in Sources */,
+				D6ABFE13206813D100500F41 /* SkillDataMappers.swift in Sources */,
 				D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */,
 				D6D04E99204C304200A83178 /* Url.swift in Sources */,
 				D6ADAE5E20669231000188D3 /* SplashViewController.swift in Sources */,
 				D6DE69452054B5FF002EC053 /* APICommunication.swift in Sources */,
 				D6D04E93204C277500A83178 /* APIService.swift in Sources */,
 				D6D04E7E204C10A100A83178 /* SkillRateView.swift in Sources */,
-				D6ADAE6A20673C14000188D3 /* Error.swift in Sources */,
+				D6ADAE6A20673C14000188D3 /* Errors.swift in Sources */,
 				D69AC4D2205ECE8F00107703 /* BasePresenter.swift in Sources */,
 				D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */,
 				D6ADAE6F20674982000188D3 /* Reachability..swift in Sources */,
 				D6D04E91204C188100A83178 /* SkillDataRepository.swift in Sources */,
 				D6ADAE60206696D3000188D3 /* SplashView.swift in Sources */,
 				D6ADAE672067299A000188D3 /* HttpException.swift in Sources */,
+				D6E4C60120685653007471B1 /* LoginProvider.swift in Sources */,
+				D6ABFE15206819B400500F41 /* Skill.swift in Sources */,
 				D61CEDB22029B261000E1948 /* LoginUtils.swift in Sources */,
 				D61CEDB42029B3FF000E1948 /* KeyChain.swift in Sources */,
+				D6E4C60520685739007471B1 /* LoginProviders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

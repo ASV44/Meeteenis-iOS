@@ -6,4 +6,17 @@
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+class SkillRateInteractor {
+    
+    private let gateWay: SkillRateGateway
+    
+    init(gateWay: SkillRateGateway) {
+        self.gateWay = gateWay
+    }
+    
+    func getQuizData() -> Observable<[Skill]>{
+        return gateWay.getQuizData()
+    }
+}

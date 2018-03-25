@@ -8,5 +8,5 @@
 
 
 protocol SkillRateView {
-    
+    func onError(error: Errors.Error)
 }
