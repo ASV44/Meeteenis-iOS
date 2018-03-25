@@ -6,6 +6,11 @@
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
+import Alamofire
+import RxSwift
+import ObjectMapper
+
 protocol APIService {
-    func getJWToken(requestParameters: [String: Any])
+    //func request<T: Mappable>(to url: String, with parameters: Parameters, method: HTTPMethod,  headers: HTTPHeaders?) -> Observable<T>
+    func getJWToken(requestParameters: Parameters) -> Observable<JWTokenResponseAPI>
 }

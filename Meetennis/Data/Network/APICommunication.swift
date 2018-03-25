@@ -7,25 +7,24 @@
 //
 
 import Alamofire
+import RxSwift
 
 class APICommunication: APIService {
     
-    func getJWToken(requestParameters: Parameters) {
-        print("***************",requestParameters)
-        Alamofire.request(Url.authentication, method: .post, parameters: requestParameters, encoding: JSONEncoding.default).responseJSON { response in
-            print(response.response?.statusCode)
-            switch response.result {
-            case .success(let value):
-//                let response = JSON(value)
-//                let token = response["token"].string!
-//                LoginUtils.login(with: provider, access: token, self)
-                break
-            case .failure(let error):
-                print(error)
-                break
-            }
-        }
+    private let requestExecutor: RequestExecutor
+    private let keyChain: KeyChain
+    
+    init() {
+        requestExecutor = RequestExecutor()
+        keyChain = KeyChain()
     }
     
+    func getJWToken(requestParameters: Parameters) -> Observable<JWTokenResponseAPI> {
+        return requestExecutor.execute(to: Url.authentication, with: requestParameters, method: .post)
+    }
+    
+    func getRequestHeader() -> HTTPHeaders {
+        return ["Authorization": "Bearer " + keyChain.getAccesToken()]
+    }
     
 }

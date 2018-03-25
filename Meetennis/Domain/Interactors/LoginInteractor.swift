@@ -6,6 +6,7 @@
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
+import RxSwift
 
 class LoginInteractor {
     
@@ -15,7 +16,15 @@ class LoginInteractor {
         self.gateWay = gateWay
     }
     
-    func getJWToken(token: String, loginProvider: String) {
-        gateWay.getJWToken(accessToken: token, provider: loginProvider)
+    func getJWToken(token: String, loginProvider: String) ->  Observable<Void> {
+        return gateWay.getJWToken(accessToken: token, provider: loginProvider)
+    }
+    
+    func getJWToken() -> Observable<Void> {
+        return gateWay.getJWToken()
+    }
+    
+    func isJWTokenPresent(for provider: String) -> Bool {
+        return gateWay.isJWTokenPresent(for: provider)
     }
 }

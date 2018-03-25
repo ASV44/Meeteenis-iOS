@@ -20,11 +20,16 @@ class Router {
     
     func showLoginVC() {
         let loginVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginView")
-        viewController.present(loginVC, animated: true, completion: nil)
+        viewController.present(loginVC, animated: false, completion: nil)
     }
     
     func showSkillRateVC() {
         let skillRateVC = mainStoryboard.instantiateViewController(withIdentifier: "QuizView")
         viewController.present(skillRateVC, animated: true, completion: nil)
+    }
+    
+    func showAuthenticatedVC(animated: Bool) {
+        let skillRateVC = mainStoryboard.instantiateViewController(withIdentifier: "AuthenticatedVC")
+        viewController.present(skillRateVC, animated: animated, completion: nil)
     }
 }

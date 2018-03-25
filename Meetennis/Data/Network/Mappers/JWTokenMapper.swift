@@ -20,3 +20,13 @@ extension ProviderDataRequestAPI{
         token <- map["token"]
     }
 }
+
+extension JWTokenResponseAPI {
+    func mapping(map: Map) {
+        token <- map["token"]
+    }
+    
+    func toJWToken() -> JWToken {
+        return JWToken(token: token)
+    }
+}

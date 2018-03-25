@@ -17,6 +17,8 @@ target 'Meetennis' do
   pod 'SwiftyJSON'
   pod 'Kingfisher', '~> 4.0'
   pod 'ObjectMapper', '~> 3.1'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
 
   target 'MeetennisTests' do
     inherit! :search_paths
