@@ -19,7 +19,7 @@ class PagerViewCell:  FSPagerViewCell{
     @IBOutlet weak var question: UITextView!
     @IBOutlet var balls: [UIImageView]!
     
-    private var setRateListener: ((PagerViewCell) -> Void)!
+    private var setRateListener: ((PagerViewCell) -> ())!
     
     public var rate: Int = 0
     

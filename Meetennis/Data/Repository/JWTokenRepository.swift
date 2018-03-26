@@ -20,7 +20,7 @@ class JWTokenRepository: LoginGateway {
     
     func getJWToken(accessToken: String, provider: String) -> Observable<Void>  {
         let jwtokenRequestApi = JWTokenRequestAPI(data: ProviderDataRequestAPI(token: accessToken), provider: provider)
-        return apiService.getJWToken(requestParameters: jwtokenRequestApi.toJSON())
+        return apiService.getJWToken(request: jwtokenRequestApi)
             .map { it in
                 it.toJWToken()
             }

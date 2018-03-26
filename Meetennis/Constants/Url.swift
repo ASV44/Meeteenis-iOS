@@ -28,4 +28,12 @@ struct Url {
     static var skills: String {
         return BaseURL  + "/skill"
     }
+    
+    static var postSkills: String {
+        return BaseURL + "/skillrate/"
+    }
+    
+    static var userMe: String {
+        return BaseURL + "/user/me"
+    }
 }

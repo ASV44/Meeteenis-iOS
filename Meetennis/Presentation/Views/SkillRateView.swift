@@ -8,5 +8,6 @@
 
 
 protocol SkillRateView {
+    func updateSkillsList(with skills: [SkillItem])
     func onError(error: Errors.Error)
 }

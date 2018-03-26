@@ -21,10 +21,20 @@ class SkillRatePresenter: BasePresenter<SkillRateView> {
         execute(interactor.getQuizData(), onSkillsLoaded, onError)
     }
     
+    func submitSkillsResults(skills: [SkillItem]) {
+        let observable = interactor.submitSkillsRates(skillRates: skills.map { $0.toSkillRate() })
+        execute(observable, onSubmitSuccess, onError)
+    }
+    
     func onSkillsLoaded(skills: [Skill]) {
-        for skill in skills {
-            print(skill)
+        if skills.isEmpty {
+            router.showAuthenticatedVC(animated: true)
         }
+        view.updateSkillsList(with: skills.map { $0.toSkillItem() })
+    }
+    
+    func onSubmitSuccess() {
+        router.showAuthenticatedVC(animated: true)
     }
     
     func onError(error: Error) {

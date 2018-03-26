@@ -10,7 +10,6 @@
 		7593B312B709AA369A4E853D /* Pods_MeetennisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF52EF30EA2FAF6F53613FAC /* Pods_MeetennisTests.framework */; };
 		7A3543E1472BAD1E3D0CB498 /* Pods_Meetennis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809C34335E2401C5AA6A843 /* Pods_Meetennis.framework */; };
 		BF4A26907A906029D34742F9 /* Pods_MeetennisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C0D9A3085DCEC1D3DD3D9 /* Pods_MeetennisUITests.framework */; };
-		D61CEDB22029B261000E1948 /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB12029B261000E1948 /* LoginUtils.swift */; };
 		D61CEDB42029B3FF000E1948 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* KeyChain.swift */; };
 		D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642EEA32055B59E001514ED /* JWTokenMapper.swift */; };
 		D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */; };
@@ -60,6 +59,19 @@
 		D6E4C603206856D9007471B1 /* FacebookLoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C602206856D9007471B1 /* FacebookLoginProvider.swift */; };
 		D6E4C60520685739007471B1 /* LoginProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60420685739007471B1 /* LoginProviders.swift */; };
 		D6E4C60720685F0F007471B1 /* GoogleLoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60620685F0F007471B1 /* GoogleLoginProvider.swift */; };
+		D6E4C6092068677A007471B1 /* SkillItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C6082068677A007471B1 /* SkillItem.swift */; };
+		D6E4C60C20686853007471B1 /* SkillItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60B20686853007471B1 /* SkillItemMapper.swift */; };
+		D6E4C61120687179007471B1 /* UserMeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61020687179007471B1 /* UserMeGateway.swift */; };
+		D6E4C613206871CD007471B1 /* UserMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C612206871CD007471B1 /* UserMe.swift */; };
+		D6E4C61520687244007471B1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61420687244007471B1 /* Location.swift */; };
+		D6E4C61720687306007471B1 /* UserMeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61620687306007471B1 /* UserMeRepository.swift */; };
+		D6E4C61920687599007471B1 /* UserMeResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61820687599007471B1 /* UserMeResponseAPI.swift */; };
+		D6E4C61B2068761B007471B1 /* LocationResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61A2068761B007471B1 /* LocationResponseAPI.swift */; };
+		D6E4C61D20687851007471B1 /* UsersMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61C20687851007471B1 /* UsersMappers.swift */; };
+		D6E4C61F20687A98007471B1 /* CourtsMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61E20687A98007471B1 /* CourtsMappers.swift */; };
+		D6E4C62120687ECF007471B1 /* SkillRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C62020687ECF007471B1 /* SkillRate.swift */; };
+		D6E4C62320688378007471B1 /* SkillRateRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C62220688378007471B1 /* SkillRateRequestAPI.swift */; };
+		D6E4C625206884B6007471B1 /* SkillRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C624206884B6007471B1 /* SkillRequestAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +100,6 @@
 		813850AE97A2B2FF89AC2708 /* Pods-Meetennis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetennis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meetennis/Pods-Meetennis.debug.xcconfig"; sourceTree = "<group>"; };
 		953FBE31B370DEA72059D40A /* Pods-MeetennisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetennisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetennisTests/Pods-MeetennisTests.release.xcconfig"; sourceTree = "<group>"; };
 		95D61A4E9732886075C8C74E /* Pods-Meetennis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetennis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meetennis/Pods-Meetennis.release.xcconfig"; sourceTree = "<group>"; };
-		D61CEDB12029B261000E1948 /* LoginUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
 		D61CEDB32029B3FF000E1948 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		D642EEA32055B59E001514ED /* JWTokenMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenMapper.swift; sourceTree = "<group>"; };
 		D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenRequestAPI.swift; sourceTree = "<group>"; };
@@ -144,6 +155,19 @@
 		D6E4C602206856D9007471B1 /* FacebookLoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginProvider.swift; sourceTree = "<group>"; };
 		D6E4C60420685739007471B1 /* LoginProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProviders.swift; sourceTree = "<group>"; };
 		D6E4C60620685F0F007471B1 /* GoogleLoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginProvider.swift; sourceTree = "<group>"; };
+		D6E4C6082068677A007471B1 /* SkillItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillItem.swift; sourceTree = "<group>"; };
+		D6E4C60B20686853007471B1 /* SkillItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillItemMapper.swift; sourceTree = "<group>"; };
+		D6E4C61020687179007471B1 /* UserMeGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeGateway.swift; sourceTree = "<group>"; };
+		D6E4C612206871CD007471B1 /* UserMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMe.swift; sourceTree = "<group>"; };
+		D6E4C61420687244007471B1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D6E4C61620687306007471B1 /* UserMeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeRepository.swift; sourceTree = "<group>"; };
+		D6E4C61820687599007471B1 /* UserMeResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeResponseAPI.swift; sourceTree = "<group>"; };
+		D6E4C61A2068761B007471B1 /* LocationResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponseAPI.swift; sourceTree = "<group>"; };
+		D6E4C61C20687851007471B1 /* UsersMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMappers.swift; sourceTree = "<group>"; };
+		D6E4C61E20687A98007471B1 /* CourtsMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtsMappers.swift; sourceTree = "<group>"; };
+		D6E4C62020687ECF007471B1 /* SkillRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillRate.swift; sourceTree = "<group>"; };
+		D6E4C62220688378007471B1 /* SkillRateRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillRateRequestAPI.swift; sourceTree = "<group>"; };
+		D6E4C624206884B6007471B1 /* SkillRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillRequestAPI.swift; sourceTree = "<group>"; };
 		DF52EF30EA2FAF6F53613FAC /* Pods_MeetennisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetennisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,19 +222,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D61CEDB02029B03A000E1948 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				D61CEDB12029B261000E1948 /* LoginUtils.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		D642EEA22055B560001514ED /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
 				D642EEA32055B59E001514ED /* JWTokenMapper.swift */,
 				D6ABFE12206813D100500F41 /* SkillDataMappers.swift */,
+				D6E4C61C20687851007471B1 /* UsersMappers.swift */,
+				D6E4C61E20687A98007471B1 /* CourtsMappers.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -229,6 +247,8 @@
 			children = (
 				D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */,
 				D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */,
+				D6E4C62220688378007471B1 /* SkillRateRequestAPI.swift */,
+				D6E4C624206884B6007471B1 /* SkillRequestAPI.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -239,6 +259,8 @@
 				D6CACC95205747AF00D704D9 /* JWTokenResponseAPI.swift */,
 				D6ABFE0E206810FB00500F41 /* SkillDataResponseAPI.swift */,
 				D6ABFE10206812EC00500F41 /* SkillResponseAPI.swift */,
+				D6E4C61820687599007471B1 /* UserMeResponseAPI.swift */,
+				D6E4C61A2068761B007471B1 /* LocationResponseAPI.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -256,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				D6ADAE6920673C14000188D3 /* Errors.swift */,
+				D6E4C6082068677A007471B1 /* SkillItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,7 +337,6 @@
 				D6C789AE204A8FE100652B94 /* Data */,
 				D6C789AD204A8FD000652B94 /* Domain */,
 				D6C789AB204A8FBC00652B94 /* Presentation */,
-				D61CEDB02029B03A000E1948 /* Utils */,
 				D6D04E97204C2EF100A83178 /* Constants */,
 				D6BEFABE203DE07C0067362F /* Layouts */,
 				D6C565D52027234B0040F4A7 /* Assets.xcassets */,
@@ -347,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E4C5FE2068562C007471B1 /* Controllers */,
+				D6E4C60A2068681B007471B1 /* Mappers */,
 				D6ADAE6820673C08000188D3 /* Models */,
 				D6D04E9A204C419100A83178 /* Navigation */,
 				D6C789B1204A91CE00652B94 /* Presenters */,
@@ -423,6 +446,9 @@
 			children = (
 				D6CACC982057581100D704D9 /* JWToken.swift */,
 				D6ABFE14206819B400500F41 /* Skill.swift */,
+				D6E4C612206871CD007471B1 /* UserMe.swift */,
+				D6E4C61420687244007471B1 /* Location.swift */,
+				D6E4C62020687ECF007471B1 /* SkillRate.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -440,6 +466,7 @@
 			children = (
 				D6D04E89204C158A00A83178 /* LoginGateway.swift */,
 				D6D04E8B204C159E00A83178 /* SkillRateGateway.swift */,
+				D6E4C61020687179007471B1 /* UserMeGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -458,6 +485,7 @@
 			children = (
 				D6D04E85204C150100A83178 /* JWTokenRepository.swift */,
 				D6D04E90204C188100A83178 /* SkillDataRepository.swift */,
+				D6E4C61620687306007471B1 /* UserMeRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -508,6 +536,14 @@
 				D6E4C60620685F0F007471B1 /* GoogleLoginProvider.swift */,
 			);
 			path = LoginProviders;
+			sourceTree = "<group>";
+		};
+		D6E4C60A2068681B007471B1 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4C60B20686853007471B1 /* SkillItemMapper.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -847,24 +883,34 @@
 				D6E4C60720685F0F007471B1 /* GoogleLoginProvider.swift in Sources */,
 				D6ABFE11206812EC00500F41 /* SkillResponseAPI.swift in Sources */,
 				D6E4C603206856D9007471B1 /* FacebookLoginProvider.swift in Sources */,
+				D6E4C625206884B6007471B1 /* SkillRequestAPI.swift in Sources */,
 				D66400362032E088008B87CB /* PagerViewCell.swift in Sources */,
 				D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */,
+				D6E4C61B2068761B007471B1 /* LocationResponseAPI.swift in Sources */,
 				D6D04E7C204C107A00A83178 /* LoginView.swift in Sources */,
 				D69AC4D4205ECECF00107703 /* BaseView.swift in Sources */,
 				D6D04E84204C118C00A83178 /* LoginInteractor.swift in Sources */,
 				D6D04E88204C156500A83178 /* SkillRateInteractor.swift in Sources */,
+				D6E4C61120687179007471B1 /* UserMeGateway.swift in Sources */,
 				D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */,
+				D6E4C62120687ECF007471B1 /* SkillRate.swift in Sources */,
 				D6D04E9C204C41A200A83178 /* Router.swift in Sources */,
+				D6E4C60C20686853007471B1 /* SkillItemMapper.swift in Sources */,
 				D6ADAE62206696F2000188D3 /* SplashPresenter.swift in Sources */,
 				D6D04E8C204C159E00A83178 /* SkillRateGateway.swift in Sources */,
+				D6E4C61720687306007471B1 /* UserMeRepository.swift in Sources */,
+				D6E4C61D20687851007471B1 /* UsersMappers.swift in Sources */,
 				D6C565D12027234B0040F4A7 /* LogInViewController.swift in Sources */,
+				D6E4C61920687599007471B1 /* UserMeResponseAPI.swift in Sources */,
 				D6ABFE0F206810FB00500F41 /* SkillDataResponseAPI.swift in Sources */,
 				D6D04E80204C110700A83178 /* LoginPresenter.swift in Sources */,
 				D6D04E82204C111700A83178 /* SkillRatePresenter.swift in Sources */,
+				D6E4C613206871CD007471B1 /* UserMe.swift in Sources */,
 				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
 				D6ADAE64206700FB000188D3 /* AuthenticatedViewController.swift in Sources */,
 				D6CACC96205747AF00D704D9 /* JWTokenResponseAPI.swift in Sources */,
 				D6ABFE13206813D100500F41 /* SkillDataMappers.swift in Sources */,
+				D6E4C62320688378007471B1 /* SkillRateRequestAPI.swift in Sources */,
 				D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */,
 				D6D04E99204C304200A83178 /* Url.swift in Sources */,
 				D6ADAE5E20669231000188D3 /* SplashViewController.swift in Sources */,
@@ -878,11 +924,13 @@
 				D6D04E91204C188100A83178 /* SkillDataRepository.swift in Sources */,
 				D6ADAE60206696D3000188D3 /* SplashView.swift in Sources */,
 				D6ADAE672067299A000188D3 /* HttpException.swift in Sources */,
+				D6E4C61F20687A98007471B1 /* CourtsMappers.swift in Sources */,
 				D6E4C60120685653007471B1 /* LoginProvider.swift in Sources */,
 				D6ABFE15206819B400500F41 /* Skill.swift in Sources */,
-				D61CEDB22029B261000E1948 /* LoginUtils.swift in Sources */,
 				D61CEDB42029B3FF000E1948 /* KeyChain.swift in Sources */,
 				D6E4C60520685739007471B1 /* LoginProviders.swift in Sources */,
+				D6E4C6092068677A007471B1 /* SkillItem.swift in Sources */,
+				D6E4C61520687244007471B1 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

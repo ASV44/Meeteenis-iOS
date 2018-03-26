@@ -10,7 +10,7 @@ import Alamofire
 import RxSwift
 
 class APICommunication: APIService {
-    
+
     private let requestExecutor: RequestExecutor
     private let keyChain: KeyChain
     
@@ -19,12 +19,20 @@ class APICommunication: APIService {
         keyChain = KeyChain()
     }
     
-    func getJWToken(requestParameters: Parameters) -> Observable<JWTokenResponseAPI> {
-        return requestExecutor.execute(to: Url.authentication, with: requestParameters, method: .post)
+    func getJWToken(request: JWTokenRequestAPI) -> Observable<JWTokenResponseAPI> {
+        return requestExecutor.execute(to: Url.authentication, with: request.toJSON(), method: .post)
     }
     
     func getQuizData() -> Observable<SkillDataResponseAPI> {
         return requestExecutor.execute(to: Url.skills, with: nil, method: HTTPMethod.get, headers: getRequestHeader())
+    }
+    
+    func getUserMe() -> Observable<UserMeResponseAPI> {
+        return requestExecutor.execute(to: Url.userMe, with: nil, method: HTTPMethod.get, headers: getRequestHeader())
+    }
+    
+    func postSkillsRates(request: SkillRateRequestAPI, userId: Int) -> Observable<SkillRateRequestAPI> {
+        return requestExecutor.execute(to: Url.postSkills + String(userId), with: request.toJSON(), method: .post, headers: getRequestHeader())
     }
     
     func getRequestHeader() -> HTTPHeaders {
