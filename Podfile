@@ -13,6 +13,12 @@ target 'Meetennis' do
   pod 'GoogleSignIn'
   pod 'Alamofire', '~> 4.5'
   pod 'KeychainSwift', '~> 10.0'
+  pod 'FSPagerView'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 4.0'
+  pod 'ObjectMapper', '~> 3.1'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
 
   target 'MeetennisTests' do
     inherit! :search_paths

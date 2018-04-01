@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yBy-eX-ULZ">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,7 +33,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="fbSignInClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuR-bR-DwH"/>
+                                    <action selector="fbSignInClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mrK-5Y-4PI"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0ao-b4-CPK">
@@ -90,30 +90,139 @@
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="32.608695652173914"/>
         </scene>
-        <!--Quiz View Controller-->
+        <!--Data Source-->
         <scene sceneID="hdm-XL-Mo3">
             <objects>
-                <viewController storyboardIdentifier="QuizView" id="d8A-lt-ZHD" customClass="QuizViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizView" id="d8A-lt-ZHD" customClass="SkillRateViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jrs-Fi-sQx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7I-bj-ZYn">
-                                <rect key="frame" x="145" y="354" width="125" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign out"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logInBackground" translatesAutoresizingMaskIntoConstraints="NO" id="KCb-dO-peX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stroke_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-7n-tqU">
+                                <rect key="frame" x="160" y="156" width="94" height="102.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hCr-7n-tqU" secondAttribute="height" multiplier="74:81" id="sHt-9z-pPV"/>
+                                </constraints>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-97-0Iy" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="388" width="414" height="293"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1kf-97-0Iy" secondAttribute="height" multiplier="414:293" id="ngC-Fd-5WY"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="signOutCLick:" destination="d8A-lt-ZHD" eventType="touchUpInside" id="6jK-Me-uzq"/>
+                                    <outlet property="dataSource" destination="d8A-lt-ZHD" id="JiX-cm-Ptw"/>
+                                    <outlet property="delegate" destination="d8A-lt-ZHD" id="xqG-9o-a6y"/>
+                                </connections>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-Xi-amD">
+                                <rect key="frame" x="90.666666666666671" y="695" width="232.66666666666663" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitSkillRate:" destination="d8A-lt-ZHD" eventType="touchUpInside" id="Bf7-ne-iPb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KCb-dO-peX" firstAttribute="leading" secondItem="DI5-CZ-gbz" secondAttribute="leading" id="5aJ-Td-nNd"/>
+                            <constraint firstItem="1kf-97-0Iy" firstAttribute="trailing" secondItem="DI5-CZ-gbz" secondAttribute="trailing" id="Bcx-yh-VPn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Byb-Xi-amD" secondAttribute="bottom" multiplier="1.015" id="BeU-kI-ouC"/>
+                            <constraint firstItem="hCr-7n-tqU" firstAttribute="leading" secondItem="Jrs-Fi-sQx" secondAttribute="leadingMargin" multiplier="8" id="Ohf-ee-LA1"/>
+                            <constraint firstItem="Byb-Xi-amD" firstAttribute="centerX" secondItem="Jrs-Fi-sQx" secondAttribute="centerX" id="PtQ-3m-VeE"/>
+                            <constraint firstAttribute="width" secondItem="Byb-Xi-amD" secondAttribute="width" multiplier="1.78" id="RQP-W3-3y7"/>
+                            <constraint firstItem="KCb-dO-peX" firstAttribute="top" secondItem="Jrs-Fi-sQx" secondAttribute="top" id="Srs-Zc-6kd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1kf-97-0Iy" secondAttribute="bottom" multiplier="1.08" id="fwI-qc-0i4"/>
+                            <constraint firstItem="1kf-97-0Iy" firstAttribute="leading" secondItem="DI5-CZ-gbz" secondAttribute="leading" id="kvq-Mw-Bx9"/>
+                            <constraint firstItem="KCb-dO-peX" firstAttribute="bottom" secondItem="DI5-CZ-gbz" secondAttribute="bottom" id="pBU-RT-3h3"/>
+                            <constraint firstItem="1kf-97-0Iy" firstAttribute="top" secondItem="hCr-7n-tqU" secondAttribute="bottom" multiplier="1.5" id="vBc-5X-3os"/>
+                            <constraint firstItem="KCb-dO-peX" firstAttribute="trailing" secondItem="DI5-CZ-gbz" secondAttribute="trailing" id="vS9-Up-bHx"/>
+                            <constraint firstItem="hCr-7n-tqU" firstAttribute="trailing" secondItem="Jrs-Fi-sQx" secondAttribute="trailingMargin" multiplier="0.645" id="wMj-n5-rBN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DI5-CZ-gbz"/>
                     </view>
+                    <connections>
+                        <outlet property="icon" destination="hCr-7n-tqU" id="Zat-89-Mlo"/>
+                        <outlet property="pagerView" destination="1kf-97-0Iy" id="K3B-xt-KCL"/>
+                        <outlet property="submitButton" destination="Byb-Xi-amD" id="U3E-n0-IGV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0r0-xV-LYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="824.63768115942037" y="32.608695652173914"/>
+        </scene>
+        <!--Authenticated View Controller-->
+        <scene sceneID="EhM-as-qva">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticatedVC" id="DdR-Um-dVS" customClass="AuthenticatedViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aXT-X4-I6M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7I-bj-ZYn">
+                                <rect key="frame" x="269" y="20" width="125" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign out"/>
+                                <connections>
+                                    <action selector="signOutCLick:" destination="DdR-Um-dVS" eventType="touchUpInside" id="JlW-3Y-j1i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="liC-41-9vD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1M-dr-VYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="33"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="dVL-0N-WtN">
+            <objects>
+                <viewController id="yBy-eX-ULZ" customClass="SplashViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uhh-RW-Avi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logInBackground" translatesAutoresizingMaskIntoConstraints="NO" id="OVe-gb-lgA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tSD-VM-ZDV">
+                                <rect key="frame" x="164" y="307" width="86" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tSD-VM-ZDV" secondAttribute="height" multiplier="86:123" id="QYQ-fd-aKT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="UN3-e2-HYN">
+                                <rect key="frame" x="147" y="464.33333333333331" width="120" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UN3-e2-HYN" secondAttribute="height" multiplier="6:1" id="kIR-0M-PQt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UN3-e2-HYN" secondAttribute="trailing" multiplier="1.475" id="A3T-2V-4Te"/>
+                            <constraint firstItem="tSD-VM-ZDV" firstAttribute="centerY" secondItem="Uhh-RW-Avi" secondAttribute="centerY" id="Cpr-ne-Whh"/>
+                            <constraint firstItem="OVe-gb-lgA" firstAttribute="leading" secondItem="AXZ-EF-l9g" secondAttribute="leading" id="EEW-kG-efj"/>
+                            <constraint firstItem="UN3-e2-HYN" firstAttribute="leading" secondItem="Uhh-RW-Avi" secondAttribute="leadingMargin" multiplier="7.35" id="K0D-FF-Kwa"/>
+                            <constraint firstItem="OVe-gb-lgA" firstAttribute="top" secondItem="Uhh-RW-Avi" secondAttribute="top" id="Qea-c1-GBh"/>
+                            <constraint firstItem="OVe-gb-lgA" firstAttribute="bottom" secondItem="AXZ-EF-l9g" secondAttribute="bottom" id="T5Q-xF-ebx"/>
+                            <constraint firstItem="UN3-e2-HYN" firstAttribute="top" secondItem="tSD-VM-ZDV" secondAttribute="bottom" multiplier="1.08" id="VfZ-dy-sEy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tSD-VM-ZDV" secondAttribute="trailing" multiplier="1.576" id="lr1-VD-hrS"/>
+                            <constraint firstItem="tSD-VM-ZDV" firstAttribute="leading" secondItem="Uhh-RW-Avi" secondAttribute="leadingMargin" multiplier="8.2" id="u9u-lD-6XG"/>
+                            <constraint firstItem="OVe-gb-lgA" firstAttribute="trailing" secondItem="AXZ-EF-l9g" secondAttribute="trailing" id="yoO-Vz-2lK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AXZ-EF-l9g"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltc-TY-Bq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-777" y="33"/>
         </scene>
     </scenes>
     <resources>
@@ -121,6 +230,7 @@
         <image name="googleSignin" width="789" height="161"/>
         <image name="logInBackground" width="1080" height="1920"/>
         <image name="logoIcon" width="212" height="320"/>
+        <image name="stroke_icon" width="107" height="116"/>
         <image name="title" width="397" height="69"/>
     </resources>
 </document>
