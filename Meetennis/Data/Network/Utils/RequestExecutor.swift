@@ -36,9 +36,11 @@ class RequestExecutor {
                         let response = value as! [String: Any]
                         observer.onNext(T(JSON: response)!)
                         observer.onCompleted()
-                    case .failure(_):
-                        observer.onError(HttpException(code: response.response?.statusCode,
-                                                       data: response.data))
+                    case .failure(let error):
+                        let httpException = (response.data?.isEmpty)!
+                            ? HttpException(code: response.response?.statusCode,error: error)
+                            : HttpException(data: response.data)
+                        observer.onError(httpException)
                     }
             }
             request.resume()

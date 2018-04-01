@@ -23,8 +23,8 @@ class SplashPresenter: BasePresenter<SplashView> {
     }
     
     func onLogin() {
-        //router.showAuthenticatedVC(animated: false)
-        router.showSkillRateVC()
+        router.showAuthenticatedVC(animated: false)
+        //router.showSkillRateVC()
     }
     
     func onError(error: Error) {

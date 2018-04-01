@@ -11,16 +11,16 @@ import SwiftyJSON
 
 class HttpException: Error {
     let code: Int
-    private let data: Data
     let message: String
     
-    init(code: Int!, data: Data!) {
+    init(data: Data!) {
+        let jsonData = JSON(data)
+        self.code = jsonData["code"].intValue
+        self.message = JSON(data)["message"].stringValue
+    }
+    
+    init(code: Int!, error: Error) {
         self.code = code ?? 0
-        self.data = data ?? Data()
-        if let errorMessage = JSON(data)["message"].string {
-            self.message = errorMessage
-        } else {
-            self.message = "Error"
-        }
+        self.message = error.localizedDescription
     }
 }
