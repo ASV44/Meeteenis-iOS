@@ -14,6 +14,11 @@
 		D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642EEA32055B59E001514ED /* JWTokenMapper.swift */; };
 		D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */; };
 		D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */; };
+		D647665F20719CAE00622186 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647665E20719CAE00622186 /* ActivityViewController.swift */; };
+		D647666120719CC300622186 /* LobyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647666020719CC300622186 /* LobyViewController.swift */; };
+		D647666320719CCE00622186 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647666220719CCE00622186 /* UsersViewController.swift */; };
+		D647666520719CF100622186 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647666420719CF100622186 /* WalletViewController.swift */; };
+		D647666820719E5A00622186 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647666720719E5A00622186 /* TabBarController.swift */; };
 		D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DD158202A4583004ACB79 /* SkillRateViewController.swift */; };
 		D66400342032DF6D008B87CB /* PagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66400332032DF6D008B87CB /* PagerViewCell.xib */; };
 		D66400362032E088008B87CB /* PagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66400352032E088008B87CB /* PagerViewCell.swift */; };
@@ -26,7 +31,7 @@
 		D6ADAE5E20669231000188D3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE5D20669231000188D3 /* SplashViewController.swift */; };
 		D6ADAE60206696D3000188D3 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE5F206696D3000188D3 /* SplashView.swift */; };
 		D6ADAE62206696F2000188D3 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE61206696F2000188D3 /* SplashPresenter.swift */; };
-		D6ADAE64206700FB000188D3 /* AuthenticatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE63206700FB000188D3 /* AuthenticatedViewController.swift */; };
+		D6ADAE64206700FB000188D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE63206700FB000188D3 /* ProfileViewController.swift */; };
 		D6ADAE672067299A000188D3 /* HttpException.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE662067299A000188D3 /* HttpException.swift */; };
 		D6ADAE6A20673C14000188D3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE6920673C14000188D3 /* Errors.swift */; };
 		D6ADAE6C20674619000188D3 /* NetworkConnectionException.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE6B20674619000188D3 /* NetworkConnectionException.swift */; };
@@ -104,6 +109,11 @@
 		D642EEA32055B59E001514ED /* JWTokenMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenMapper.swift; sourceTree = "<group>"; };
 		D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenRequestAPI.swift; sourceTree = "<group>"; };
 		D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDataRequestAPI.swift; sourceTree = "<group>"; };
+		D647665E20719CAE00622186 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		D647666020719CC300622186 /* LobyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobyViewController.swift; sourceTree = "<group>"; };
+		D647666220719CCE00622186 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		D647666420719CF100622186 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		D647666720719E5A00622186 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D64DD158202A4583004ACB79 /* SkillRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillRateViewController.swift; sourceTree = "<group>"; };
 		D66400332032DF6D008B87CB /* PagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerViewCell.xib; sourceTree = "<group>"; };
 		D66400352032E088008B87CB /* PagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewCell.swift; sourceTree = "<group>"; };
@@ -116,7 +126,7 @@
 		D6ADAE5D20669231000188D3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D6ADAE5F206696D3000188D3 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D6ADAE61206696F2000188D3 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
-		D6ADAE63206700FB000188D3 /* AuthenticatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedViewController.swift; sourceTree = "<group>"; };
+		D6ADAE63206700FB000188D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D6ADAE662067299A000188D3 /* HttpException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpException.swift; sourceTree = "<group>"; };
 		D6ADAE6920673C14000188D3 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		D6ADAE6B20674619000188D3 /* NetworkConnectionException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionException.swift; sourceTree = "<group>"; };
@@ -263,6 +273,14 @@
 				D6E4C61A2068761B007471B1 /* LocationResponseAPI.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		D647666620719E3500622186 /* UI_controlers */ = {
+			isa = PBXGroup;
+			children = (
+				D647666720719E5A00622186 /* TabBarController.swift */,
+			);
+			path = UI_controlers;
 			sourceTree = "<group>";
 		};
 		D6ADAE6520672977000188D3 /* Exceptions */ = {
@@ -414,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C789B2204A91EE00652B94 /* View_controllers */,
+				D647666620719E3500622186 /* UI_controlers */,
 				D6D04E7A204C0F8B00A83178 /* Custom_views */,
 			);
 			path = UI;
@@ -436,7 +455,11 @@
 				D6ADAE5D20669231000188D3 /* SplashViewController.swift */,
 				D6C565D02027234B0040F4A7 /* LogInViewController.swift */,
 				D64DD158202A4583004ACB79 /* SkillRateViewController.swift */,
-				D6ADAE63206700FB000188D3 /* AuthenticatedViewController.swift */,
+				D6ADAE63206700FB000188D3 /* ProfileViewController.swift */,
+				D647665E20719CAE00622186 /* ActivityViewController.swift */,
+				D647666020719CC300622186 /* LobyViewController.swift */,
+				D647666220719CCE00622186 /* UsersViewController.swift */,
+				D647666420719CF100622186 /* WalletViewController.swift */,
 			);
 			path = View_controllers;
 			sourceTree = "<group>";
@@ -875,6 +898,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D647666120719CC300622186 /* LobyViewController.swift in Sources */,
 				D6ADAE7120674B7C000188D3 /* RequestExecutor.swift in Sources */,
 				D6D04E8A204C158A00A83178 /* LoginGateway.swift in Sources */,
 				D6D04E86204C150100A83178 /* JWTokenRepository.swift in Sources */,
@@ -883,6 +907,7 @@
 				D6E4C60720685F0F007471B1 /* GoogleLoginProvider.swift in Sources */,
 				D6ABFE11206812EC00500F41 /* SkillResponseAPI.swift in Sources */,
 				D6E4C603206856D9007471B1 /* FacebookLoginProvider.swift in Sources */,
+				D647666820719E5A00622186 /* TabBarController.swift in Sources */,
 				D6E4C625206884B6007471B1 /* SkillRequestAPI.swift in Sources */,
 				D66400362032E088008B87CB /* PagerViewCell.swift in Sources */,
 				D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */,
@@ -907,8 +932,11 @@
 				D6D04E82204C111700A83178 /* SkillRatePresenter.swift in Sources */,
 				D6E4C613206871CD007471B1 /* UserMe.swift in Sources */,
 				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
-				D6ADAE64206700FB000188D3 /* AuthenticatedViewController.swift in Sources */,
+				D647665F20719CAE00622186 /* ActivityViewController.swift in Sources */,
+				D6ADAE64206700FB000188D3 /* ProfileViewController.swift in Sources */,
 				D6CACC96205747AF00D704D9 /* JWTokenResponseAPI.swift in Sources */,
+				D647666320719CCE00622186 /* UsersViewController.swift in Sources */,
+				D647666520719CF100622186 /* WalletViewController.swift in Sources */,
 				D6ABFE13206813D100500F41 /* SkillDataMappers.swift in Sources */,
 				D6E4C62320688378007471B1 /* SkillRateRequestAPI.swift in Sources */,
 				D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */,

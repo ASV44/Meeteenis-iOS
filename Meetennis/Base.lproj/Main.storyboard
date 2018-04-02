@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.884057971014496" y="32.608695652173914"/>
+            <point key="canvasLocation" x="-5506" y="-2221"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="hdm-XL-Mo3">
@@ -153,32 +153,204 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0r0-xV-LYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824.63768115942037" y="32.608695652173914"/>
+            <point key="canvasLocation" x="-4712" y="-2221"/>
         </scene>
-        <!--Authenticated View Controller-->
-        <scene sceneID="EhM-as-qva">
+        <!--Activity View Controller-->
+        <scene sceneID="1d5-kn-Guu">
             <objects>
-                <viewController storyboardIdentifier="AuthenticatedVC" id="DdR-Um-dVS" customClass="AuthenticatedViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aXT-X4-I6M">
+                <viewController id="6uY-IP-Paf" customClass="ActivityViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lJs-fk-2dt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7I-bj-ZYn">
-                                <rect key="frame" x="269" y="20" width="125" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RR-K4-v0P">
+                                <rect key="frame" x="150" y="358" width="115" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign out"/>
-                                <connections>
-                                    <action selector="signOutCLick:" destination="DdR-Um-dVS" eventType="touchUpInside" id="JlW-3Y-j1i"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="liC-41-9vD"/>
+                        <viewLayoutGuide key="safeArea" id="H2h-hH-wpT"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="history" id="hLl-gb-kdK">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-12"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1M-dr-VYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXu-vR-4hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586" y="33"/>
+            <point key="canvasLocation" x="-4712" y="-1405"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="p15-l7-DLd">
+            <objects>
+                <viewController id="QnL-fh-Dti" customClass="ProfileViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JOZ-dF-Coh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWE-sU-Tnh">
+                                <rect key="frame" x="154" y="358" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileBackground" translatesAutoresizingMaskIntoConstraints="NO" id="q93-7f-ten">
+                                <rect key="frame" x="0.0" y="20" width="414" height="266"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zho-bW-do2">
+                                <rect key="frame" x="30" y="47" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="settingsIcon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBs-S9-cBU">
+                                <rect key="frame" x="159" y="241" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFa-Jd-EIP">
+                                <rect key="frame" x="132" y="212" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_border" translatesAutoresizingMaskIntoConstraints="NO" id="vvT-Qf-XLF">
+                                <rect key="frame" x="147" y="54" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-sm-u0R">
+                                <rect key="frame" x="152" y="59" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q93-7f-ten" firstAttribute="top" secondItem="dgG-62-yR7" secondAttribute="top" id="29N-pj-SLM"/>
+                            <constraint firstItem="q93-7f-ten" firstAttribute="leading" secondItem="dgG-62-yR7" secondAttribute="leading" id="Iep-Qb-Vpu"/>
+                            <constraint firstItem="q93-7f-ten" firstAttribute="trailing" secondItem="dgG-62-yR7" secondAttribute="trailing" id="Zi5-OW-mch"/>
+                            <constraint firstItem="dgG-62-yR7" firstAttribute="bottom" secondItem="q93-7f-ten" secondAttribute="bottom" constant="401" id="bw0-xG-9l0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dgG-62-yR7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="account" id="xpW-iZ-rGg">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2YB-vU-ROq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5507.2463768115949" y="-1405.4347826086957"/>
+        </scene>
+        <!--Loby View Controller-->
+        <scene sceneID="5uB-Qf-J4T">
+            <objects>
+                <viewController id="8ts-Lk-Nem" customClass="LobyViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gzC-rc-pQj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loby Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0Q-op-dNn">
+                                <rect key="frame" x="159" y="358" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Wli-Zn-tKc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="game_icon" selectedImage="game_icon" id="MDE-ky-eX9">
+                        <inset key="imageInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ip2-G8-Kux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3896" y="-1405"/>
+        </scene>
+        <!--Users View Controller-->
+        <scene sceneID="oWO-NU-NaI">
+            <objects>
+                <viewController id="Sxh-hC-zPo" customClass="UsersViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="21k-iC-GpX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Users Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAC-VZ-0DF">
+                                <rect key="frame" x="156" y="358" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="eac-rw-fwi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="friends" id="4ts-fU-fb9">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-12"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sf-1T-eMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3083" y="-1405"/>
+        </scene>
+        <!--Wallet View Controller-->
+        <scene sceneID="Xbo-fL-R5I">
+            <objects>
+                <viewController id="Gq9-5c-SeB" customClass="WalletViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qFh-rR-hHD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wallet Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K80-3v-jPu">
+                                <rect key="frame" x="154" y="358" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="yrW-Hb-e3G"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="wallet" id="edx-Nc-1mj">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xx-ZB-KW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2336" y="-1405"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wax-ug-9fI">
+            <objects>
+                <tabBarController storyboardIdentifier="AuthenticatedVC" id="jwH-4b-XEq" customClass="TabBarController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="active_page" id="o4Q-cs-aIf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QnL-fh-Dti" kind="relationship" relationship="viewControllers" id="Its-m4-5Dm"/>
+                        <segue destination="6uY-IP-Paf" kind="relationship" relationship="viewControllers" id="lX7-4z-VLv"/>
+                        <segue destination="8ts-Lk-Nem" kind="relationship" relationship="viewControllers" id="FgL-Yf-KyO"/>
+                        <segue destination="Sxh-hC-zPo" kind="relationship" relationship="viewControllers" id="O56-2R-6UP"/>
+                        <segue destination="Gq9-5c-SeB" kind="relationship" relationship="viewControllers" id="Ly3-fe-t81"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EmW-1E-t8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3896" y="-2221"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="dVL-0N-WtN">
@@ -222,15 +394,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltc-TY-Bq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777" y="33"/>
+            <point key="canvasLocation" x="-6314" y="-2221"/>
         </scene>
     </scenes>
     <resources>
+        <image name="account" width="25" height="25"/>
+        <image name="active_page" width="40" height="50"/>
         <image name="facebookSignin" width="789" height="161"/>
+        <image name="friends" width="25" height="25"/>
+        <image name="game_icon" width="70" height="70"/>
         <image name="googleSignin" width="789" height="161"/>
+        <image name="history" width="25" height="25"/>
+        <image name="imagePlaceholder" width="177" height="175"/>
         <image name="logInBackground" width="1080" height="1920"/>
         <image name="logoIcon" width="212" height="320"/>
+        <image name="profileBackground" width="372" height="233"/>
+        <image name="profile_border" width="286" height="286"/>
+        <image name="settingsIcon" width="41" height="42"/>
         <image name="stroke_icon" width="107" height="116"/>
         <image name="title" width="397" height="69"/>
+        <image name="wallet" width="25" height="25"/>
     </resources>
 </document>
