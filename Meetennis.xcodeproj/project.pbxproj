@@ -24,6 +24,7 @@
 		D66400362032E088008B87CB /* PagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66400352032E088008B87CB /* PagerViewCell.swift */; };
 		D69AC4D2205ECE8F00107703 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AC4D1205ECE8F00107703 /* BasePresenter.swift */; };
 		D69AC4D4205ECECF00107703 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AC4D3205ECECF00107703 /* BaseView.swift */; };
+		D6A901472073F34000E7FA54 /* SkillChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A901462073F34000E7FA54 /* SkillChartItem.swift */; };
 		D6ABFE0F206810FB00500F41 /* SkillDataResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFE0E206810FB00500F41 /* SkillDataResponseAPI.swift */; };
 		D6ABFE11206812EC00500F41 /* SkillResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFE10206812EC00500F41 /* SkillResponseAPI.swift */; };
 		D6ABFE13206813D100500F41 /* SkillDataMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFE12206813D100500F41 /* SkillDataMappers.swift */; };
@@ -119,6 +120,7 @@
 		D66400352032E088008B87CB /* PagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewCell.swift; sourceTree = "<group>"; };
 		D69AC4D1205ECE8F00107703 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		D69AC4D3205ECECF00107703 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D6A901462073F34000E7FA54 /* SkillChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillChartItem.swift; sourceTree = "<group>"; };
 		D6ABFE0E206810FB00500F41 /* SkillDataResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDataResponseAPI.swift; sourceTree = "<group>"; };
 		D6ABFE10206812EC00500F41 /* SkillResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillResponseAPI.swift; sourceTree = "<group>"; };
 		D6ABFE12206813D100500F41 /* SkillDataMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDataMappers.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			children = (
 				D6ADAE6920673C14000188D3 /* Errors.swift */,
 				D6E4C6082068677A007471B1 /* SkillItem.swift */,
+				D6A901462073F34000E7FA54 /* SkillChartItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -820,6 +823,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Meetennis/Pods-Meetennis-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
@@ -831,6 +836,8 @@
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -840,6 +847,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartsRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
@@ -851,6 +860,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -921,6 +932,7 @@
 				D6E4C62120687ECF007471B1 /* SkillRate.swift in Sources */,
 				D6D04E9C204C41A200A83178 /* Router.swift in Sources */,
 				D6E4C60C20686853007471B1 /* SkillItemMapper.swift in Sources */,
+				D6A901472073F34000E7FA54 /* SkillChartItem.swift in Sources */,
 				D6ADAE62206696F2000188D3 /* SplashPresenter.swift in Sources */,
 				D6D04E8C204C159E00A83178 /* SkillRateGateway.swift in Sources */,
 				D6E4C61720687306007471B1 /* UserMeRepository.swift in Sources */,

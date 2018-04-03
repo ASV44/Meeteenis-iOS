@@ -228,6 +228,11 @@
                                 <rect key="frame" x="152" y="59" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ7-OH-L01" customClass="RadarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="430" width="414" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -242,6 +247,9 @@
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="radarChart" destination="ZJ7-OH-L01" id="ZxZ-5a-TeL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YB-vU-ROq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

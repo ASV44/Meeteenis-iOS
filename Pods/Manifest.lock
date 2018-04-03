@@ -6,6 +6,12 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
+  - ChartsRealm (3.0.4):
+    - Charts (= 3.0.4)
+    - RealmSwift (~> 2.10)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.27)
@@ -42,6 +48,11 @@ PODS:
   - KeychainSwift (10.0.0)
   - Kingfisher (4.6.1)
   - ObjectMapper (3.1.0)
+  - Realm (2.10.2):
+    - Realm/Headers (= 2.10.2)
+  - Realm/Headers (2.10.2)
+  - RealmSwift (2.10.2):
+    - Realm (= 2.10.2)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
@@ -50,6 +61,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - ChartsRealm
   - FacebookCore
   - FacebookLogin
   - FSPagerView
@@ -65,6 +77,8 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  ChartsRealm: 3cf7c9ebf9c6312efbf418cf1da91d72d5416b26
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
   FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
@@ -77,11 +91,13 @@ SPEC CHECKSUMS:
   KeychainSwift: f9f7910449a0c0fd2cabc889121530dd2c477c33
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
+  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Swinject: afea49fd95f392b41171669f165842879c48fad6
 
-PODFILE CHECKSUM: 27b79639a40e71a32af7b54aed21a266bf8972d7
+PODFILE CHECKSUM: 220318ca3e33f8399e359aa16c3aa5d6ffc64c88
 
 COCOAPODS: 1.3.1
