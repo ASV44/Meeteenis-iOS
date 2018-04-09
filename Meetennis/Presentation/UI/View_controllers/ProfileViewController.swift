@@ -13,32 +13,47 @@ import RealmSwift
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var radarChart: RadarChartView!
+    @IBOutlet weak var balanceBackground: UIView!
+    @IBOutlet weak var statusBar: UIView!
+    
+    private var radarChartController: RadarChartController!
+    
+    private let gradient : CAGradientLayer = CAGradientLayer()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //setPresenter()
-        
-        updateChart()
+
+        initView()
+        radarChartController = RadarChartController(radarChart: radarChart)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func initView() {
+        gradient.frame = statusBar.bounds
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        gradient.colors = [UIColor(red: 80 / 255, green: 10 / 255, blue: 35 / 255, alpha: 1).cgColor,
+                           UIColor(red: 110 / 255, green: 15 / 255, blue: 45 / 255, alpha: 1).cgColor]
+        statusBar.layer.insertSublayer(gradient, at: 0)
+    }
+    
     @IBAction func signOutCLick(_ sender: Any) {
         //LoginUtils.logout(vc: self)
     }
     
-    func updateChart() {
-        var chartDataSet = [RadarChartDataSet]()
-        
-        for i in 0 ..< 1 {
-            var dataEntries = [RadarChartDataEntry]()
-            for j in 0 ..< 5 {
-                dataEntries.append(RadarChartDataEntry(value: Double(arc4random_uniform(100))))
-            }
-             chartDataSet.append(RadarChartDataSet(values: dataEntries, label: "Skill Rates"))
-        }
-        radarChart.data = RadarChartData(dataSets: chartDataSet)
-    }
+
 }

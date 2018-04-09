@@ -20,6 +20,7 @@
 		D647666520719CF100622186 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647666420719CF100622186 /* WalletViewController.swift */; };
 		D647666820719E5A00622186 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647666720719E5A00622186 /* TabBarController.swift */; };
 		D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DD158202A4583004ACB79 /* SkillRateViewController.swift */; };
+		D6538DDF207AFC3200107B84 /* RadarChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538DDE207AFC3200107B84 /* RadarChartController.swift */; };
 		D66400342032DF6D008B87CB /* PagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66400332032DF6D008B87CB /* PagerViewCell.xib */; };
 		D66400362032E088008B87CB /* PagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66400352032E088008B87CB /* PagerViewCell.swift */; };
 		D69AC4D2205ECE8F00107703 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AC4D1205ECE8F00107703 /* BasePresenter.swift */; };
@@ -116,6 +117,7 @@
 		D647666420719CF100622186 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		D647666720719E5A00622186 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D64DD158202A4583004ACB79 /* SkillRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillRateViewController.swift; sourceTree = "<group>"; };
+		D6538DDE207AFC3200107B84 /* RadarChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarChartController.swift; sourceTree = "<group>"; };
 		D66400332032DF6D008B87CB /* PagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerViewCell.xib; sourceTree = "<group>"; };
 		D66400352032E088008B87CB /* PagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewCell.swift; sourceTree = "<group>"; };
 		D69AC4D1205ECE8F00107703 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -550,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E4C5FF20685634007471B1 /* LoginProviders */,
+				D6538DDE207AFC3200107B84 /* RadarChartController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -942,6 +945,7 @@
 				D6ABFE0F206810FB00500F41 /* SkillDataResponseAPI.swift in Sources */,
 				D6D04E80204C110700A83178 /* LoginPresenter.swift in Sources */,
 				D6D04E82204C111700A83178 /* SkillRatePresenter.swift in Sources */,
+				D6538DDF207AFC3200107B84 /* RadarChartController.swift in Sources */,
 				D6E4C613206871CD007471B1 /* UserMe.swift in Sources */,
 				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
 				D647665F20719CAE00622186 /* ActivityViewController.swift in Sources */,
