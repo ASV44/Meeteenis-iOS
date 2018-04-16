@@ -58,6 +58,7 @@ PODS:
   - RxSwift (4.1.2)
   - SwiftyJSON (4.0.0)
   - Swinject (2.1.1)
+  - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
@@ -73,6 +74,7 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - SwiftyJSON
   - Swinject (~> 2.1.0)
+  - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -97,7 +99,8 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Swinject: afea49fd95f392b41171669f165842879c48fad6
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: 220318ca3e33f8399e359aa16c3aa5d6ffc64c88
+PODFILE CHECKSUM: 0bea6cde8498f9ebc344fb711b7302642f575c8f
 
 COCOAPODS: 1.3.1

@@ -11,6 +11,8 @@
 		7A3543E1472BAD1E3D0CB498 /* Pods_Meetennis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809C34335E2401C5AA6A843 /* Pods_Meetennis.framework */; };
 		BF4A26907A906029D34742F9 /* Pods_MeetennisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C0D9A3085DCEC1D3DD3D9 /* Pods_MeetennisUITests.framework */; };
 		D61CEDB42029B3FF000E1948 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* KeyChain.swift */; };
+		D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */; };
+		D623B38E2085445700FD5EDC /* CompletedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */; };
 		D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642EEA32055B59E001514ED /* JWTokenMapper.swift */; };
 		D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */; };
 		D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */; };
@@ -110,6 +112,8 @@
 		953FBE31B370DEA72059D40A /* Pods-MeetennisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetennisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetennisTests/Pods-MeetennisTests.release.xcconfig"; sourceTree = "<group>"; };
 		95D61A4E9732886075C8C74E /* Pods-Meetennis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetennis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meetennis/Pods-Meetennis.release.xcconfig"; sourceTree = "<group>"; };
 		D61CEDB32029B3FF000E1948 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameViewController.swift; sourceTree = "<group>"; };
+		D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedGameViewController.swift; sourceTree = "<group>"; };
 		D642EEA32055B59E001514ED /* JWTokenMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenMapper.swift; sourceTree = "<group>"; };
 		D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenRequestAPI.swift; sourceTree = "<group>"; };
 		D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDataRequestAPI.swift; sourceTree = "<group>"; };
@@ -467,6 +471,8 @@
 				D64DD158202A4583004ACB79 /* SkillRateViewController.swift */,
 				D6ADAE63206700FB000188D3 /* ProfileViewController.swift */,
 				D647665E20719CAE00622186 /* ActivityViewController.swift */,
+				D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */,
+				D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */,
 				D647666020719CC300622186 /* LobyViewController.swift */,
 				D647666220719CCE00622186 /* UsersViewController.swift */,
 				D647666420719CF100622186 /* WalletViewController.swift */,
@@ -851,6 +857,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -875,6 +882,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -944,6 +952,7 @@
 				D6E4C60C20686853007471B1 /* SkillItemMapper.swift in Sources */,
 				D6A901472073F34000E7FA54 /* SkillChartItem.swift in Sources */,
 				D6ADAE62206696F2000188D3 /* SplashPresenter.swift in Sources */,
+				D623B38E2085445700FD5EDC /* CompletedGameViewController.swift in Sources */,
 				D6D04E8C204C159E00A83178 /* SkillRateGateway.swift in Sources */,
 				D6E4C61720687306007471B1 /* UserMeRepository.swift in Sources */,
 				D6E4C61D20687851007471B1 /* UsersMappers.swift in Sources */,
@@ -969,6 +978,7 @@
 				D6D04E93204C277500A83178 /* APIService.swift in Sources */,
 				D6D04E7E204C10A100A83178 /* SkillRateView.swift in Sources */,
 				D6ADAE6A20673C14000188D3 /* Errors.swift in Sources */,
+				D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */,
 				D69AC4D2205ECE8F00107703 /* BasePresenter.swift in Sources */,
 				D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */,
 				D6ADAE6F20674982000188D3 /* Reachability..swift in Sources */,
