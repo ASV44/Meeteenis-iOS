@@ -20,11 +20,6 @@ class ProfileViewController: UIViewController {
     
     private let gradient : CAGradientLayer = CAGradientLayer()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        UIApplication.shared.statusBarStyle = .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //setPresenter()
@@ -33,9 +28,9 @@ class ProfileViewController: UIViewController {
         radarChartController = RadarChartController(radarChart: radarChart)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func didReceiveMemoryWarning() {
