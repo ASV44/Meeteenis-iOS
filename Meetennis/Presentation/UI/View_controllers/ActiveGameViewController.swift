@@ -11,6 +11,8 @@ import XLPagerTabStrip
 
 class ActiveGameViewController: UIViewController, IndicatorInfoProvider {
     
+    let cellIdentifier = "ActiveGameListCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //setPresenter()
@@ -26,3 +28,25 @@ class ActiveGameViewController: UIViewController, IndicatorInfoProvider {
     }
 }
 
+// MARK: Implement table view data source
+extension ActiveGameViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10//usersListData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ActiveGameListCell
+        
+        return cell
+    }
+}
+
+// MARK: Implement table view delegate
+extension ActiveGameViewController: UITableViewDelegate {
+    
+}

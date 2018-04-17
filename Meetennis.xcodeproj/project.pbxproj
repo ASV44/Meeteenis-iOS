@@ -13,6 +13,9 @@
 		D61CEDB42029B3FF000E1948 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* KeyChain.swift */; };
 		D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */; };
 		D623B38E2085445700FD5EDC /* CompletedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */; };
+		D623B39020856D5000FD5EDC /* ActiveGameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38F20856D5000FD5EDC /* ActiveGameListCell.swift */; };
+		D623B39220856E1E00FD5EDC /* BaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B39120856E1E00FD5EDC /* BaseListCell.swift */; };
+		D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B39320856FF600FD5EDC /* CompletedGameListCell.swift */; };
 		D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642EEA32055B59E001514ED /* JWTokenMapper.swift */; };
 		D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */; };
 		D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */; };
@@ -114,6 +117,9 @@
 		D61CEDB32029B3FF000E1948 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameViewController.swift; sourceTree = "<group>"; };
 		D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedGameViewController.swift; sourceTree = "<group>"; };
+		D623B38F20856D5000FD5EDC /* ActiveGameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameListCell.swift; sourceTree = "<group>"; };
+		D623B39120856E1E00FD5EDC /* BaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCell.swift; sourceTree = "<group>"; };
+		D623B39320856FF600FD5EDC /* CompletedGameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedGameListCell.swift; sourceTree = "<group>"; };
 		D642EEA32055B59E001514ED /* JWTokenMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenMapper.swift; sourceTree = "<group>"; };
 		D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenRequestAPI.swift; sourceTree = "<group>"; };
 		D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDataRequestAPI.swift; sourceTree = "<group>"; };
@@ -496,7 +502,10 @@
 			isa = PBXGroup;
 			children = (
 				D66400352032E088008B87CB /* PagerViewCell.swift */,
+				D623B39120856E1E00FD5EDC /* BaseListCell.swift */,
 				D647AA2C2082DF0200C4BA53 /* UsersListCell.swift */,
+				D623B38F20856D5000FD5EDC /* ActiveGameListCell.swift */,
+				D623B39320856FF600FD5EDC /* CompletedGameListCell.swift */,
 			);
 			path = Custom_views;
 			sourceTree = "<group>";
@@ -943,6 +952,7 @@
 				D6E4C61B2068761B007471B1 /* LocationResponseAPI.swift in Sources */,
 				D6D04E7C204C107A00A83178 /* LoginView.swift in Sources */,
 				D69AC4D4205ECECF00107703 /* BaseView.swift in Sources */,
+				D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */,
 				D6D04E84204C118C00A83178 /* LoginInteractor.swift in Sources */,
 				D6D04E88204C156500A83178 /* SkillRateInteractor.swift in Sources */,
 				D6E4C61120687179007471B1 /* UserMeGateway.swift in Sources */,
@@ -963,6 +973,7 @@
 				D6D04E82204C111700A83178 /* SkillRatePresenter.swift in Sources */,
 				D6538DDF207AFC3200107B84 /* RadarChartController.swift in Sources */,
 				D6E4C613206871CD007471B1 /* UserMe.swift in Sources */,
+				D623B39220856E1E00FD5EDC /* BaseListCell.swift in Sources */,
 				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
 				D647665F20719CAE00622186 /* ActivityViewController.swift in Sources */,
 				D6ADAE64206700FB000188D3 /* ProfileViewController.swift in Sources */,
@@ -971,6 +982,7 @@
 				D647666520719CF100622186 /* WalletViewController.swift in Sources */,
 				D6ABFE13206813D100500F41 /* SkillDataMappers.swift in Sources */,
 				D6E4C62320688378007471B1 /* SkillRateRequestAPI.swift in Sources */,
+				D623B39020856D5000FD5EDC /* ActiveGameListCell.swift in Sources */,
 				D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */,
 				D6D04E99204C304200A83178 /* Url.swift in Sources */,
 				D6ADAE5E20669231000188D3 /* SplashViewController.swift in Sources */,
