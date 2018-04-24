@@ -16,7 +16,6 @@ class ActiveGameViewController: UIViewController, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setPresenter()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,7 +31,7 @@ class ActiveGameViewController: UIViewController, IndicatorInfoProvider {
 extension ActiveGameViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return UIScreen.main.bounds.height * 0.244
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
