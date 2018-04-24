@@ -33,7 +33,7 @@ class CompletedGameViewController: UIViewController, IndicatorInfoProvider {
 extension CompletedGameViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return UIScreen.main.bounds.height * 0.3125
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -35,7 +35,7 @@ class ActivityViewController: ButtonBarPagerTabStripViewController {
     
     func configTabBar() {
         settings.style.buttonBarItemBackgroundColor = .white
-        settings.style.buttonBarItemFont = .systemFont(ofSize: 20)
+        settings.style.buttonBarItemFont = .systemFont(ofSize: 0.0271 * UIScreen.main.bounds.height)
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarItemTitleColor = .black
         settings.style.buttonBarMinimumLineSpacing = 0
