@@ -1,14 +1,14 @@
 //
-//  AuthenticatedViewController.swift
+//  UsersViewController.swift
 //  Meetennis
 //
-//  Created by Hackintosh on 3/24/18.
+//  Created by Hackintosh on 4/2/18.
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
 import UIKit
 
-class AuthenticatedViewController: UIViewController {
+class UsersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,4 @@ class AuthenticatedViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func signOutCLick(_ sender: Any) {
-        //LoginUtils.logout(vc: self)
-    }
 }

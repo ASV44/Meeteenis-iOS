@@ -19,6 +19,7 @@ target 'Meetennis' do
   pod 'ObjectMapper', '~> 3.1'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'ChartsRealm'
 
   target 'MeetennisTests' do
     inherit! :search_paths
