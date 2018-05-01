@@ -13,8 +13,13 @@ import ObjectMapper
 class RequestExecutor {
     
     func execute<T: Mappable>(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
-        let request: Observable<T> = getRequest(to: url, with: parameters, method: method, headers: headers)
-        return execute(request)
+        let request = getRequest(to: url, with: parameters, method: method, headers: headers)
+        return execute(request).map {it in Mapper<T>().map(JSONObject: it)! }
+    }
+    
+    func execute(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<Void> {
+        let request = getRequest(to: url, with: parameters, method: method, headers: headers)
+        return execute(request).map {_ in }
     }
     
     func execute<T>(_ request: Observable<T>) -> Observable<T> {
@@ -27,15 +32,13 @@ class RequestExecutor {
         }
     }
     
-    func getRequest<T: Mappable>(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
+    func getRequest(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<Any> {
         return Observable.create { observer in
             let request = Alamofire.request(url, method: method, parameters: parameters,encoding: JSONEncoding.default, headers: headers)
                 .validate().responseJSON { response in
                     switch response.result {
                     case .success(let value):
-                        let response = value as! [String: Any]
-                        observer.onNext(T(JSON: response)!)
-                        observer.onCompleted()
+                        observer.onNext(value)
                     case .failure(let error):
                         let httpException = (response.data?.isEmpty)!
                             ? HttpException(code: response.response?.statusCode,error: error)

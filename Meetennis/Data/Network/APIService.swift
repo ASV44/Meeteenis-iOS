@@ -14,5 +14,5 @@ protocol APIService {
     func getJWToken(request: JWTokenRequestAPI) -> Observable<JWTokenResponseAPI>
     func getQuizData() -> Observable<SkillDataResponseAPI>
     func getUserMe() -> Observable<UserMeResponseAPI>
-    func postSkillsRates(request: SkillRateRequestAPI, userId: Int) -> Observable<SkillRateRequestAPI>
+    func postSkillsRates(request: SkillRateRequestAPI, userId: Int) -> Observable<Void>
 }

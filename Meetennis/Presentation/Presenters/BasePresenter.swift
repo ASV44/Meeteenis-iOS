@@ -20,7 +20,7 @@ class BasePresenter<V>  {
     
     func viewDidLoad() { }
     
-    func execute<T>(_ observable: Observable<T>, _ onNext: @escaping (T) -> Void, _ onError: @escaping (Error) -> Void) {
+    func execute<T>(_ observable: Observable<T>, _ onNext: @escaping (T) -> (), _ onError: @escaping (Error) -> ()) {
         let scheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
         let subscription = observable.subscribeOn(scheduler)
             .observeOn(MainScheduler.instance)
