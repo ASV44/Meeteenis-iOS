@@ -11,9 +11,9 @@ import RxSwift
 class SkillRateInteractor {
     
     private let skillGateWay: SkillRateGateway
-    private let userMeGateway: UserMeGateway
+    private let userMeGateway: UsersGateway
     
-    init(skillGateWay: SkillRateGateway, userMeGateway: UserMeGateway) {
+    init(skillGateWay: SkillRateGateway, userMeGateway: UsersGateway) {
         self.skillGateWay = skillGateWay
         self.userMeGateway = userMeGateway
     }
@@ -23,7 +23,7 @@ class SkillRateInteractor {
     }
     
     func submitSkillsRates(skillRates: [SkillRate]) -> Observable<Void> {
-        return userMeGateway.getUser()
+        return userMeGateway.getUserMe()
             .flatMap {
                 self.skillGateWay.submitSkillsRates(skills: skillRates, userId: $0.id)
             }

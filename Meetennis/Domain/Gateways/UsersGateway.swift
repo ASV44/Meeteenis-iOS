@@ -8,6 +8,7 @@
 
 import RxSwift
 
-protocol UserMeGateway {
-    func getUser() -> Observable<UserMe>
+protocol UsersGateway {
+    func getUserMe() -> Observable<UserMe>
+    func getUsers() -> Observable<[User]>
 }

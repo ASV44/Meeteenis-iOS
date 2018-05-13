@@ -41,7 +41,7 @@ class SkillRateViewController: UIViewController, SkillRateView {
     func setPresenter() {
         presenter = SkillRatePresenter(router: Router(viewController: self),
                                        interactor: SkillRateInteractor(skillGateWay: SkillDataRepository(apiService: APICommunication()),
-                                                                       userMeGateway: UserMeRepository(apiService: APICommunication())))
+                                                                       userMeGateway: UsersDataRepository(apiService: APICommunication())))
         presenter.view = self
     }
     

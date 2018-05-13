@@ -667,6 +667,9 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="balanceBackground" destination="cGd-0A-qUL" id="GT0-WL-pRU"/>
+                        <outlet property="image" destination="dhL-sm-u0R" id="WzB-BS-St6"/>
+                        <outlet property="location" destination="oBs-S9-cBU" id="gm8-L6-EG0"/>
+                        <outlet property="name" destination="q93-7f-ten" id="KnQ-yu-xYv"/>
                         <outlet property="radarChart" destination="ZJ7-OH-L01" id="ZxZ-5a-TeL"/>
                         <outlet property="statusBar" destination="NrW-fY-99n" id="FFv-Ug-tSp"/>
                     </connections>

@@ -1,25 +1,20 @@
 //
-//  UserMeResponseAPI.swift
+//  UserResponseAPI.swift
 //  Meetennis
 //
-//  Created by Hackintosh on 3/26/18.
+//  Created by Hackintosh on 5/13/18.
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
 import ObjectMapper
 
-class UserMeResponseAPI: Mappable {
-   
-    var wallets: [Int]!
+class UserResponseAPI: Mappable {
+    
     var id: Int!
     var email: String!
     var firstName: String!
     var lastName: String!
     var pictureUrl: String!
-    var location: LocationResponseAPI!
-    var role: Int!
-    var gender: Int!
-    var following: Bool!
     
     required init?(map: Map) {
         

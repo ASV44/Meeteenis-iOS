@@ -16,7 +16,7 @@ class User: Mappable {
     var lastName: String!
     var pictureUrl: String!
     
-    init(id: Int, email: String, firstName: String, lastName: String, pictureUrl: String) {
+    init(id: Int, email: String, firstName: String, lastName: String, pictureUrl: String!) {
         self.id = id
         self.email = email
         self.firstName = firstName

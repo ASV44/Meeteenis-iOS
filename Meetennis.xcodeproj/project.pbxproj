@@ -10,6 +10,11 @@
 		7593B312B709AA369A4E853D /* Pods_MeetennisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF52EF30EA2FAF6F53613FAC /* Pods_MeetennisTests.framework */; };
 		7A3543E1472BAD1E3D0CB498 /* Pods_Meetennis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809C34335E2401C5AA6A843 /* Pods_Meetennis.framework */; };
 		BF4A26907A906029D34742F9 /* Pods_MeetennisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C0D9A3085DCEC1D3DD3D9 /* Pods_MeetennisUITests.framework */; };
+		D605791320A7C76500827C26 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791220A7C76500827C26 /* ProfilePresenter.swift */; };
+		D605791520A7C77100827C26 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791420A7C77100827C26 /* ProfileView.swift */; };
+		D605791720A7C89500827C26 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791620A7C89500827C26 /* ProfileInteractor.swift */; };
+		D605791920A7D55C00827C26 /* UsersResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791820A7D55C00827C26 /* UsersResponseAPI.swift */; };
+		D605791C20A7D5A900827C26 /* UserResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791B20A7D5A900827C26 /* UserResponseAPI.swift */; };
 		D61CEDB42029B3FF000E1948 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* KeyChain.swift */; };
 		D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */; };
 		D623B38E2085445700FD5EDC /* CompletedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */; };
@@ -75,10 +80,10 @@
 		D6E4C60720685F0F007471B1 /* GoogleLoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60620685F0F007471B1 /* GoogleLoginProvider.swift */; };
 		D6E4C6092068677A007471B1 /* SkillItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C6082068677A007471B1 /* SkillItem.swift */; };
 		D6E4C60C20686853007471B1 /* SkillItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60B20686853007471B1 /* SkillItemMapper.swift */; };
-		D6E4C61120687179007471B1 /* UserMeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61020687179007471B1 /* UserMeGateway.swift */; };
+		D6E4C61120687179007471B1 /* UsersGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61020687179007471B1 /* UsersGateway.swift */; };
 		D6E4C613206871CD007471B1 /* UserMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C612206871CD007471B1 /* UserMe.swift */; };
 		D6E4C61520687244007471B1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61420687244007471B1 /* Location.swift */; };
-		D6E4C61720687306007471B1 /* UserMeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61620687306007471B1 /* UserMeRepository.swift */; };
+		D6E4C61720687306007471B1 /* UsersDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61620687306007471B1 /* UsersDataRepository.swift */; };
 		D6E4C61920687599007471B1 /* UserMeResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61820687599007471B1 /* UserMeResponseAPI.swift */; };
 		D6E4C61B2068761B007471B1 /* LocationResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61A2068761B007471B1 /* LocationResponseAPI.swift */; };
 		D6E4C61D20687851007471B1 /* UsersMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C61C20687851007471B1 /* UsersMappers.swift */; };
@@ -114,6 +119,11 @@
 		813850AE97A2B2FF89AC2708 /* Pods-Meetennis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetennis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meetennis/Pods-Meetennis.debug.xcconfig"; sourceTree = "<group>"; };
 		953FBE31B370DEA72059D40A /* Pods-MeetennisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetennisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetennisTests/Pods-MeetennisTests.release.xcconfig"; sourceTree = "<group>"; };
 		95D61A4E9732886075C8C74E /* Pods-Meetennis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetennis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meetennis/Pods-Meetennis.release.xcconfig"; sourceTree = "<group>"; };
+		D605791220A7C76500827C26 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		D605791420A7C77100827C26 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D605791620A7C89500827C26 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		D605791820A7D55C00827C26 /* UsersResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponseAPI.swift; sourceTree = "<group>"; };
+		D605791B20A7D5A900827C26 /* UserResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseAPI.swift; sourceTree = "<group>"; };
 		D61CEDB32029B3FF000E1948 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameViewController.swift; sourceTree = "<group>"; };
 		D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedGameViewController.swift; sourceTree = "<group>"; };
@@ -185,10 +195,10 @@
 		D6E4C60620685F0F007471B1 /* GoogleLoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginProvider.swift; sourceTree = "<group>"; };
 		D6E4C6082068677A007471B1 /* SkillItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillItem.swift; sourceTree = "<group>"; };
 		D6E4C60B20686853007471B1 /* SkillItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillItemMapper.swift; sourceTree = "<group>"; };
-		D6E4C61020687179007471B1 /* UserMeGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeGateway.swift; sourceTree = "<group>"; };
+		D6E4C61020687179007471B1 /* UsersGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersGateway.swift; sourceTree = "<group>"; };
 		D6E4C612206871CD007471B1 /* UserMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMe.swift; sourceTree = "<group>"; };
 		D6E4C61420687244007471B1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		D6E4C61620687306007471B1 /* UserMeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeRepository.swift; sourceTree = "<group>"; };
+		D6E4C61620687306007471B1 /* UsersDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataRepository.swift; sourceTree = "<group>"; };
 		D6E4C61820687599007471B1 /* UserMeResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeResponseAPI.swift; sourceTree = "<group>"; };
 		D6E4C61A2068761B007471B1 /* LocationResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponseAPI.swift; sourceTree = "<group>"; };
 		D6E4C61C20687851007471B1 /* UsersMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMappers.swift; sourceTree = "<group>"; };
@@ -289,6 +299,8 @@
 				D6ABFE10206812EC00500F41 /* SkillResponseAPI.swift */,
 				D6E4C61820687599007471B1 /* UserMeResponseAPI.swift */,
 				D6E4C61A2068761B007471B1 /* LocationResponseAPI.swift */,
+				D605791820A7D55C00827C26 /* UsersResponseAPI.swift */,
+				D605791B20A7D5A900827C26 /* UserResponseAPI.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -316,7 +328,6 @@
 				D6ADAE6920673C14000188D3 /* Errors.swift */,
 				D6E4C6082068677A007471B1 /* SkillItem.swift */,
 				D6A901462073F34000E7FA54 /* SkillChartItem.swift */,
-				D647AA2A2082DC1500C4BA53 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -444,6 +455,7 @@
 				D6ADAE5F206696D3000188D3 /* SplashView.swift */,
 				D6D04E7B204C107A00A83178 /* LoginView.swift */,
 				D6D04E7D204C10A100A83178 /* SkillRateView.swift */,
+				D605791420A7C77100827C26 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -465,6 +477,7 @@
 				D6ADAE61206696F2000188D3 /* SplashPresenter.swift */,
 				D6D04E7F204C110700A83178 /* LoginPresenter.swift */,
 				D6D04E81204C111700A83178 /* SkillRatePresenter.swift */,
+				D605791220A7C76500827C26 /* ProfilePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -494,6 +507,7 @@
 				D6E4C612206871CD007471B1 /* UserMe.swift */,
 				D6E4C61420687244007471B1 /* Location.swift */,
 				D6E4C62020687ECF007471B1 /* SkillRate.swift */,
+				D647AA2A2082DC1500C4BA53 /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -515,7 +529,7 @@
 			children = (
 				D6D04E89204C158A00A83178 /* LoginGateway.swift */,
 				D6D04E8B204C159E00A83178 /* SkillRateGateway.swift */,
-				D6E4C61020687179007471B1 /* UserMeGateway.swift */,
+				D6E4C61020687179007471B1 /* UsersGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -525,6 +539,7 @@
 			children = (
 				D6D04E83204C118C00A83178 /* LoginInteractor.swift */,
 				D6D04E87204C156500A83178 /* SkillRateInteractor.swift */,
+				D605791620A7C89500827C26 /* ProfileInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -534,7 +549,7 @@
 			children = (
 				D6D04E85204C150100A83178 /* JWTokenRepository.swift */,
 				D6D04E90204C188100A83178 /* SkillDataRepository.swift */,
-				D6E4C61620687306007471B1 /* UserMeRepository.swift */,
+				D6E4C61620687306007471B1 /* UsersDataRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -951,11 +966,12 @@
 				D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */,
 				D6E4C61B2068761B007471B1 /* LocationResponseAPI.swift in Sources */,
 				D6D04E7C204C107A00A83178 /* LoginView.swift in Sources */,
+				D605791920A7D55C00827C26 /* UsersResponseAPI.swift in Sources */,
 				D69AC4D4205ECECF00107703 /* BaseView.swift in Sources */,
 				D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */,
 				D6D04E84204C118C00A83178 /* LoginInteractor.swift in Sources */,
 				D6D04E88204C156500A83178 /* SkillRateInteractor.swift in Sources */,
-				D6E4C61120687179007471B1 /* UserMeGateway.swift in Sources */,
+				D6E4C61120687179007471B1 /* UsersGateway.swift in Sources */,
 				D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */,
 				D6E4C62120687ECF007471B1 /* SkillRate.swift in Sources */,
 				D6D04E9C204C41A200A83178 /* Router.swift in Sources */,
@@ -964,7 +980,7 @@
 				D6ADAE62206696F2000188D3 /* SplashPresenter.swift in Sources */,
 				D623B38E2085445700FD5EDC /* CompletedGameViewController.swift in Sources */,
 				D6D04E8C204C159E00A83178 /* SkillRateGateway.swift in Sources */,
-				D6E4C61720687306007471B1 /* UserMeRepository.swift in Sources */,
+				D6E4C61720687306007471B1 /* UsersDataRepository.swift in Sources */,
 				D6E4C61D20687851007471B1 /* UsersMappers.swift in Sources */,
 				D6C565D12027234B0040F4A7 /* LogInViewController.swift in Sources */,
 				D6E4C61920687599007471B1 /* UserMeResponseAPI.swift in Sources */,
@@ -974,6 +990,7 @@
 				D6538DDF207AFC3200107B84 /* RadarChartController.swift in Sources */,
 				D6E4C613206871CD007471B1 /* UserMe.swift in Sources */,
 				D623B39220856E1E00FD5EDC /* BaseListCell.swift in Sources */,
+				D605791C20A7D5A900827C26 /* UserResponseAPI.swift in Sources */,
 				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
 				D647665F20719CAE00622186 /* ActivityViewController.swift in Sources */,
 				D6ADAE64206700FB000188D3 /* ProfileViewController.swift in Sources */,
@@ -992,12 +1009,15 @@
 				D6ADAE6A20673C14000188D3 /* Errors.swift in Sources */,
 				D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */,
 				D69AC4D2205ECE8F00107703 /* BasePresenter.swift in Sources */,
+				D605791320A7C76500827C26 /* ProfilePresenter.swift in Sources */,
 				D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */,
 				D6ADAE6F20674982000188D3 /* Reachability..swift in Sources */,
 				D647AA2D2082DF0200C4BA53 /* UsersListCell.swift in Sources */,
 				D6D04E91204C188100A83178 /* SkillDataRepository.swift in Sources */,
+				D605791720A7C89500827C26 /* ProfileInteractor.swift in Sources */,
 				D6ADAE60206696D3000188D3 /* SplashView.swift in Sources */,
 				D6ADAE672067299A000188D3 /* HttpException.swift in Sources */,
+				D605791520A7C77100827C26 /* ProfileView.swift in Sources */,
 				D6E4C61F20687A98007471B1 /* CourtsMappers.swift in Sources */,
 				D6E4C60120685653007471B1 /* LoginProvider.swift in Sources */,
 				D6ABFE15206819B400500F41 /* Skill.swift in Sources */,
