@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController, ProfileView {
     @IBOutlet weak var balanceBackground: UIView!
     @IBOutlet weak var statusBar: UIView!
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var name: UIImageView!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var location: UILabel!
     
     private var radarChartController: RadarChartController!
@@ -31,7 +31,6 @@ class ProfileViewController: UIViewController, ProfileView {
 
         initView()
         presenter.getPersonalData()
-        presenter.getUserList()
         radarChartController = RadarChartController(radarChart: radarChart)
     }
     
@@ -65,8 +64,8 @@ class ProfileViewController: UIViewController, ProfileView {
     }
     
     func onPersonalDataReceive(data: UserMe) {
-        print(data.pictureUrl)
         image.kf.setImage(with: URL(string: data.pictureUrl))
+        name.text = data.firstName + " " + data.lastName
     }
 
     func onError(error: Errors.Error) {

@@ -15,6 +15,9 @@
 		D605791720A7C89500827C26 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791620A7C89500827C26 /* ProfileInteractor.swift */; };
 		D605791920A7D55C00827C26 /* UsersResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791820A7D55C00827C26 /* UsersResponseAPI.swift */; };
 		D605791C20A7D5A900827C26 /* UserResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791B20A7D5A900827C26 /* UserResponseAPI.swift */; };
+		D605792020A7E3B200827C26 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791F20A7E3B200827C26 /* UsersView.swift */; };
+		D605792220A7E3F800827C26 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605792120A7E3F800827C26 /* UsersPresenter.swift */; };
+		D605792420A7E53600827C26 /* UsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605792320A7E53600827C26 /* UsersInteractor.swift */; };
 		D61CEDB42029B3FF000E1948 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* KeyChain.swift */; };
 		D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */; };
 		D623B38E2085445700FD5EDC /* CompletedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */; };
@@ -124,6 +127,9 @@
 		D605791620A7C89500827C26 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		D605791820A7D55C00827C26 /* UsersResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponseAPI.swift; sourceTree = "<group>"; };
 		D605791B20A7D5A900827C26 /* UserResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseAPI.swift; sourceTree = "<group>"; };
+		D605791F20A7E3B200827C26 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		D605792120A7E3F800827C26 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
+		D605792320A7E53600827C26 /* UsersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInteractor.swift; sourceTree = "<group>"; };
 		D61CEDB32029B3FF000E1948 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameViewController.swift; sourceTree = "<group>"; };
 		D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedGameViewController.swift; sourceTree = "<group>"; };
@@ -456,6 +462,7 @@
 				D6D04E7B204C107A00A83178 /* LoginView.swift */,
 				D6D04E7D204C10A100A83178 /* SkillRateView.swift */,
 				D605791420A7C77100827C26 /* ProfileView.swift */,
+				D605791F20A7E3B200827C26 /* UsersView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -478,6 +485,7 @@
 				D6D04E7F204C110700A83178 /* LoginPresenter.swift */,
 				D6D04E81204C111700A83178 /* SkillRatePresenter.swift */,
 				D605791220A7C76500827C26 /* ProfilePresenter.swift */,
+				D605792120A7E3F800827C26 /* UsersPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -540,6 +548,7 @@
 				D6D04E83204C118C00A83178 /* LoginInteractor.swift */,
 				D6D04E87204C156500A83178 /* SkillRateInteractor.swift */,
 				D605791620A7C89500827C26 /* ProfileInteractor.swift */,
+				D605792320A7E53600827C26 /* UsersInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -969,6 +978,7 @@
 				D605791920A7D55C00827C26 /* UsersResponseAPI.swift in Sources */,
 				D69AC4D4205ECECF00107703 /* BaseView.swift in Sources */,
 				D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */,
+				D605792020A7E3B200827C26 /* UsersView.swift in Sources */,
 				D6D04E84204C118C00A83178 /* LoginInteractor.swift in Sources */,
 				D6D04E88204C156500A83178 /* SkillRateInteractor.swift in Sources */,
 				D6E4C61120687179007471B1 /* UsersGateway.swift in Sources */,
@@ -992,9 +1002,11 @@
 				D623B39220856E1E00FD5EDC /* BaseListCell.swift in Sources */,
 				D605791C20A7D5A900827C26 /* UserResponseAPI.swift in Sources */,
 				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
+				D605792420A7E53600827C26 /* UsersInteractor.swift in Sources */,
 				D647665F20719CAE00622186 /* ActivityViewController.swift in Sources */,
 				D6ADAE64206700FB000188D3 /* ProfileViewController.swift in Sources */,
 				D6CACC96205747AF00D704D9 /* JWTokenResponseAPI.swift in Sources */,
+				D605792220A7E3F800827C26 /* UsersPresenter.swift in Sources */,
 				D647666320719CCE00622186 /* UsersViewController.swift in Sources */,
 				D647666520719CF100622186 /* WalletViewController.swift in Sources */,
 				D6ABFE13206813D100500F41 /* SkillDataMappers.swift in Sources */,
