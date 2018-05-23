@@ -33,7 +33,7 @@ class RequestExecutor {
                 .validate().responseJSON { response in
                     switch response.result {
                     case .success(let value):
-                        let response = value as! [String: Any]
+                        let response = value is [String: Any] ? value as! [String: Any] : [String: Any]()
                         observer.onNext(T(JSON: response)!)
                         observer.onCompleted()
                     case .failure(let error):

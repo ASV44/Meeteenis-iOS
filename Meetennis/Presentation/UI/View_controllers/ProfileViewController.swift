@@ -34,6 +34,11 @@ class ProfileViewController: UIViewController, ProfileView {
         radarChartController = RadarChartController(radarChart: radarChart)
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        image.layer.cornerRadius = image.frame.height / 2
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -54,7 +59,6 @@ class ProfileViewController: UIViewController, ProfileView {
         gradient.colors = [UIColor(red: 80 / 255, green: 10 / 255, blue: 35 / 255, alpha: 1).cgColor,
                            UIColor(red: 110 / 255, green: 15 / 255, blue: 45 / 255, alpha: 1).cgColor]
         statusBar.layer.insertSublayer(gradient, at: 0)
-        image.layer.cornerRadius = image.frame.height/2
         image.layer.masksToBounds = false
         image.clipsToBounds = true
     }
