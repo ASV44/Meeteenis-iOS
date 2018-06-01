@@ -13,13 +13,8 @@ import ObjectMapper
 class RequestExecutor {
     
     func execute<T: Mappable>(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
-        let request = getRequest(to: url, with: parameters, method: method, headers: headers)
-        return execute(request).map {it in Mapper<T>().map(JSONObject: it)! }
-    }
-    
-    func execute(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<Void> {
-        let request = getRequest(to: url, with: parameters, method: method, headers: headers)
-        return execute(request).map {_ in }
+        let request: Observable<T> = getRequest(to: url, with: parameters, method: method, headers: headers)
+        return execute(request)
     }
     
     func execute<T>(_ request: Observable<T>) -> Observable<T> {
@@ -32,13 +27,15 @@ class RequestExecutor {
         }
     }
     
-    func getRequest(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<Any> {
+    func getRequest<T: Mappable>(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
         return Observable.create { observer in
             let request = Alamofire.request(url, method: method, parameters: parameters,encoding: JSONEncoding.default, headers: headers)
                 .validate().responseJSON { response in
                     switch response.result {
                     case .success(let value):
-                        observer.onNext(value)
+                        let response = value is [String: Any] ? value as! [String: Any] : [String: Any]()
+                        observer.onNext(T(JSON: response)!)
+                        observer.onCompleted()
                     case .failure(let error):
                         let httpException = (response.data?.isEmpty)!
                             ? HttpException(code: response.response?.statusCode,error: error)

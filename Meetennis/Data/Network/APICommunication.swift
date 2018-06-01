@@ -31,7 +31,7 @@ class APICommunication: APIService {
         return requestExecutor.execute(to: Url.userMe, with: nil, method: HTTPMethod.get, headers: getRequestHeader())
     }
     
-    func postSkillsRates(request: SkillRateRequestAPI, userId: Int) -> Observable<Void> {
+    func postSkillsRates(request: SkillRateRequestAPI, userId: Int) -> Observable<SkillRateRequestAPI> {
         return requestExecutor.execute(to: Url.postSkills + String(userId), with: request.toJSON(), method: .post, headers: getRequestHeader())
     }
     
