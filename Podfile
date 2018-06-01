@@ -20,6 +20,7 @@ target 'Meetennis' do
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'ChartsRealm'
+  pod 'XLPagerTabStrip', '~> 8.0'
 
   target 'MeetennisTests' do
     inherit! :search_paths

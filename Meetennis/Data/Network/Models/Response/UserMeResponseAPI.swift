@@ -18,6 +18,8 @@ class UserMeResponseAPI: Mappable {
     var pictureUrl: String!
     var location: LocationResponseAPI!
     var role: Int!
+    var gender: Int!
+    var following: Bool!
     
     required init?(map: Map) {
         

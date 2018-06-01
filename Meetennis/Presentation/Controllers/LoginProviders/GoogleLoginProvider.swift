@@ -46,11 +46,11 @@ class GoogleLoginProvider: NSObject, LoginProvider, GIDSignInUIDelegate, GIDSign
     }
     
     func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
-        
+        self.viewController.present(viewController, animated: true, completion: nil)
     }
     
     func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
-        
+        self.viewController.dismiss(animated: true, completion: nil)
     }
     
 }

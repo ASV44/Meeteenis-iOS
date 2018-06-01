@@ -15,13 +15,17 @@ class UserMe {
     var lastName: String!
     var pictureUrl: String!
     var location: Location!
+    var gender: Int!
+    var following: Bool!
     
     init(id: Int,
          email: String,
          firstName: String,
          lastName: String,
          pictureUrl: String,
-         location: Location) {
+         location: Location,
+         gender: Int,
+         following: Bool) {
         
         self.id = id
         self.email = email
@@ -29,5 +33,7 @@ class UserMe {
         self.lastName = lastName
         self.pictureUrl = pictureUrl
         self.location = location
+        self.gender = gender
+        self.following = following
     }
 }

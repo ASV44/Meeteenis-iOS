@@ -8,7 +8,7 @@
 
 import RxSwift
 
-class UserMeRepository: UserMeGateway {
+class UsersDataRepository: UsersGateway {
     
     private let apiService: APIService
     
@@ -17,10 +17,17 @@ class UserMeRepository: UserMeGateway {
     }
     
     
-    func getUser() -> Observable<UserMe> {
+    func getUserMe() -> Observable<UserMe> {
         return apiService.getUserMe()
             .map { it in
                 it.toUserMe()
             }
+    }
+    
+    func getUsers() -> Observable<[User]> {
+        return apiService.getUsers()
+            .map { it in
+                it.toUsersList()
+        }
     }
 }

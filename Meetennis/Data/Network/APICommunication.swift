@@ -35,6 +35,10 @@ class APICommunication: APIService {
         return requestExecutor.execute(to: Url.postSkills + String(userId), with: request.toJSON(), method: .post, headers: getRequestHeader())
     }
     
+    func getUsers() -> Observable<UsersResponseAPI> {
+        return requestExecutor.execute(to: Url.users, with: nil, method: .get, headers: getRequestHeader())
+    }
+    
     func getRequestHeader() -> HTTPHeaders {
         return ["Authorization": "Bearer " + keyChain.getAccesToken()]
     }

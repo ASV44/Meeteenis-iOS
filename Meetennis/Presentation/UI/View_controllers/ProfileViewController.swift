@@ -10,36 +10,46 @@ import UIKit
 import Charts
 import RealmSwift
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, ProfileView {
+    
+    var presenter: ProfilePresenter!
     
     @IBOutlet weak var radarChart: RadarChartView!
     @IBOutlet weak var balanceBackground: UIView!
     @IBOutlet weak var statusBar: UIView!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var location: UILabel!
     
     private var radarChartController: RadarChartController!
     
     private let gradient : CAGradientLayer = CAGradientLayer()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        UIApplication.shared.statusBarStyle = .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setPresenter()
+        setPresenter()
 
         initView()
+        presenter.getPersonalData()
         radarChartController = RadarChartController(radarChart: radarChart)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        image.layer.cornerRadius = image.frame.height / 2
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func setPresenter() {
+        presenter = ProfilePresenter(router: Router(viewController: self), interactor: ProfileInteractor(userMeGateway: UsersDataRepository(apiService: APICommunication())))
+        presenter.view = self
     }
     
     func initView() {
@@ -49,11 +59,24 @@ class ProfileViewController: UIViewController {
         gradient.colors = [UIColor(red: 80 / 255, green: 10 / 255, blue: 35 / 255, alpha: 1).cgColor,
                            UIColor(red: 110 / 255, green: 15 / 255, blue: 45 / 255, alpha: 1).cgColor]
         statusBar.layer.insertSublayer(gradient, at: 0)
+        image.layer.masksToBounds = false
+        image.clipsToBounds = true
     }
     
     @IBAction func signOutCLick(_ sender: Any) {
         //LoginUtils.logout(vc: self)
     }
     
+    func onPersonalDataReceive(data: UserMe) {
+        image.kf.setImage(with: URL(string: data.pictureUrl))
+        name.text = data.firstName + " " + data.lastName
+    }
 
+    func onError(error: Errors.Error) {
+        let alert = UIAlertController(title: nil, message: error.description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            alert!.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

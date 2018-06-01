@@ -36,4 +36,8 @@ struct Url {
     static var userMe: String {
         return BaseURL + "/user/me"
     }
+    
+    static var users: String {
+        return BaseURL + "/user"
+    }
 }
