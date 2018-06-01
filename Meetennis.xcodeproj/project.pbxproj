@@ -18,6 +18,7 @@
 		D605792020A7E3B200827C26 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791F20A7E3B200827C26 /* UsersView.swift */; };
 		D605792220A7E3F800827C26 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605792120A7E3F800827C26 /* UsersPresenter.swift */; };
 		D605792420A7E53600827C26 /* UsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605792320A7E53600827C26 /* UsersInteractor.swift */; };
+		D61A6B6620C205DA002B9240 /* LocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A6B6520C205DA002B9240 /* LocationUtils.swift */; };
 		D61CEDB42029B3FF000E1948 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CEDB32029B3FF000E1948 /* KeyChain.swift */; };
 		D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */; };
 		D623B38E2085445700FD5EDC /* CompletedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */; };
@@ -130,6 +131,7 @@
 		D605791F20A7E3B200827C26 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		D605792120A7E3F800827C26 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
 		D605792320A7E53600827C26 /* UsersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInteractor.swift; sourceTree = "<group>"; };
+		D61A6B6520C205DA002B9240 /* LocationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtils.swift; sourceTree = "<group>"; };
 		D61CEDB32029B3FF000E1948 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		D623B38B2085444100FD5EDC /* ActiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameViewController.swift; sourceTree = "<group>"; };
 		D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedGameViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +266,14 @@
 				7228BD95C40D6E29DB5F3CAD /* Pods-MeetennisUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D61A6B6420C205A5002B9240 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				D61A6B6520C205DA002B9240 /* LocationUtils.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		D642EEA22055B560001514ED /* Mappers */ = {
@@ -597,6 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E4C5FF20685634007471B1 /* LoginProviders */,
+				D61A6B6420C205A5002B9240 /* Location */,
 				D6538DDE207AFC3200107B84 /* RadarChartController.swift */,
 			);
 			path = Controllers;
@@ -1024,6 +1035,7 @@
 				D605791320A7C76500827C26 /* ProfilePresenter.swift in Sources */,
 				D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */,
 				D6ADAE6F20674982000188D3 /* Reachability..swift in Sources */,
+				D61A6B6620C205DA002B9240 /* LocationUtils.swift in Sources */,
 				D647AA2D2082DF0200C4BA53 /* UsersListCell.swift in Sources */,
 				D6D04E91204C188100A83178 /* SkillDataRepository.swift in Sources */,
 				D605791720A7C89500827C26 /* ProfileInteractor.swift in Sources */,

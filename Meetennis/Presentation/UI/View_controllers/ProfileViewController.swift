@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 import RealmSwift
+import CoreLocation
 
 class ProfileViewController: UIViewController, ProfileView {
     
@@ -68,8 +69,13 @@ class ProfileViewController: UIViewController, ProfileView {
     }
     
     func onPersonalDataReceive(data: UserMe) {
+        LocationUtils.getAddress(location: data.location, onAddressReceive: onAddressUpdate)
         image.kf.setImage(with: URL(string: data.pictureUrl))
         name.text = data.firstName + " " + data.lastName
+    }
+    
+    func onAddressUpdate(placemark: CLPlacemark) {
+        location.text = placemark.locality! + ", " + placemark.country!
     }
 
     func onError(error: Errors.Error) {
