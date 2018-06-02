@@ -7,7 +7,6 @@
 //
 
 
-protocol SkillRateView {
+protocol SkillRateView: BaseView {
     func updateSkillsList(with skills: [SkillItem])
-    func onError(error: Errors.Error)
 }

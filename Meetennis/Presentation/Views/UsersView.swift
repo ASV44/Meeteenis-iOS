@@ -6,7 +6,6 @@
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
-protocol UsersView {
+protocol UsersView: BaseView {
     func onUsersListReceived(data: [User])
-    func onError(error: Errors.Error)
 }

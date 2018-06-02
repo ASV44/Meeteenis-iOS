@@ -10,9 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class LogInViewController: UIViewController, LoginView {
-    
-    var presenter: LoginPresenter!
+class LogInViewController: BaseViewController<LoginView, LoginPresenter>, LoginView {
     
     var facebookLoginProvider: FacebookLoginProvider!
     var googleLoginProvider: GoogleLoginProvider!
@@ -53,14 +51,6 @@ class LogInViewController: UIViewController, LoginView {
     
     func loginWith(provider: LoginProvider) {
         provider.login()
-    }
-    
-    func onError(error: Errors.Error) {
-        let alert = UIAlertController(title: nil, message: error.description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            alert!.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
     }
 }
 

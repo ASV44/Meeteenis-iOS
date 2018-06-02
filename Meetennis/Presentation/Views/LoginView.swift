@@ -8,5 +8,4 @@
 
 
 protocol LoginView: BaseView {
-    func onError(error: Errors.Error)
 }

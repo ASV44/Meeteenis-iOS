@@ -81,6 +81,10 @@
 		D6D04E99204C304200A83178 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D04E98204C304200A83178 /* Url.swift */; };
 		D6D04E9C204C41A200A83178 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D04E9B204C41A200A83178 /* Router.swift */; };
 		D6DE69452054B5FF002EC053 /* APICommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DE69442054B5FF002EC053 /* APICommunication.swift */; };
+		D6E2AF0820C2D45A002BF046 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2AF0720C2D45A002BF046 /* BaseViewController.swift */; };
+		D6E2AF0A20C2DEB5002BF046 /* LobyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2AF0920C2DEB5002BF046 /* LobyView.swift */; };
+		D6E2AF0C20C2DEF1002BF046 /* LobyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2AF0B20C2DEF1002BF046 /* LobyPresenter.swift */; };
+		D6E2AF0E20C2DF2D002BF046 /* LobyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2AF0D20C2DF2D002BF046 /* LobyInteractor.swift */; };
 		D6E4C60120685653007471B1 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60020685653007471B1 /* LoginProvider.swift */; };
 		D6E4C603206856D9007471B1 /* FacebookLoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C602206856D9007471B1 /* FacebookLoginProvider.swift */; };
 		D6E4C60520685739007471B1 /* LoginProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4C60420685739007471B1 /* LoginProviders.swift */; };
@@ -203,6 +207,10 @@
 		D6D04E98204C304200A83178 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		D6D04E9B204C41A200A83178 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D6DE69442054B5FF002EC053 /* APICommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICommunication.swift; sourceTree = "<group>"; };
+		D6E2AF0720C2D45A002BF046 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D6E2AF0920C2DEB5002BF046 /* LobyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobyView.swift; sourceTree = "<group>"; };
+		D6E2AF0B20C2DEF1002BF046 /* LobyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobyPresenter.swift; sourceTree = "<group>"; };
+		D6E2AF0D20C2DF2D002BF046 /* LobyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobyInteractor.swift; sourceTree = "<group>"; };
 		D6E4C60020685653007471B1 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		D6E4C602206856D9007471B1 /* FacebookLoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginProvider.swift; sourceTree = "<group>"; };
 		D6E4C60420685739007471B1 /* LoginProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProviders.swift; sourceTree = "<group>"; };
@@ -481,6 +489,7 @@
 				D6D04E7D204C10A100A83178 /* SkillRateView.swift */,
 				D605791420A7C77100827C26 /* ProfileView.swift */,
 				D605791F20A7E3B200827C26 /* UsersView.swift */,
+				D6E2AF0920C2DEB5002BF046 /* LobyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -504,6 +513,7 @@
 				D6D04E81204C111700A83178 /* SkillRatePresenter.swift */,
 				D605791220A7C76500827C26 /* ProfilePresenter.swift */,
 				D605792120A7E3F800827C26 /* UsersPresenter.swift */,
+				D6E2AF0B20C2DEF1002BF046 /* LobyPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -511,6 +521,7 @@
 		D6C789B2204A91EE00652B94 /* View_controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6E2AF0720C2D45A002BF046 /* BaseViewController.swift */,
 				D6ADAE5D20669231000188D3 /* SplashViewController.swift */,
 				D6C565D02027234B0040F4A7 /* LogInViewController.swift */,
 				D64DD158202A4583004ACB79 /* SkillRateViewController.swift */,
@@ -567,6 +578,7 @@
 				D6D04E87204C156500A83178 /* SkillRateInteractor.swift */,
 				D605791620A7C89500827C26 /* ProfileInteractor.swift */,
 				D605792320A7E53600827C26 /* UsersInteractor.swift */,
+				D6E2AF0D20C2DF2D002BF046 /* LobyInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -993,6 +1005,7 @@
 				D6E4C625206884B6007471B1 /* SkillRequestAPI.swift in Sources */,
 				D66400362032E088008B87CB /* PagerViewCell.swift in Sources */,
 				D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */,
+				D6E2AF0E20C2DF2D002BF046 /* LobyInteractor.swift in Sources */,
 				D6E4C61B2068761B007471B1 /* LocationResponseAPI.swift in Sources */,
 				D6D04E7C204C107A00A83178 /* LoginView.swift in Sources */,
 				D605791920A7D55C00827C26 /* UsersResponseAPI.swift in Sources */,
@@ -1000,6 +1013,7 @@
 				D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */,
 				D605792020A7E3B200827C26 /* UsersView.swift in Sources */,
 				D6D04E84204C118C00A83178 /* LoginInteractor.swift in Sources */,
+				D6E2AF0820C2D45A002BF046 /* BaseViewController.swift in Sources */,
 				D6D04E88204C156500A83178 /* SkillRateInteractor.swift in Sources */,
 				D6E4C61120687179007471B1 /* UsersGateway.swift in Sources */,
 				D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */,
@@ -1017,6 +1031,7 @@
 				D6ABFE0F206810FB00500F41 /* SkillDataResponseAPI.swift in Sources */,
 				D61A6B6820C2155C002B9240 /* SkillsRatesResponseAPI.swift in Sources */,
 				D61A6B6A20C21679002B9240 /* SkillRateResponseAPI.swift in Sources */,
+				D6E2AF0C20C2DEF1002BF046 /* LobyPresenter.swift in Sources */,
 				D6D04E80204C110700A83178 /* LoginPresenter.swift in Sources */,
 				D6D04E82204C111700A83178 /* SkillRatePresenter.swift in Sources */,
 				D6538DDF207AFC3200107B84 /* RadarChartController.swift in Sources */,
@@ -1036,6 +1051,7 @@
 				D6E4C62320688378007471B1 /* SkillRateRequestAPI.swift in Sources */,
 				D623B39020856D5000FD5EDC /* ActiveGameListCell.swift in Sources */,
 				D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */,
+				D6E2AF0A20C2DEB5002BF046 /* LobyView.swift in Sources */,
 				D6D04E99204C304200A83178 /* Url.swift in Sources */,
 				D6ADAE5E20669231000188D3 /* SplashViewController.swift in Sources */,
 				D6DE69452054B5FF002EC053 /* APICommunication.swift in Sources */,

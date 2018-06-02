@@ -11,9 +11,7 @@ import Charts
 import RealmSwift
 import CoreLocation
 
-class ProfileViewController: UIViewController, ProfileView {
-    
-    var presenter: ProfilePresenter!
+class ProfileViewController: BaseViewController<ProfileView, ProfilePresenter>, ProfileView {
     
     @IBOutlet weak var radarChart: RadarChartView!
     @IBOutlet weak var balanceBackground: UIView!
@@ -82,13 +80,5 @@ class ProfileViewController: UIViewController, ProfileView {
     
     func onChartDataUpdate(data: [SkillRate]) {
         radarChartController.updateChart(skillsRates: data)
-    }
-
-    func onError(error: Errors.Error) {
-        let alert = UIAlertController(title: nil, message: error.description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            alert!.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LobyViewController: UIViewController {
+class LobyViewController: BaseViewController<LobyView, LobyPresenter>, LobyView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setPresenter()
+        setPresenter()
         
     }
     
@@ -20,4 +20,8 @@ class LobyViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func setPresenter() {
+        presenter = LobyPresenter(router: Router(viewController: self), interactor: LobyInteractor())
+        presenter.view = self
+    }
 }
