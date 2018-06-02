@@ -32,6 +32,7 @@ class ProfileViewController: UIViewController, ProfileView {
 
         initView()
         presenter.getPersonalData()
+        presenter.getSkillsRates()
         radarChartController = RadarChartController(radarChart: radarChart)
     }
     
@@ -49,7 +50,8 @@ class ProfileViewController: UIViewController, ProfileView {
     }
     
     func setPresenter() {
-        presenter = ProfilePresenter(router: Router(viewController: self), interactor: ProfileInteractor(userMeGateway: UsersDataRepository(apiService: APICommunication())))
+        presenter = ProfilePresenter(router: Router(viewController: self), interactor: ProfileInteractor(userMeGateway: UsersDataRepository(apiService: APICommunication()),
+                                                                                                         skillGateway: SkillDataRepository(apiService: APICommunication())))
         presenter.view = self
     }
     
@@ -76,6 +78,10 @@ class ProfileViewController: UIViewController, ProfileView {
     
     func onAddressUpdate(placemark: CLPlacemark) {
         location.text = placemark.locality! + ", " + placemark.country!
+    }
+    
+    func onChartDataUpdate(data: [SkillRate]) {
+        radarChartController.updateChart(skillsRates: data)
     }
 
     func onError(error: Errors.Error) {

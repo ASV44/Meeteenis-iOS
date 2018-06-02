@@ -11,9 +11,11 @@ import RxSwift
 class ProfileInteractor {
     
     private let userMeGateway: UsersGateway
+    private let skillGateway: SkillRateGateway
     
-    init(userMeGateway: UsersGateway) {
+    init(userMeGateway: UsersGateway, skillGateway: SkillRateGateway) {
         self.userMeGateway = userMeGateway
+        self.skillGateway = skillGateway
     }
     
     func getUserMeData() -> Observable<UserMe> {
@@ -23,4 +25,12 @@ class ProfileInteractor {
     func getUsers() -> Observable<[User]> {
         return userMeGateway.getUsers()
     }
+    
+    func getSkillsRates() -> Observable<[SkillRate]> {
+        return userMeGateway.getUserMe()
+            .flatMap {
+                self.skillGateway.getSkillsRates(userId: $0.id)
+        }
+    }
+    
 }

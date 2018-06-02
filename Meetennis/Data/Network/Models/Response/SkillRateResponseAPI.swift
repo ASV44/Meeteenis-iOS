@@ -1,21 +1,21 @@
 //
-//  SkillRequestApi.swift
+//  SkillRateResponseAPI.swift
 //  Meetennis
 //
-//  Created by Hackintosh on 3/26/18.
+//  Created by Hackintosh on 6/2/18.
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
 import ObjectMapper
 
-class SkillRequestAPI: Mappable {
+class SkillRateResponseAPI: Mappable {
     
     var skill: Int!
     var value: Int!
     
-    init(skill: Int, rating: Int) {
+    init(skill: Int, value: Int) {
         self.skill = skill
-        self.value = rating
+        self.value = value
     }
     
     required init?(map: Map) {

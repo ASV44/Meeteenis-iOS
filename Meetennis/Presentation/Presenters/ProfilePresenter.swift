@@ -21,6 +21,10 @@ class ProfilePresenter: BasePresenter<ProfileView> {
         execute(observable, view.onPersonalDataReceive, onError)
     }
     
+    func getSkillsRates() {
+        execute(interactor.getSkillsRates(), view.onChartDataUpdate, onError)
+    }
+    
     func onError(error: Error) {
         switch error {
         case is HttpException:

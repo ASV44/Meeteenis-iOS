@@ -8,5 +8,6 @@
 
 protocol ProfileView {
     func onPersonalDataReceive(data: UserMe)
+    func onChartDataUpdate(data: [SkillRate])
     func onError(error: Errors.Error)
 }

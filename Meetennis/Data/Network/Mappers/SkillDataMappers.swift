@@ -55,7 +55,7 @@ extension SkillRequestAPI {
     
     func mapping(map: Map) {
         skill <- map["skill"]
-        rating <- map["rating"]
+        value <- map["value"]
     }
 }
 
@@ -63,5 +63,35 @@ extension SkillRate {
     
     func toSkillRequestAPI() ->  SkillRequestAPI{
         return SkillRequestAPI(skill: skill, rating: rating)
+    }
+}
+
+extension SkillsRatesResponseAPI {
+    
+    func mapping(map: Map) {
+        rates <- map["rates"]
+    }
+    
+    func toSkillsRatesList() -> [SkillRate] {
+        var skillsRates = [SkillRate]()
+        
+        for rate in rates {
+            skillsRates.append(rate.toSkillRate())
+        }
+        
+        return skillsRates
+    }
+
+}
+
+extension SkillRateResponseAPI {
+    
+    func mapping(map: Map) {
+        skill <- map["skill"]
+        value <- map["value"]
+    }
+    
+    func toSkillRate() -> SkillRate {
+        return SkillRate(skill: skill, rating: value)
     }
 }

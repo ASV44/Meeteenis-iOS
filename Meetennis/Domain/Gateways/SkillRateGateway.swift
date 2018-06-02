@@ -11,4 +11,5 @@ import RxSwift
 protocol SkillRateGateway {
     func getQuizData() -> Observable<[Skill]>
     func submitSkillsRates(skills: [SkillRate], userId: Int) -> Observable<Void>
+    func getSkillsRates(userId: Int) -> Observable<[SkillRate]>
 }
