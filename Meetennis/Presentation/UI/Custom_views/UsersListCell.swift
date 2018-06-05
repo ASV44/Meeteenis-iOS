@@ -22,6 +22,11 @@ class UsersListCell: BaseListCell {
         userImage.clipsToBounds = true
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        userImage.layer.cornerRadius = userImage.frame.height / 2
+    }
+    
     func setCell(for user: User) {
         if(user.pictureUrl != nil) {
             userImage.kf.setImage(with: URL(string: user.pictureUrl))

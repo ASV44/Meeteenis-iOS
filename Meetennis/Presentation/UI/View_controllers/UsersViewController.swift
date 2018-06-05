@@ -52,7 +52,7 @@ class UsersViewController: UIViewController, UsersView {
 extension UsersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 0.19 * UIScreen.main.bounds.height
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

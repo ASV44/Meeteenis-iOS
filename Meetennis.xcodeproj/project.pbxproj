@@ -58,6 +58,8 @@
 		D6ADAE6C20674619000188D3 /* NetworkConnectionException.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE6B20674619000188D3 /* NetworkConnectionException.swift */; };
 		D6ADAE6F20674982000188D3 /* Reachability..swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE6E20674982000188D3 /* Reachability..swift */; };
 		D6ADAE7120674B7C000188D3 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADAE7020674B7C000188D3 /* RequestExecutor.swift */; };
+		D6B9383120C6BE6A00B52C66 /* TabsTimePickerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9383020C6BE6A00B52C66 /* TabsTimePickerContainer.swift */; };
+		D6B9383320C6C51B00B52C66 /* TimePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9383220C6C51B00B52C66 /* TimePickerController.swift */; };
 		D6C565CF2027234B0040F4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C565CE2027234B0040F4A7 /* AppDelegate.swift */; };
 		D6C565D12027234B0040F4A7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C565D02027234B0040F4A7 /* LogInViewController.swift */; };
 		D6C565D42027234B0040F4A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C565D22027234B0040F4A7 /* Main.storyboard */; };
@@ -80,6 +82,7 @@
 		D6D04E93204C277500A83178 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D04E92204C277500A83178 /* APIService.swift */; };
 		D6D04E99204C304200A83178 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D04E98204C304200A83178 /* Url.swift */; };
 		D6D04E9C204C41A200A83178 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D04E9B204C41A200A83178 /* Router.swift */; };
+		D6D60B5B20C4949E00C5A892 /* TabsTimePickerContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D60B5A20C4949E00C5A892 /* TabsTimePickerContainer.xib */; };
 		D6DE69452054B5FF002EC053 /* APICommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DE69442054B5FF002EC053 /* APICommunication.swift */; };
 		D6E2AF0820C2D45A002BF046 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2AF0720C2D45A002BF046 /* BaseViewController.swift */; };
 		D6E2AF0A20C2DEB5002BF046 /* LobyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2AF0920C2DEB5002BF046 /* LobyView.swift */; };
@@ -178,6 +181,8 @@
 		D6ADAE6B20674619000188D3 /* NetworkConnectionException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionException.swift; sourceTree = "<group>"; };
 		D6ADAE6E20674982000188D3 /* Reachability..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability..swift; sourceTree = "<group>"; };
 		D6ADAE7020674B7C000188D3 /* RequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
+		D6B9383020C6BE6A00B52C66 /* TabsTimePickerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTimePickerContainer.swift; sourceTree = "<group>"; };
+		D6B9383220C6C51B00B52C66 /* TimePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerController.swift; sourceTree = "<group>"; };
 		D6C565CB2027234B0040F4A7 /* Meetennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meetennis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C565CE2027234B0040F4A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6C565D02027234B0040F4A7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +211,7 @@
 		D6D04E92204C277500A83178 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		D6D04E98204C304200A83178 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		D6D04E9B204C41A200A83178 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D6D60B5A20C4949E00C5A892 /* TabsTimePickerContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabsTimePickerContainer.xib; sourceTree = "<group>"; };
 		D6DE69442054B5FF002EC053 /* APICommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICommunication.swift; sourceTree = "<group>"; };
 		D6E2AF0720C2D45A002BF046 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D6E2AF0920C2DEB5002BF046 /* LobyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobyView.swift; sourceTree = "<group>"; };
@@ -385,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				D66400332032DF6D008B87CB /* PagerViewCell.xib */,
+				D6D60B5A20C4949E00C5A892 /* TabsTimePickerContainer.xib */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -557,6 +564,8 @@
 				D647AA2C2082DF0200C4BA53 /* UsersListCell.swift */,
 				D623B38F20856D5000FD5EDC /* ActiveGameListCell.swift */,
 				D623B39320856FF600FD5EDC /* CompletedGameListCell.swift */,
+				D6B9383020C6BE6A00B52C66 /* TabsTimePickerContainer.swift */,
+				D6B9383220C6C51B00B52C66 /* TimePickerController.swift */,
 			);
 			path = Custom_views;
 			sourceTree = "<group>";
@@ -769,6 +778,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D66400342032DF6D008B87CB /* PagerViewCell.xib in Resources */,
+				D6D60B5B20C4949E00C5A892 /* TabsTimePickerContainer.xib in Resources */,
 				D6C565D92027234B0040F4A7 /* LaunchScreen.storyboard in Resources */,
 				D6C565D62027234B0040F4A7 /* Assets.xcassets in Resources */,
 				D6C565D42027234B0040F4A7 /* Main.storyboard in Resources */,
@@ -1013,6 +1023,7 @@
 				D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */,
 				D605792020A7E3B200827C26 /* UsersView.swift in Sources */,
 				D6D04E84204C118C00A83178 /* LoginInteractor.swift in Sources */,
+				D6B9383320C6C51B00B52C66 /* TimePickerController.swift in Sources */,
 				D6E2AF0820C2D45A002BF046 /* BaseViewController.swift in Sources */,
 				D6D04E88204C156500A83178 /* SkillRateInteractor.swift in Sources */,
 				D6E4C61120687179007471B1 /* UsersGateway.swift in Sources */,
@@ -1058,6 +1069,7 @@
 				D6D04E93204C277500A83178 /* APIService.swift in Sources */,
 				D6D04E7E204C10A100A83178 /* SkillRateView.swift in Sources */,
 				D6ADAE6A20673C14000188D3 /* Errors.swift in Sources */,
+				D6B9383120C6BE6A00B52C66 /* TabsTimePickerContainer.swift in Sources */,
 				D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */,
 				D69AC4D2205ECE8F00107703 /* BasePresenter.swift in Sources */,
 				D605791320A7C76500827C26 /* ProfilePresenter.swift in Sources */,
