@@ -14,12 +14,6 @@ class TimePickerController: UIViewController, IndicatorInfoProvider {
     var indicatorInfo: String!
     var size: CGRect!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let pickerView = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-        self.view.addSubview(pickerView)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

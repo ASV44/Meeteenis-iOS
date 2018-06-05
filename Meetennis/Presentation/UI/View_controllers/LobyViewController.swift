@@ -35,13 +35,10 @@ class LobyViewController: BaseViewController<LobyView, LobyPresenter>, LobyView 
     
     @objc func selectCourtTime(sender : UITapGestureRecognizer) {
         let vc = TabsTimePickerContainer(nibName: "TabsTimePickerContainer", bundle: nil)
-        vc.preferredContentSize = CGSize(width: 300,height: 300)
-//        let pickerView = UIDatePicker(frame: CGRect(x: 0, y: -30, width: 250, height: 250))
-//        vc.view.addSubview(pickerView)
-        let editRadiusAlert = UIAlertController(title: nil, message: "Choose match date and time", preferredStyle: UIAlertControllerStyle.alert)
+        let editRadiusAlert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         editRadiusAlert.setValue(vc, forKey: "contentViewController")
-        editRadiusAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         editRadiusAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        editRadiusAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(editRadiusAlert, animated: true)
     }
 }
