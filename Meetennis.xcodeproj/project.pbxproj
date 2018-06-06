@@ -18,6 +18,9 @@
 		D605792020A7E3B200827C26 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605791F20A7E3B200827C26 /* UsersView.swift */; };
 		D605792220A7E3F800827C26 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605792120A7E3F800827C26 /* UsersPresenter.swift */; };
 		D605792420A7E53600827C26 /* UsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D605792320A7E53600827C26 /* UsersInteractor.swift */; };
+		D60CBA1020C75C2600ACDB66 /* CourtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60CBA0F20C75C2600ACDB66 /* CourtsViewController.swift */; };
+		D60CBA1220C7639700ACDB66 /* CourtCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60CBA1120C7639700ACDB66 /* CourtCollectionCell.swift */; };
+		D60CBA1420C7669E00ACDB66 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60CBA1320C7669E00ACDB66 /* BaseCollectionCell.swift */; };
 		D61A6B6620C205DA002B9240 /* LocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A6B6520C205DA002B9240 /* LocationUtils.swift */; };
 		D61A6B6820C2155C002B9240 /* SkillsRatesResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A6B6720C2155C002B9240 /* SkillsRatesResponseAPI.swift */; };
 		D61A6B6A20C21679002B9240 /* SkillRateResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A6B6920C21679002B9240 /* SkillRateResponseAPI.swift */; };
@@ -142,6 +145,9 @@
 		D605791F20A7E3B200827C26 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		D605792120A7E3F800827C26 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
 		D605792320A7E53600827C26 /* UsersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInteractor.swift; sourceTree = "<group>"; };
+		D60CBA0F20C75C2600ACDB66 /* CourtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtsViewController.swift; sourceTree = "<group>"; };
+		D60CBA1120C7639700ACDB66 /* CourtCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtCollectionCell.swift; sourceTree = "<group>"; };
+		D60CBA1320C7669E00ACDB66 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		D61A6B6520C205DA002B9240 /* LocationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtils.swift; sourceTree = "<group>"; };
 		D61A6B6720C2155C002B9240 /* SkillsRatesResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsRatesResponseAPI.swift; sourceTree = "<group>"; };
 		D61A6B6920C21679002B9240 /* SkillRateResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillRateResponseAPI.swift; sourceTree = "<group>"; };
@@ -542,6 +548,7 @@
 				D647666020719CC300622186 /* LobyViewController.swift */,
 				D647666220719CCE00622186 /* UsersViewController.swift */,
 				D647666420719CF100622186 /* WalletViewController.swift */,
+				D60CBA0F20C75C2600ACDB66 /* CourtsViewController.swift */,
 			);
 			path = View_controllers;
 			sourceTree = "<group>";
@@ -567,6 +574,8 @@
 				D647AA2C2082DF0200C4BA53 /* UsersListCell.swift */,
 				D623B38F20856D5000FD5EDC /* ActiveGameListCell.swift */,
 				D623B39320856FF600FD5EDC /* CompletedGameListCell.swift */,
+				D60CBA1320C7669E00ACDB66 /* BaseCollectionCell.swift */,
+				D60CBA1120C7639700ACDB66 /* CourtCollectionCell.swift */,
 				D6B9383020C6BE6A00B52C66 /* TabsTimePickerContainer.swift */,
 				D6B9383220C6C51B00B52C66 /* TimePickerController.swift */,
 			);
@@ -1047,6 +1056,7 @@
 				D61A6B6820C2155C002B9240 /* SkillsRatesResponseAPI.swift in Sources */,
 				D61A6B6A20C21679002B9240 /* SkillRateResponseAPI.swift in Sources */,
 				D6E2AF0C20C2DEF1002BF046 /* LobyPresenter.swift in Sources */,
+				D60CBA1020C75C2600ACDB66 /* CourtsViewController.swift in Sources */,
 				D6D04E80204C110700A83178 /* LoginPresenter.swift in Sources */,
 				D6D04E82204C111700A83178 /* SkillRatePresenter.swift in Sources */,
 				D6538DDF207AFC3200107B84 /* RadarChartController.swift in Sources */,
@@ -1066,7 +1076,9 @@
 				D6E4C62320688378007471B1 /* SkillRateRequestAPI.swift in Sources */,
 				D623B39020856D5000FD5EDC /* ActiveGameListCell.swift in Sources */,
 				D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */,
+				D60CBA1420C7669E00ACDB66 /* BaseCollectionCell.swift in Sources */,
 				D6E2AF0A20C2DEB5002BF046 /* LobyView.swift in Sources */,
+				D60CBA1220C7639700ACDB66 /* CourtCollectionCell.swift in Sources */,
 				D6D04E99204C304200A83178 /* Url.swift in Sources */,
 				D6ADAE5E20669231000188D3 /* SplashViewController.swift in Sources */,
 				D6DE69452054B5FF002EC053 /* APICommunication.swift in Sources */,

@@ -23,7 +23,7 @@ class TabsTimePickerContainer: ButtonBarPagerTabStripViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        self.preferredContentSize = CGSize(width: 300,height: 0.407 * UIScreen.main.bounds.height)
+        self.preferredContentSize = CGSize(width: 250,height: 0.407 * UIScreen.main.bounds.height)
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

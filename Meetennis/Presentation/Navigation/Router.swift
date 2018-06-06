@@ -32,4 +32,9 @@ class Router {
         let skillRateVC = mainStoryboard.instantiateViewController(withIdentifier: "AuthenticatedVC")
         viewController.present(skillRateVC, animated: animated, completion: nil)
     }
+    
+    func showCourtsListVC() {
+        let courtsListVC = mainStoryboard.instantiateViewController(withIdentifier: "CourtsListVC")
+        viewController.present(courtsListVC, animated: true, completion: nil)
+    }
 }

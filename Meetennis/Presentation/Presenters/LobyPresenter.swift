@@ -17,4 +17,7 @@ class LobyPresenter: BasePresenter<LobyView> {
         self.interactor = interactor
     }
     
+    func onMatchTimeSet() {
+        router.showCourtsListVC()
+    }
 }

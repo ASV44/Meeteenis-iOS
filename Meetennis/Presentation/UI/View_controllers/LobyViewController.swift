@@ -38,7 +38,9 @@ class LobyViewController: BaseViewController<LobyView, LobyPresenter>, LobyView 
         let editRadiusAlert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         editRadiusAlert.setValue(vc, forKey: "contentViewController")
         editRadiusAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        editRadiusAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        editRadiusAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.presenter.onMatchTimeSet()
+        }))
         self.present(editRadiusAlert, animated: true)
     }
 }
