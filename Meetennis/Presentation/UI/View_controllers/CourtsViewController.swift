@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CourtsViewController: UICollectionViewController {
+class CourtsViewController: UIViewController {
+    
+    private let gradient : CAGradientLayer = CAGradientLayer()
     
     let cellIdentifier = "CourtCollectionCell"
     
@@ -23,14 +25,14 @@ class CourtsViewController: UICollectionViewController {
     
 }
 
-//MARK: Override CollectionViewDataSource
-extension CourtsViewController {
+//MARK: Implementing CollectionViewDataSource
+extension CourtsViewController: UICollectionViewDataSource {
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
         return 20
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         
         return cell
@@ -38,7 +40,7 @@ extension CourtsViewController {
 }
 
 
-//MARK: Override CollectionViewDelegate
-extension CourtsViewController {
+//MARK: Implementing CollectionViewDelegate
+extension CourtsViewController: UICollectionViewDelegate {
     
 }

@@ -35,6 +35,8 @@ class Router {
     
     func showCourtsListVC() {
         let courtsListVC = mainStoryboard.instantiateViewController(withIdentifier: "CourtsListVC")
-        viewController.present(courtsListVC, animated: true, completion: nil)
+        viewController.hidesBottomBarWhenPushed = true
+        viewController.navigationController?.pushViewController(courtsListVC, animated: true)
+        viewController.hidesBottomBarWhenPushed = false
     }
 }

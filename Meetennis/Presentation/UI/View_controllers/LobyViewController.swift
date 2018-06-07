@@ -23,6 +23,16 @@ class LobyViewController: BaseViewController<LobyView, LobyPresenter>, LobyView 
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+    }
+    
     func setPresenter() {
         presenter = LobyPresenter(router: Router(viewController: self), interactor: LobyInteractor())
         presenter.view = self
