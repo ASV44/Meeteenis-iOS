@@ -32,6 +32,14 @@
 		D623B39220856E1E00FD5EDC /* BaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B39120856E1E00FD5EDC /* BaseListCell.swift */; };
 		D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623B39320856FF600FD5EDC /* CompletedGameListCell.swift */; };
 		D642EEA42055B59E001514ED /* JWTokenMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642EEA32055B59E001514ED /* JWTokenMapper.swift */; };
+		D646A23320CAF68F00219D43 /* CourtResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646A23220CAF68F00219D43 /* CourtResponseAPI.swift */; };
+		D646A23520CAF7D800219D43 /* AddressResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646A23420CAF7D800219D43 /* AddressResponseAPI.swift */; };
+		D646A23720CAF89500219D43 /* PictureResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646A23620CAF89500219D43 /* PictureResponseAPI.swift */; };
+		D646A23920CAF8F300219D43 /* CourtsResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646A23820CAF8F300219D43 /* CourtsResponseAPI.swift */; };
+		D646A23B20CAF9BD00219D43 /* LocationMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646A23A20CAF9BD00219D43 /* LocationMappers.swift */; };
+		D646A23D20CAFC3F00219D43 /* Court.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646A23C20CAFC3F00219D43 /* Court.swift */; };
+		D646A23F20CAFD9200219D43 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646A23E20CAFD9200219D43 /* Address.swift */; };
+		D646A24120CAFE9800219D43 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646A24020CAFE9800219D43 /* Picture.swift */; };
 		D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */; };
 		D64721812055FB4A008DB9B5 /* ProviderDataRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */; };
 		D647665F20719CAE00622186 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647665E20719CAE00622186 /* ActivityViewController.swift */; };
@@ -159,6 +167,14 @@
 		D623B39120856E1E00FD5EDC /* BaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCell.swift; sourceTree = "<group>"; };
 		D623B39320856FF600FD5EDC /* CompletedGameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedGameListCell.swift; sourceTree = "<group>"; };
 		D642EEA32055B59E001514ED /* JWTokenMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenMapper.swift; sourceTree = "<group>"; };
+		D646A23220CAF68F00219D43 /* CourtResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtResponseAPI.swift; sourceTree = "<group>"; };
+		D646A23420CAF7D800219D43 /* AddressResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResponseAPI.swift; sourceTree = "<group>"; };
+		D646A23620CAF89500219D43 /* PictureResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureResponseAPI.swift; sourceTree = "<group>"; };
+		D646A23820CAF8F300219D43 /* CourtsResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtsResponseAPI.swift; sourceTree = "<group>"; };
+		D646A23A20CAF9BD00219D43 /* LocationMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMappers.swift; sourceTree = "<group>"; };
+		D646A23C20CAFC3F00219D43 /* Court.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Court.swift; sourceTree = "<group>"; };
+		D646A23E20CAFD9200219D43 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		D646A24020CAFE9800219D43 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		D647217E2055F9C6008DB9B5 /* JWTokenRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTokenRequestAPI.swift; sourceTree = "<group>"; };
 		D64721802055FB4A008DB9B5 /* ProviderDataRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDataRequestAPI.swift; sourceTree = "<group>"; };
 		D647665E20719CAE00622186 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -311,6 +327,7 @@
 				D6ABFE12206813D100500F41 /* SkillDataMappers.swift */,
 				D6E4C61C20687851007471B1 /* UsersMappers.swift */,
 				D6E4C61E20687A98007471B1 /* CourtsMappers.swift */,
+				D646A23A20CAF9BD00219D43 /* LocationMappers.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -347,6 +364,10 @@
 				D6E4C61A2068761B007471B1 /* LocationResponseAPI.swift */,
 				D605791820A7D55C00827C26 /* UsersResponseAPI.swift */,
 				D605791B20A7D5A900827C26 /* UserResponseAPI.swift */,
+				D646A23820CAF8F300219D43 /* CourtsResponseAPI.swift */,
+				D646A23220CAF68F00219D43 /* CourtResponseAPI.swift */,
+				D646A23620CAF89500219D43 /* PictureResponseAPI.swift */,
+				D646A23420CAF7D800219D43 /* AddressResponseAPI.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -562,6 +583,9 @@
 				D6E4C61420687244007471B1 /* Location.swift */,
 				D6E4C62020687ECF007471B1 /* SkillRate.swift */,
 				D647AA2A2082DC1500C4BA53 /* User.swift */,
+				D646A23C20CAFC3F00219D43 /* Court.swift */,
+				D646A23E20CAFD9200219D43 /* Address.swift */,
+				D646A24020CAFE9800219D43 /* Picture.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1016,7 +1040,9 @@
 			files = (
 				D647666120719CC300622186 /* LobyViewController.swift in Sources */,
 				D6ADAE7120674B7C000188D3 /* RequestExecutor.swift in Sources */,
+				D646A23D20CAFC3F00219D43 /* Court.swift in Sources */,
 				D6D04E8A204C158A00A83178 /* LoginGateway.swift in Sources */,
+				D646A23320CAF68F00219D43 /* CourtResponseAPI.swift in Sources */,
 				D6D04E86204C150100A83178 /* JWTokenRepository.swift in Sources */,
 				D647AA2B2082DC1500C4BA53 /* User.swift in Sources */,
 				D6ADAE6C20674619000188D3 /* NetworkConnectionException.swift in Sources */,
@@ -1031,6 +1057,7 @@
 				D6E2AF0E20C2DF2D002BF046 /* LobyInteractor.swift in Sources */,
 				D6E4C61B2068761B007471B1 /* LocationResponseAPI.swift in Sources */,
 				D6D04E7C204C107A00A83178 /* LoginView.swift in Sources */,
+				D646A23520CAF7D800219D43 /* AddressResponseAPI.swift in Sources */,
 				D605791920A7D55C00827C26 /* UsersResponseAPI.swift in Sources */,
 				D69AC4D4205ECECF00107703 /* BaseView.swift in Sources */,
 				D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */,
@@ -1040,10 +1067,14 @@
 				D6E2AF0820C2D45A002BF046 /* BaseViewController.swift in Sources */,
 				D6D04E88204C156500A83178 /* SkillRateInteractor.swift in Sources */,
 				D6E4C61120687179007471B1 /* UsersGateway.swift in Sources */,
+				D646A23720CAF89500219D43 /* PictureResponseAPI.swift in Sources */,
 				D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */,
 				D6E4C62120687ECF007471B1 /* SkillRate.swift in Sources */,
 				D6D04E9C204C41A200A83178 /* Router.swift in Sources */,
 				D6E4C60C20686853007471B1 /* SkillItemMapper.swift in Sources */,
+				D646A23F20CAFD9200219D43 /* Address.swift in Sources */,
+				D646A23B20CAF9BD00219D43 /* LocationMappers.swift in Sources */,
+				D646A24120CAFE9800219D43 /* Picture.swift in Sources */,
 				D6A901472073F34000E7FA54 /* SkillChartItem.swift in Sources */,
 				D6ADAE62206696F2000188D3 /* SplashPresenter.swift in Sources */,
 				D623B38E2085445700FD5EDC /* CompletedGameViewController.swift in Sources */,
@@ -1064,6 +1095,7 @@
 				D6E4C613206871CD007471B1 /* UserMe.swift in Sources */,
 				D623B39220856E1E00FD5EDC /* BaseListCell.swift in Sources */,
 				D605791C20A7D5A900827C26 /* UserResponseAPI.swift in Sources */,
+				D646A23920CAF8F300219D43 /* CourtsResponseAPI.swift in Sources */,
 				D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */,
 				D605792420A7E53600827C26 /* UsersInteractor.swift in Sources */,
 				D647665F20719CAE00622186 /* ActivityViewController.swift in Sources */,
