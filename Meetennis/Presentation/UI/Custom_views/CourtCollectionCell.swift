@@ -10,5 +10,13 @@ import UIKit
 
 class CourtCollectionCell: BaseCollectionCell {
     
+    @IBOutlet weak var selectButton: UIButton!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.contentView.frame = self.bounds
+    }
+    
+    @IBAction func onCourtSelect(_ sender: Any) {
+    }
 }
