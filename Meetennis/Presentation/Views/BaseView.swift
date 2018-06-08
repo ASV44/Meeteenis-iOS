@@ -8,5 +8,5 @@
 
 
 protocol BaseView {
-    
+    func onError(error: Errors.Error)
 }

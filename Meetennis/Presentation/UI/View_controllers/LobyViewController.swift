@@ -8,16 +8,37 @@
 
 import UIKit
 
-class LobyViewController: UIViewController {
+class LobyViewController: BaseViewController<LobyView, LobyPresenter>, LobyView {
+    
+    @IBOutlet weak var court: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setPresenter()
+        setPresenter()
         
+        initView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func setPresenter() {
+        presenter = LobyPresenter(router: Router(viewController: self), interactor: LobyInteractor())
+        presenter.view = self
+    }
+    
+    func initView() {
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(selectCourtTime(sender:)))
+        court.addGestureRecognizer(gesture)
+    }
+    
+    @objc func selectCourtTime(sender : UITapGestureRecognizer) {
+        let vc = TabsTimePickerContainer(nibName: "TabsTimePickerContainer", bundle: nil)
+        let editRadiusAlert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        editRadiusAlert.setValue(vc, forKey: "contentViewController")
+        editRadiusAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        editRadiusAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(editRadiusAlert, animated: true)
+    }
 }

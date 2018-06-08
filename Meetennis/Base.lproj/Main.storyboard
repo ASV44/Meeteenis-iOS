@@ -681,7 +681,7 @@
         <scene sceneID="5uB-Qf-J4T">
             <objects>
                 <viewController id="8ts-Lk-Nem" customClass="LobyViewController" customModule="Meetennis" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="gzC-rc-pQj">
+                    <view key="view" contentMode="scaleToFill" id="gzC-rc-pQj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -855,6 +855,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="game_icon" selectedImage="game_icon" id="MDE-ky-eX9"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="court" destination="P8P-Vc-dm2" id="DBZ-gF-wuD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip2-G8-Kux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -892,11 +895,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctw-DR-kRe">
-                                                            <rect key="frame" x="144.66666666666666" y="17.666666666666668" width="117.99999999999997" height="21.000000000000004"/>
+                                                            <rect key="frame" x="144.66666666666666" y="49" width="146.99999999999997" height="26.333333333333329"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="Li7-Tx-sHG"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -909,22 +912,31 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Rts-fL-wwM">
-                                                            <rect key="frame" x="20" y="15" width="96" height="91"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Rts-fL-wwM">
+                                                            <rect key="frame" x="20" y="16" width="96" height="91"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="Rts-fL-wwM" firstAttribute="width" secondItem="qXx-Fe-laX" secondAttribute="width" multiplier="0.24" id="0hq-yA-Gt5"/>
                                                         <constraint firstItem="ORd-wF-2P9" firstAttribute="leading" secondItem="qXx-Fe-laX" secondAttribute="leading" constant="144.33000000000001" id="5UC-ol-5IE"/>
-                                                        <constraint firstItem="ctw-DR-kRe" firstAttribute="leading" secondItem="qXx-Fe-laX" secondAttribute="leading" constant="144.33000000000001" id="Ck5-E7-FKX"/>
-                                                        <constraint firstItem="ctw-DR-kRe" firstAttribute="centerY" secondItem="qXx-Fe-laX" secondAttribute="centerY" multiplier="0.45" id="IuT-3H-rev"/>
+                                                        <constraint firstItem="Rts-fL-wwM" firstAttribute="centerY" secondItem="qXx-Fe-laX" secondAttribute="centerY" id="EeU-Rc-JLQ"/>
+                                                        <constraint firstItem="ctw-DR-kRe" firstAttribute="leading" secondItem="Rts-fL-wwM" secondAttribute="trailing" constant="28.670000000000002" id="I2Z-hx-6JC"/>
+                                                        <constraint firstItem="ctw-DR-kRe" firstAttribute="centerY" secondItem="qXx-Fe-laX" secondAttribute="centerY" id="IuT-3H-rev"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ORd-wF-2P9" secondAttribute="trailing" id="KhN-v2-av6"/>
+                                                        <constraint firstItem="Rts-fL-wwM" firstAttribute="height" secondItem="qXx-Fe-laX" secondAttribute="height" multiplier="0.74" id="OpV-af-5Jv"/>
                                                         <constraint firstItem="IjW-v2-uvx" firstAttribute="leading" secondItem="qXx-Fe-laX" secondAttribute="centerX" multiplier="1.55" id="SAd-Q1-QhL"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ctw-DR-kRe" secondAttribute="trailing" id="Vmt-Aa-BT9"/>
+                                                        <constraint firstItem="Rts-fL-wwM" firstAttribute="centerX" secondItem="qXx-Fe-laX" secondAttribute="centerX" multiplier="0.34" id="lEJ-sN-PWH"/>
                                                         <constraint firstItem="IjW-v2-uvx" firstAttribute="centerY" secondItem="qXx-Fe-laX" secondAttribute="centerY" id="oLD-r0-rSL"/>
                                                         <constraint firstItem="ORd-wF-2P9" firstAttribute="centerY" secondItem="qXx-Fe-laX" secondAttribute="centerY" id="uhj-UW-RcF"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="IjW-v2-uvx"/>
+                                                            <exclude reference="ORd-wF-2P9"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <constraints>

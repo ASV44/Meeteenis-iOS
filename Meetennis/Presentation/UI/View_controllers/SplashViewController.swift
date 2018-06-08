@@ -8,9 +8,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController, SplashView {
-    
-    var presenter: SplashPresenter!
+class SplashViewController: BaseViewController<SplashView, SplashPresenter>, SplashView {
     
     override func viewDidLoad() {
         super.viewDidLoad()

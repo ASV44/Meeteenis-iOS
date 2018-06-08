@@ -27,7 +27,7 @@ class SplashPresenter: BasePresenter<SplashView> {
         //router.showSkillRateVC()
     }
     
-    func onError(error: Error) {
+    override func onError(error: Error) {
         router.showLoginVC()
     }
 }

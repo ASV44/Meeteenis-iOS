@@ -18,7 +18,7 @@ class RadarChartController: NSObject ,IAxisValueFormatter {
         
         initChart()
         setAxis()
-        updateChart()
+        //updateChart()
     }
     
     func initChart() {
@@ -37,12 +37,12 @@ class RadarChartController: NSObject ,IAxisValueFormatter {
 
     }
     
-    func updateChart() {
+    func updateChart(skillsRates: [SkillRate]) {
         var chartDataSet = [RadarChartDataSet]()
         
         var dataEntries = [RadarChartDataEntry]()
-        for _ in 0 ..< 5 {
-            dataEntries.append(RadarChartDataEntry(value: Double(arc4random_uniform(100))))
+        for skillRate in skillsRates {
+            dataEntries.append(RadarChartDataEntry(value: Double(skillRate.rating)))
         }
         let set = RadarChartDataSet(values: dataEntries, label: "Skill Rates")
         formatDataSet(set)
@@ -63,7 +63,7 @@ class RadarChartController: NSObject ,IAxisValueFormatter {
     
     func setAxis() {
         radarChart.xAxis.valueFormatter = self
-        radarChart.xAxis.labelFont = radarChart.xAxis.labelFont.withSize(10)
+        radarChart.xAxis.labelFont = radarChart.xAxis.labelFont.withSize(8)
         radarChart.xAxis.yOffset = 0
         radarChart.xAxis.xOffset = 0
         radarChart.xAxis.labelTextColor = UIColor.black
@@ -72,6 +72,6 @@ class RadarChartController: NSObject ,IAxisValueFormatter {
     }
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        return "Skill \(value)"
+        return Skills.names[Int(value)]
     }
 }

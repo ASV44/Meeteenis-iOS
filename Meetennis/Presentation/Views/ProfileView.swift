@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
-protocol ProfileView {
+protocol ProfileView: BaseView {
     func onPersonalDataReceive(data: UserMe)
-    func onError(error: Errors.Error)
+    func onChartDataUpdate(data: [SkillRate])
 }

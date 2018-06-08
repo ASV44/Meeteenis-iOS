@@ -25,6 +25,12 @@ class SkillDataRepository: SkillRateGateway {
     
     func submitSkillsRates(skills: [SkillRate], userId: Int) -> Observable<Void> {
         let skillRateRequest = SkillRateRequestAPI(rates: skills.map {$0.toSkillRequestAPI()})
-        return apiService.postSkillsRates(request: skillRateRequest, userId: userId)
+        return apiService.postSkillsRates(request: skillRateRequest, userId: userId).map { _ in }
+    }
+    
+    func getSkillsRates(userId: Int) -> Observable<[SkillRate]> {
+        return apiService.getSkillsRates(userId: userId).map { it in
+            it.toSkillsRatesList()
+        }
     }
 }

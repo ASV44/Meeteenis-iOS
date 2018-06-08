@@ -21,18 +21,8 @@ class ProfilePresenter: BasePresenter<ProfileView> {
         execute(observable, view.onPersonalDataReceive, onError)
     }
     
-    func onError(error: Error) {
-        switch error {
-        case is HttpException:
-            let exception = error as! HttpException
-            view.onError(error: Errors.Error(code: exception.code, message: exception.message))
-            break
-        case is NetworkConnectionException:
-            view.onError(error: Errors.NETWORK_CONNECTION_ERROR)
-            break
-        default:
-            view.onError(error: Errors.GENERAL_ERROR)
-        }
+    func getSkillsRates() {
+        execute(interactor.getSkillsRates(), view.onChartDataUpdate, onError)
     }
     
 }

@@ -9,10 +9,9 @@
 import UIKit
 import Charts
 import RealmSwift
+import CoreLocation
 
-class ProfileViewController: UIViewController, ProfileView {
-    
-    var presenter: ProfilePresenter!
+class ProfileViewController: BaseViewController<ProfileView, ProfilePresenter>, ProfileView {
     
     @IBOutlet weak var radarChart: RadarChartView!
     @IBOutlet weak var balanceBackground: UIView!
@@ -31,6 +30,7 @@ class ProfileViewController: UIViewController, ProfileView {
 
         initView()
         presenter.getPersonalData()
+        presenter.getSkillsRates()
         radarChartController = RadarChartController(radarChart: radarChart)
     }
     
@@ -48,7 +48,8 @@ class ProfileViewController: UIViewController, ProfileView {
     }
     
     func setPresenter() {
-        presenter = ProfilePresenter(router: Router(viewController: self), interactor: ProfileInteractor(userMeGateway: UsersDataRepository(apiService: APICommunication())))
+        presenter = ProfilePresenter(router: Router(viewController: self), interactor: ProfileInteractor(userMeGateway: UsersDataRepository(apiService: APICommunication()),
+                                                                                                         skillGateway: SkillDataRepository(apiService: APICommunication())))
         presenter.view = self
     }
     
@@ -68,15 +69,16 @@ class ProfileViewController: UIViewController, ProfileView {
     }
     
     func onPersonalDataReceive(data: UserMe) {
+        LocationUtils.getAddress(location: data.location, onAddressReceive: onAddressUpdate)
         image.kf.setImage(with: URL(string: data.pictureUrl))
         name.text = data.firstName + " " + data.lastName
     }
-
-    func onError(error: Errors.Error) {
-        let alert = UIAlertController(title: nil, message: error.description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            alert!.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
+    
+    func onAddressUpdate(placemark: CLPlacemark) {
+        location.text = placemark.locality! + ", " + placemark.country!
+    }
+    
+    func onChartDataUpdate(data: [SkillRate]) {
+        radarChartController.updateChart(skillsRates: data)
     }
 }

@@ -29,7 +29,7 @@ struct Url {
         return BaseURL  + "/skill"
     }
     
-    static var postSkills: String {
+    static var skillsRates: String {
         return BaseURL + "/skillrate/"
     }
     

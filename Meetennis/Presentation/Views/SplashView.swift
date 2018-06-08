@@ -6,5 +6,5 @@
 //  Copyright © 2018 Hackintosh. All rights reserved.
 //
 
-protocol SplashView {
+protocol SplashView: BaseView {
 }

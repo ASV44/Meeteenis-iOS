@@ -31,4 +31,19 @@ class BasePresenter<V>  {
             })
         subscriptions.insert(subscription)
     }
+    
+    func onError(error: Error) {
+        let view = self.view as! BaseView
+        switch error {
+        case is HttpException:
+            let exception = error as! HttpException
+            view.onError(error: Errors.Error(code: exception.code, message: exception.message))
+            break
+        case is NetworkConnectionException:
+            view.onError(error: Errors.NETWORK_CONNECTION_ERROR)
+            break
+        default:
+            view.onError(error: Errors.GENERAL_ERROR)
+        }
+    }
 }
