@@ -23,6 +23,16 @@ class LobyViewController: BaseViewController<LobyView, LobyPresenter>, LobyView 
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+    }
+    
     func setPresenter() {
         presenter = LobyPresenter(router: Router(viewController: self), interactor: LobyInteractor())
         presenter.view = self
@@ -38,7 +48,9 @@ class LobyViewController: BaseViewController<LobyView, LobyPresenter>, LobyView 
         let editRadiusAlert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         editRadiusAlert.setValue(vc, forKey: "contentViewController")
         editRadiusAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        editRadiusAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        editRadiusAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.presenter.onMatchTimeSet()
+        }))
         self.present(editRadiusAlert, animated: true)
     }
 }

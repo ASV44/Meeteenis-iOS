@@ -32,4 +32,11 @@ class Router {
         let skillRateVC = mainStoryboard.instantiateViewController(withIdentifier: "AuthenticatedVC")
         viewController.present(skillRateVC, animated: animated, completion: nil)
     }
+    
+    func showCourtsListVC() {
+        let courtsListVC = mainStoryboard.instantiateViewController(withIdentifier: "CourtsListVC")
+        viewController.hidesBottomBarWhenPushed = true
+        viewController.navigationController?.pushViewController(courtsListVC, animated: true)
+        viewController.hidesBottomBarWhenPushed = false
+    }
 }
