@@ -1018,7 +1018,7 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="eB9-2B-P4V">
                                                                     <rect key="frame" x="0.0" y="0.0" width="118" height="45.333333333333336"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Court Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzr-t8-vmC">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Court Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzr-t8-vmC">
                                                                             <rect key="frame" x="0.0" y="0.0" width="93" height="24"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="mzr-t8-vmC" secondAttribute="height" multiplier="31:8" id="DIi-zc-nPy"/>
@@ -1098,7 +1098,9 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="cardView" destination="weg-84-Y6T" id="g12-1I-WXW"/>
-                                            <outlet property="selectButton" destination="yM9-G6-GzU" id="Rbw-ZM-KFh"/>
+                                            <outlet property="courtImage" destination="IGV-oF-Ylc" id="5Pp-fo-QZF"/>
+                                            <outlet property="location" destination="9Nd-gx-VK0" id="qIb-Pp-n6d"/>
+                                            <outlet property="name" destination="mzr-t8-vmC" id="p1z-0z-wzz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

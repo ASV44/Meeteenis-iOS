@@ -15,7 +15,7 @@ class CourtsViewController: UIViewController, CourtsView {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let gradient : CAGradientLayer = CAGradientLayer()
-    
+    private var courtsListData: [Court]! = [Court]()
     let cellIdentifier = "CourtCollectionCell"
     
     override func viewDidLoad() {
@@ -35,10 +35,12 @@ class CourtsViewController: UIViewController, CourtsView {
     
     func setPresenter() {
         presenter = CourtsPresenter(router: Router(viewController: self), interactor: CourtsInteractor(gateway: CourtRepository(apiService: APICommunication())))
+        presenter.view = self
     }
     
     func onCourtsListReceived(data: [Court]) {
-        
+        courtsListData = data
+        collectionView.reloadData()
     }
     
     func onError(error: Errors.Error) {
@@ -55,12 +57,13 @@ class CourtsViewController: UIViewController, CourtsView {
 extension CourtsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
-        return 20
+        return courtsListData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CourtCollectionCell
-
+        cell.setCellData(data: courtsListData[indexPath.row])
+        
         return cell
     }
     

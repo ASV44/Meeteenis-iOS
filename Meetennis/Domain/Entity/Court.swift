@@ -15,13 +15,15 @@ class Court {
     var opensAt: String!
     var closesAt: String!
     
-    init(id: Int, name: String,
+    init(id: Int,
+         name: String,
          address: Address,
          pictures: [Picture],
          opensAt: String,
          closesAt: String) {
         
         self.id = id
+        self.name = name
         self.address = address
         self.pictures = pictures
         self.opensAt = opensAt

@@ -67,15 +67,16 @@ extension AddressResponseAPI {
         zipCode <- map["zipCode"]
         phoneNumber <- map["phoneNumber"]
         countryCode <- map["countryCode"]
+        location <- map["location"]
     }
     
     func toAddress() -> Address {
         return Address(address1: addressLine1,
-                       address2: addressLine2,
+                       address2: addressLine2 ?? "",
                        city: city,
-                       stateCode: stateCode,
+                       stateCode: stateCode ?? "",
                        zipCode: zipCode,
-                       phoneNumber: phoneNumber,
+                       phoneNumber: phoneNumber ?? "",
                        coutryCode: countryCode,
                        location: location.toLocation())
     }
