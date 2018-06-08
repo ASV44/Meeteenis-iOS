@@ -17,4 +17,5 @@ protocol APIService {
     func postSkillsRates(request: SkillRateRequestAPI, userId: Int) -> Observable<SkillRateRequestAPI>
     func getUsers() -> Observable<UsersResponseAPI>
     func getSkillsRates(userId: Int) -> Observable<SkillsRatesResponseAPI>
+    func getCourts() -> Observable<CourtsResponseAPI>
 }

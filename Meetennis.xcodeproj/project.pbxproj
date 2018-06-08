@@ -49,6 +49,11 @@
 		D647666820719E5A00622186 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647666720719E5A00622186 /* TabBarController.swift */; };
 		D647AA2B2082DC1500C4BA53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647AA2A2082DC1500C4BA53 /* User.swift */; };
 		D647AA2D2082DF0200C4BA53 /* UsersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D647AA2C2082DF0200C4BA53 /* UsersListCell.swift */; };
+		D64B285220CB068000147D6F /* CourtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B285120CB068000147D6F /* CourtView.swift */; };
+		D64B285420CB074500147D6F /* CourtsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B285320CB074500147D6F /* CourtsPresenter.swift */; };
+		D64B285620CB079A00147D6F /* CourtsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B285520CB079A00147D6F /* CourtsInteractor.swift */; };
+		D64B285820CB07D100147D6F /* CourtGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B285720CB07D100147D6F /* CourtGateway.swift */; };
+		D64B285A20CB089E00147D6F /* CourtRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B285920CB089E00147D6F /* CourtRepository.swift */; };
 		D64DD159202A4583004ACB79 /* SkillRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DD158202A4583004ACB79 /* SkillRateViewController.swift */; };
 		D6538DDF207AFC3200107B84 /* RadarChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538DDE207AFC3200107B84 /* RadarChartController.swift */; };
 		D66400342032DF6D008B87CB /* PagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66400332032DF6D008B87CB /* PagerViewCell.xib */; };
@@ -184,6 +189,11 @@
 		D647666720719E5A00622186 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D647AA2A2082DC1500C4BA53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D647AA2C2082DF0200C4BA53 /* UsersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCell.swift; sourceTree = "<group>"; };
+		D64B285120CB068000147D6F /* CourtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtView.swift; sourceTree = "<group>"; };
+		D64B285320CB074500147D6F /* CourtsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtsPresenter.swift; sourceTree = "<group>"; };
+		D64B285520CB079A00147D6F /* CourtsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtsInteractor.swift; sourceTree = "<group>"; };
+		D64B285720CB07D100147D6F /* CourtGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtGateway.swift; sourceTree = "<group>"; };
+		D64B285920CB089E00147D6F /* CourtRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtRepository.swift; sourceTree = "<group>"; };
 		D64DD158202A4583004ACB79 /* SkillRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillRateViewController.swift; sourceTree = "<group>"; };
 		D6538DDE207AFC3200107B84 /* RadarChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarChartController.swift; sourceTree = "<group>"; };
 		D66400332032DF6D008B87CB /* PagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerViewCell.xib; sourceTree = "<group>"; };
@@ -527,6 +537,7 @@
 				D605791420A7C77100827C26 /* ProfileView.swift */,
 				D605791F20A7E3B200827C26 /* UsersView.swift */,
 				D6E2AF0920C2DEB5002BF046 /* LobyView.swift */,
+				D64B285120CB068000147D6F /* CourtView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -551,6 +562,7 @@
 				D605791220A7C76500827C26 /* ProfilePresenter.swift */,
 				D605792120A7E3F800827C26 /* UsersPresenter.swift */,
 				D6E2AF0B20C2DEF1002BF046 /* LobyPresenter.swift */,
+				D64B285320CB074500147D6F /* CourtsPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -568,8 +580,8 @@
 				D623B38D2085445700FD5EDC /* CompletedGameViewController.swift */,
 				D647666020719CC300622186 /* LobyViewController.swift */,
 				D647666220719CCE00622186 /* UsersViewController.swift */,
-				D647666420719CF100622186 /* WalletViewController.swift */,
 				D60CBA0F20C75C2600ACDB66 /* CourtsViewController.swift */,
+				D647666420719CF100622186 /* WalletViewController.swift */,
 			);
 			path = View_controllers;
 			sourceTree = "<group>";
@@ -612,6 +624,7 @@
 				D6D04E89204C158A00A83178 /* LoginGateway.swift */,
 				D6D04E8B204C159E00A83178 /* SkillRateGateway.swift */,
 				D6E4C61020687179007471B1 /* UsersGateway.swift */,
+				D64B285720CB07D100147D6F /* CourtGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -624,6 +637,7 @@
 				D605791620A7C89500827C26 /* ProfileInteractor.swift */,
 				D605792320A7E53600827C26 /* UsersInteractor.swift */,
 				D6E2AF0D20C2DF2D002BF046 /* LobyInteractor.swift */,
+				D64B285520CB079A00147D6F /* CourtsInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -634,6 +648,7 @@
 				D6D04E85204C150100A83178 /* JWTokenRepository.swift */,
 				D6D04E90204C188100A83178 /* SkillDataRepository.swift */,
 				D6E4C61620687306007471B1 /* UsersDataRepository.swift */,
+				D64B285920CB089E00147D6F /* CourtRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1062,12 +1077,14 @@
 				D69AC4D4205ECECF00107703 /* BaseView.swift in Sources */,
 				D623B39420856FF600FD5EDC /* CompletedGameListCell.swift in Sources */,
 				D605792020A7E3B200827C26 /* UsersView.swift in Sources */,
+				D64B285820CB07D100147D6F /* CourtGateway.swift in Sources */,
 				D6D04E84204C118C00A83178 /* LoginInteractor.swift in Sources */,
 				D6B9383320C6C51B00B52C66 /* TimePickerController.swift in Sources */,
 				D6E2AF0820C2D45A002BF046 /* BaseViewController.swift in Sources */,
 				D6D04E88204C156500A83178 /* SkillRateInteractor.swift in Sources */,
 				D6E4C61120687179007471B1 /* UsersGateway.swift in Sources */,
 				D646A23720CAF89500219D43 /* PictureResponseAPI.swift in Sources */,
+				D64B285620CB079A00147D6F /* CourtsInteractor.swift in Sources */,
 				D647217F2055F9C6008DB9B5 /* JWTokenRequestAPI.swift in Sources */,
 				D6E4C62120687ECF007471B1 /* SkillRate.swift in Sources */,
 				D6D04E9C204C41A200A83178 /* Router.swift in Sources */,
@@ -1090,6 +1107,7 @@
 				D60CBA1020C75C2600ACDB66 /* CourtsViewController.swift in Sources */,
 				D6D04E80204C110700A83178 /* LoginPresenter.swift in Sources */,
 				D6D04E82204C111700A83178 /* SkillRatePresenter.swift in Sources */,
+				D64B285420CB074500147D6F /* CourtsPresenter.swift in Sources */,
 				D6538DDF207AFC3200107B84 /* RadarChartController.swift in Sources */,
 				D61A6B6C20C22D25002B9240 /* Skills.swift in Sources */,
 				D6E4C613206871CD007471B1 /* UserMe.swift in Sources */,
@@ -1104,6 +1122,7 @@
 				D605792220A7E3F800827C26 /* UsersPresenter.swift in Sources */,
 				D647666320719CCE00622186 /* UsersViewController.swift in Sources */,
 				D647666520719CF100622186 /* WalletViewController.swift in Sources */,
+				D64B285A20CB089E00147D6F /* CourtRepository.swift in Sources */,
 				D6ABFE13206813D100500F41 /* SkillDataMappers.swift in Sources */,
 				D6E4C62320688378007471B1 /* SkillRateRequestAPI.swift in Sources */,
 				D623B39020856D5000FD5EDC /* ActiveGameListCell.swift in Sources */,
@@ -1116,6 +1135,7 @@
 				D6DE69452054B5FF002EC053 /* APICommunication.swift in Sources */,
 				D6D04E93204C277500A83178 /* APIService.swift in Sources */,
 				D6D04E7E204C10A100A83178 /* SkillRateView.swift in Sources */,
+				D64B285220CB068000147D6F /* CourtView.swift in Sources */,
 				D6ADAE6A20673C14000188D3 /* Errors.swift in Sources */,
 				D6B9383120C6BE6A00B52C66 /* TabsTimePickerContainer.swift in Sources */,
 				D623B38C2085444100FD5EDC /* ActiveGameViewController.swift in Sources */,

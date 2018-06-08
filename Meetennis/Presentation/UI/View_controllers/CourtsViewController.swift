@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CourtsViewController: UIViewController {
+class CourtsViewController: UIViewController, CourtsView {
+    
+    var presenter: CourtsPresenter!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -18,7 +20,9 @@ class CourtsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setPresenter()
+        setPresenter()
+        
+        presenter.getCourtsList()
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,6 +31,22 @@ class CourtsViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    func setPresenter() {
+        presenter = CourtsPresenter(router: Router(viewController: self), interactor: CourtsInteractor(gateway: CourtRepository(apiService: APICommunication())))
+    }
+    
+    func onCourtsListReceived(data: [Court]) {
+        
+    }
+    
+    func onError(error: Errors.Error) {
+        let alert = UIAlertController(title: nil, message: error.description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            alert!.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
