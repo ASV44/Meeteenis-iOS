@@ -43,6 +43,10 @@ class APICommunication: APIService {
         return requestExecutor.execute(to: Url.skillsRates + String(userId), with: nil, method: .get, headers: getRequestHeader())
     }
     
+    func getCourts() -> Observable<CourtsResponseAPI> {
+        return requestExecutor.execute(to: Url.court, with: nil, method: .get, headers: getRequestHeader())
+    }
+    
     func getRequestHeader() -> HTTPHeaders {
         return ["Authorization": "Bearer " + keyChain.getAccesToken()]
     }

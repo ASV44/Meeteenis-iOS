@@ -40,4 +40,8 @@ struct Url {
     static var users: String {
         return BaseURL + "/user"
     }
+    
+    static var court: String {
+        return BaseURL + "/court"
+    }
 }

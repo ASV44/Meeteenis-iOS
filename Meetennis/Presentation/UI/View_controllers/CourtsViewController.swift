@@ -8,17 +8,21 @@
 
 import UIKit
 
-class CourtsViewController: UIViewController {
+class CourtsViewController: UIViewController, CourtsView {
+    
+    var presenter: CourtsPresenter!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let gradient : CAGradientLayer = CAGradientLayer()
-    
+    private var courtsListData: [Court]! = [Court]()
     let cellIdentifier = "CourtCollectionCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setPresenter()
+        setPresenter()
+        
+        presenter.getCourtsList()
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,18 +33,37 @@ class CourtsViewController: UIViewController {
         collectionView.collectionViewLayout.invalidateLayout()
     }
     
+    func setPresenter() {
+        presenter = CourtsPresenter(router: Router(viewController: self), interactor: CourtsInteractor(gateway: CourtRepository(apiService: APICommunication())))
+        presenter.view = self
+    }
+    
+    func onCourtsListReceived(data: [Court]) {
+        courtsListData = data
+        collectionView.reloadData()
+    }
+    
+    func onError(error: Errors.Error) {
+        let alert = UIAlertController(title: nil, message: error.description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            alert!.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 //MARK: Implementing CollectionViewDataSource
 extension CourtsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
-        return 20
+        return courtsListData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CourtCollectionCell
-
+        cell.setCellData(data: courtsListData[indexPath.row])
+        
         return cell
     }
     
