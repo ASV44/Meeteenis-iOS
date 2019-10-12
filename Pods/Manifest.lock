@@ -1,106 +1,114 @@
 PODS:
-  - Alamofire (4.6.0)
-  - Bolts (1.9.0):
-    - Bolts/AppLinks (= 1.9.0)
-    - Bolts/Tasks (= 1.9.0)
-  - Bolts/AppLinks (1.9.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.0)
-  - Charts (3.0.4):
-    - Charts/Core (= 3.0.4)
-  - Charts/Core (3.0.4)
-  - ChartsRealm (3.0.4):
-    - Charts (= 3.0.4)
-    - RealmSwift (~> 2.10)
-  - FacebookCore (0.3.0):
-    - Bolts (~> 1.8)
-    - FBSDKCoreKit (~> 4.27)
-  - FacebookLogin (0.3.0):
-    - Bolts (~> 1.8)
-    - FacebookCore (~> 0.3)
-    - FBSDKCoreKit (~> 4.27)
-    - FBSDKLoginKit (~> 4.27)
-  - FBSDKCoreKit (4.30.0):
-    - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.30.0):
-    - FBSDKCoreKit
-  - FSPagerView (0.7.1)
-  - GoogleSignIn (4.1.2):
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
-    - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
-    - GTMOAuth2 (~> 1.0)
+  - Alamofire (5.0.0-rc.2)
+  - AppAuth (1.2.0):
+    - AppAuth/Core (= 1.2.0)
+    - AppAuth/ExternalUserAgent (= 1.2.0)
+  - AppAuth/Core (1.2.0)
+  - AppAuth/ExternalUserAgent (1.2.0)
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FBSDKCoreKit (5.8.0):
+    - FBSDKCoreKit/Basics (= 5.8.0)
+    - FBSDKCoreKit/Core (= 5.8.0)
+  - FBSDKCoreKit/Basics (5.8.0)
+  - FBSDKCoreKit/Core (5.8.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.8.0):
+    - FBSDKLoginKit/Login (= 5.8.0)
+  - FBSDKLoginKit/Login (5.8.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FSPagerView (0.8.3)
+  - GoogleSignIn (5.0.1):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - GoogleToolboxForMac/DebugUtils (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/Defines (2.1.3)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
-    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
-  - GTMOAuth2 (1.1.6):
+  - GTMAppAuth (1.0.0):
+    - AppAuth/Core (~> 1.0)
     - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.1.13):
-    - GTMSessionFetcher/Full (= 1.1.13)
-  - GTMSessionFetcher/Core (1.1.13)
-  - GTMSessionFetcher/Full (1.1.13):
-    - GTMSessionFetcher/Core (= 1.1.13)
-  - KeychainSwift (10.0.0)
-  - Kingfisher (4.6.1)
-  - ObjectMapper (3.1.0)
-  - Realm (2.10.2):
-    - Realm/Headers (= 2.10.2)
-  - Realm/Headers (2.10.2)
-  - RealmSwift (2.10.2):
-    - Realm (= 2.10.2)
-  - RxCocoa (4.1.2):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.1.2)
-  - SwiftyJSON (4.0.0)
-  - Swinject (2.1.1)
-  - XLPagerTabStrip (8.0.0)
+  - GTMSessionFetcher (1.2.2):
+    - GTMSessionFetcher/Full (= 1.2.2)
+  - GTMSessionFetcher/Core (1.2.2)
+  - GTMSessionFetcher/Full (1.2.2):
+    - GTMSessionFetcher/Core (= 1.2.2)
+  - KeychainSwift (17.0.0)
+  - Kingfisher (5.8.3):
+    - Kingfisher/Core (= 5.8.3)
+  - Kingfisher/Core (5.8.3)
+  - ObjectMapper (3.5.1)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SwiftyJSON (5.0.0)
+  - XLPagerTabStrip (8.1.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5)
-  - ChartsRealm
+  - Alamofire (~> 5.0.0-rc.2)
+  - Charts
   - FacebookCore
   - FacebookLogin
   - FSPagerView
   - GoogleSignIn
-  - KeychainSwift (~> 10.0)
-  - Kingfisher (~> 4.0)
-  - ObjectMapper (~> 3.1)
-  - RxCocoa (~> 4.0)
-  - RxSwift (~> 4.0)
+  - KeychainSwift (~> 17.0)
+  - Kingfisher (~> 5.0)
+  - ObjectMapper (~> 3.4)
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
   - SwiftyJSON
-  - Swinject (~> 2.1.0)
   - XLPagerTabStrip (~> 8.0)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AppAuth
+    - Charts
+    - FacebookCore
+    - FacebookLogin
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FSPagerView
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - KeychainSwift
+    - Kingfisher
+    - ObjectMapper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftyJSON
+    - XLPagerTabStrip
+
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
-  ChartsRealm: 3cf7c9ebf9c6312efbf418cf1da91d72d5416b26
-  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
-  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
-  FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
-  FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
-  FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
-  GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
-  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
-  GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
-  GTMSessionFetcher: 5bb1eae636127de695590f50e7d248483eb891e6
-  KeychainSwift: f9f7910449a0c0fd2cabc889121530dd2c477c33
-  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
-  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
-  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
-  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
-  RxSwift: e49536837d9901277638493ea537394d4b55f570
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
-  Swinject: afea49fd95f392b41171669f165842879c48fad6
-  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
+  FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
+  FBSDKLoginKit: 1b0cf04df0370b37404213157b060d6666ede814
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  GoogleSignIn: 3a51b9bb8e48b635fd7f4272cee06ca260345b86
+  GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  KeychainSwift: 9f43f562dffc88af6efadb57d74b14c598eb337f
+  Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: 0bea6cde8498f9ebc344fb711b7302642f575c8f
+PODFILE CHECKSUM: ba36365887cb176f5c8303a428e3c33c6f1b7586
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.7.5

@@ -8,7 +8,7 @@
 
 import GoogleSignIn
 
-class GoogleLoginProvider: NSObject, LoginProvider, GIDSignInUIDelegate, GIDSignInDelegate {
+class GoogleLoginProvider: NSObject, LoginProvider, GIDSignInDelegate {
     
     var viewController: UIViewController
     var onLoginSuccess: (String, String) -> ()
@@ -25,7 +25,6 @@ class GoogleLoginProvider: NSObject, LoginProvider, GIDSignInUIDelegate, GIDSign
         super.init()
         
         GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
     func login() {

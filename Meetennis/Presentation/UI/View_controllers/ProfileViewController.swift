@@ -8,7 +8,6 @@
 
 import UIKit
 import Charts
-import RealmSwift
 import CoreLocation
 
 class ProfileViewController: BaseViewController<ProfileView, ProfilePresenter>, ProfileView {

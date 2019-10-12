@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import GoogleSignIn
 
 class LogInViewController: BaseViewController<LoginView, LoginPresenter>, LoginView {
     
@@ -26,6 +27,7 @@ class LogInViewController: BaseViewController<LoginView, LoginPresenter>, LoginV
         googleLoginProvider = GoogleLoginProvider(viewController: self,
                                                   onLoginSuccess: presenter.login,
                                                   onLoginFailed: onError)
+        GIDSignIn.sharedInstance().presentingViewController = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +35,8 @@ class LogInViewController: BaseViewController<LoginView, LoginPresenter>, LoginV
     }
     
     func setPresenter() {
-        presenter = LoginPresenter(router: Router(viewController: self), interactor: LoginInteractor(gateWay: JWTokenRepository(apiService: APICommunication())))
+        presenter = LoginPresenter(router: Router(viewController: self),
+                                   interactor: LoginInteractor(gateWay: JWTokenRepository(apiService: APICommunication())))
         presenter.view = self
     }
     
