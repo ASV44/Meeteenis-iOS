@@ -39,7 +39,6 @@ open class FSPagerViewCell: UICollectionViewCell {
             return _imageView
         }
         let imageView = UIImageView(frame: .zero)
-        imageView.layer.zPosition = -1
         self.contentView.addSubview(imageView)
         _imageView = imageView
         return imageView
@@ -68,11 +67,11 @@ open class FSPagerViewCell: UICollectionViewCell {
     open override var isHighlighted: Bool {
         set {
             super.isHighlighted = newValue
-//            if newValue {
-//                self.selectedForegroundView?.layer.backgroundColor = self.selectionColor.cgColor
-//            } else if !super.isSelected {
-//                self.selectedForegroundView?.layer.backgroundColor = UIColor.clear.cgColor
-//            }
+            if newValue {
+                self.selectedForegroundView?.layer.backgroundColor = self.selectionColor.cgColor
+            } else if !super.isSelected {
+                self.selectedForegroundView?.layer.backgroundColor = UIColor.clear.cgColor
+            }
         }
         get {
             return super.isHighlighted
@@ -82,7 +81,7 @@ open class FSPagerViewCell: UICollectionViewCell {
     open override var isSelected: Bool {
         set {
             super.isSelected = newValue
-            //self.selectedForegroundView?.layer.backgroundColor = newValue ? self.selectionColor.cgColor : UIColor.clear.cgColor
+            self.selectedForegroundView?.layer.backgroundColor = newValue ? self.selectionColor.cgColor : UIColor.clear.cgColor
         }
         get {
             return super.isSelected

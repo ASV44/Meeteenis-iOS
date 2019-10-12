@@ -27,9 +27,16 @@ class RequestExecutor {
         }
     }
     
-    func getRequest<T: Mappable>(to url: String, with parameters: Parameters!, method: HTTPMethod, headers: HTTPHeaders? = nil) -> Observable<T> {
+    func getRequest<T: Mappable>(to url: String,
+                                 with parameters: Parameters!,
+                                 method: HTTPMethod,
+                                 headers: HTTPHeaders? = nil) -> Observable<T> {
         return Observable.create { observer in
-            let request = Alamofire.request(url, method: method, parameters: parameters,encoding: JSONEncoding.default, headers: headers)
+            let request = AF.request(url,
+                                     method: method,
+                                     parameters: parameters,
+                                     encoding: JSONEncoding.default,
+                                     headers: headers)
                 .validate().responseJSON { response in
                     switch response.result {
                     case .success(let value):
@@ -45,7 +52,7 @@ class RequestExecutor {
             }
             request.resume()
             
-            return Disposables.create(with: request.cancel)
+            return Disposables.create { request.cancel() }
         }
     }
 }

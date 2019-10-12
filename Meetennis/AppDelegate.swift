@@ -15,21 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GIDSignIn.sharedInstance().clientID = "515413266719-723gj9j4bq4l3edkukbc738g1ue7vrdp.apps.googleusercontent.com"
-        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         //KeyChain().removeLastProvider()
         //KeyChain().clearKeyChain()
         return true
     }
     
-    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        let googleHandler =  GIDSignIn.sharedInstance().handle(url,
-                                                sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                                annotation: [:])
-        let fbHandler = SDKApplicationDelegate.shared
-                                              .application(application, open: url, options: options)
+    func application(_ application: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        let googleHandler =  GIDSignIn.sharedInstance().handle(url)
+        let fbHandler = ApplicationDelegate.shared.application(application, open: url, options: options)
         
         return googleHandler || fbHandler
     }
@@ -50,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        AppEventsLogger.activate(application)
+        AppEvents.activateApp()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

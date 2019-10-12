@@ -44,7 +44,7 @@ class RadarChartController: NSObject ,IAxisValueFormatter {
         for skillRate in skillsRates {
             dataEntries.append(RadarChartDataEntry(value: Double(skillRate.rating)))
         }
-        let set = RadarChartDataSet(values: dataEntries, label: "Skill Rates")
+        let set = RadarChartDataSet(entries: dataEntries, label: "Skill Rates")
         formatDataSet(set)
         chartDataSet.append(set)
         radarChart.data = RadarChartData(dataSets: chartDataSet)

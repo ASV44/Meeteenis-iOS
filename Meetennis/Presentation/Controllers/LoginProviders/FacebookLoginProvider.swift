@@ -26,7 +26,7 @@ class FacebookLoginProvider: LoginProvider {
     
     func login() {
         let loginManager = LoginManager()
-        loginManager.logIn(readPermissions: [.publicProfile, .email],
+        loginManager.logIn(permissions: [.publicProfile, .email],
                            viewController: viewController,
                            completion: handleFbSignIn)
     }
@@ -44,7 +44,7 @@ class FacebookLoginProvider: LoginProvider {
             onLoginFailed(Errors.Error(code: 0, message: error.localizedDescription))
             break
         case .success( _, _, let accessToken):
-            onLoginSuccess(accessToken.authenticationToken, LoginProviders.FACEBOOK.rawValue)
+            onLoginSuccess(accessToken.tokenString, LoginProviders.FACEBOOK.rawValue)
             break
         }
     }
